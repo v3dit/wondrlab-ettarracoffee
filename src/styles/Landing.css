@@ -1,0 +1,433 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: Montserrat;
+    margin: 0px;
+    padding: 0px;
+    user-select: none;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+*::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+* {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.LandingContainer {
+    margin: 0px;
+    padding: 0px;
+    width: 100vw;
+    height: auto;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    overflow: scroll;
+}
+
+.Landing {
+    margin: 0px;
+    padding: 0px;
+    width: 100vw;
+    max-width: 785px;
+    height: auto;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    overflow: scroll;
+}
+
+.landingLogoContainer {
+    width: 100vw;
+    height: 10vh;
+    padding: 10px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+
+
+.landingLogo {
+    width: 75vw;
+    max-width: 400px;
+    height: auto;
+    animation: openAni 3s ease-in-out;
+    animation-iteration-count: 0;
+}
+
+.schoolOfThought {
+    margin: 0px 0px 15px 0px;
+    padding: 12px 15px;
+    width: 90vw;
+    max-width: 748px;
+    height: 12vh;
+    background-color: #FFFFFF;
+    box-shadow: 0px 2px 10px #291A0225;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-content: start;
+    border-radius: 25px;
+}
+
+.schoolOfThoughtTitle {
+    width: 90vw;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 600;
+    color: #777;
+}
+
+.schoolOfThoughtThought {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 700;
+    color: #555;
+}
+
+@keyframes openAni {
+    0% {
+        position: fixed;
+        weight: 100vh;
+        height: auto;
+        background-color: #FFFFFF
+    }
+
+    100% {
+        width: 50vw;
+        max-width: 225px;
+        height: auto;
+        animation: open 3s ease-in-out;
+    }
+}
+
+.menuCardContainer {
+    margin: 0px;
+    padding: 0px;
+    width: 100vw;
+    max-width: 748px;
+    height: 55vh;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.menuCardContainer * {
+    color: #FFFFFF;
+    text-overflow: 0px 2px 15px #291A02;
+    text-decoration: none;
+    border: none;
+}
+
+.menuCard {
+    width: 90vw;
+    max-width: 700px;
+    height: 25vh;
+    background-color: #FFF9E3;
+    box-shadow: inset 0px 0px 15px #291A02;
+    box-shadow: 0px 2px 10px #291A0250;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-shadow: 0px 2px 25px #291A02;
+}
+
+.gameCardContainer {
+    margin: 20px 0px;
+    padding: 0px;
+    width: 92vw;
+    max-width: 748px;
+    height: 16vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    border-radius: 25px;
+    box-shadow: 0px 2px 25px #291A0215;
+}
+
+.gameCardContainer * {
+    border: 0px;
+}
+
+.gamesBanner {
+    /* box-shadow: 1px 2px 10px #291A0235; */
+    margin: 10px;
+    padding: 0px;
+    background-color: #fff;
+}
+
+.gamesBannerText {
+    color: #291A02;
+    font-size: 0.7rem;
+    font-weight: 700;
+    margin-left: 5px;
+}
+
+.gameCard {
+    background-color: #291A02;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 800;
+    margin: 15px 2px 0px 2px;
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+
+.gameCard:hover {
+    background-color: #fff;
+    color: #291A02;
+    border: 0.5px solid #291A02;
+}
+
+.gameCard:active {
+    background-color: #fff;
+    color: #291A02;
+}
+
+.gamesVideo {
+    width: auto;
+    height: 14vh;
+    background-color: #fff;
+    border-radius: 0px;
+}
+
+.HotMenu {
+    position: relative;
+    width: 90vw;
+    max-width: 700px;
+    height: 25vh;
+    border-radius: 25px;
+    overflow: hidden;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    text-align: center;
+    z-index: 1;
+    word-break: break-word;
+    text-align: left;
+    padding: 25px 10vw 20px 25px;
+    line-height: 1.5rem;
+    text-shadow: 0px 2px 25px #291A02;
+}
+
+.HotMenu::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../assets/Latte Large.jpeg");
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.5);
+    /* Darken the image */
+    z-index: -1;
+    /* Keep the image behind the text */
+}
+
+.ColdMenu {
+    position: relative;
+    width: 90vw;
+    max-width: 700px;
+    height: 25vh;
+    border-radius: 25px;
+    overflow: hidden;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    text-align: center;
+    z-index: 1;
+    word-break: break-word;
+    text-align: left;
+    padding: 25px 10vw 20px 25px;
+    line-height: 1.5rem;
+    text-shadow: 0px 2px 25px #291A02;
+}
+
+.ColdMenu::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../assets/Copy\ of\ LAH08933 Large.jpeg");
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.5);
+    /* Darken the image */
+    z-index: -1;
+    /* Keep the image behind the text */
+}
+
+.ManualBrewMenu {
+    position: relative;
+    width: 90vw;
+    max-width: 700px;
+    height: 25vh;
+    border-radius: 25px;
+    overflow: hidden;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    text-align: center;
+    z-index: 1;
+    word-break: break-word;
+    text-align: left;
+    padding: 25px 10vw 20px 25px;
+    line-height: 1.5rem;
+    text-shadow: 0px 2px 25px #291A02;
+}
+
+.ManualBrewMenu::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../assets/coldbrew Large.jpeg");
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.5);
+    /* Darken the image */
+    z-index: -1;
+    /* Keep the image behind the text */
+}
+
+.NotCoffeeMenu {
+    position: relative;
+    width: 90vw;
+    max-width: 700px;
+    height: 25vh;
+    border-radius: 25px;
+    overflow: hidden;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    text-align: center;
+    z-index: 1;
+    word-break: break-word;
+    text-align: left;
+    padding: 25px 10vw 20px 25px;
+    line-height: 1.5rem;
+    text-shadow: 0px 2px 25px #291A02;
+}
+
+.NotCoffeeMenu::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../assets/hotchocolet Large.jpeg");
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.5);
+    /* Darken the image */
+    z-index: -1;
+    /* Keep the image behind the text */
+}
+
+.SweetMenu {
+    position: relative;
+    width: 90vw;
+    max-width: 700px;
+    height: 25vh;
+    border-radius: 25px;
+    overflow: hidden;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    text-align: center;
+    z-index: 1;
+    word-break: break-word;
+    text-align: left;
+    padding: 25px 10vw 20px 25px;
+    line-height: 1.5rem;
+    text-shadow: 0px 2px 25px #291A02;
+}
+
+.SweetMenu::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../assets/Berliners Large.jpeg");
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.5);
+    /* Darken the image */
+    z-index: -1;
+    /* Keep the image behind the text */
+}
+
+.SavouryMenu {
+    position: relative;
+    width: 90vw;
+    max-width: 700px;
+    height: 25vh;
+    border-radius: 25px;
+    overflow: hidden;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    text-align: center;
+    z-index: 1;
+    word-break: break-word;
+    text-align: left;
+    padding: 25px 10vw 20px 25px;
+    line-height: 1.5rem;
+    text-shadow: 0px 2px 25px #291A02;
+}
+
+.SavouryMenu::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../assets/vadapav Large.jpeg");
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.5);
+    /* Darken the image */
+    z-index: -1;
+    /* Keep the image behind the text */
+}

@@ -1,0 +1,74 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  font-family: Montserrat;
+  margin: 0px;
+  padding: 0px;
+  user-select: none;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+*::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+* {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+/* styles/Loader.css */
+.loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 9999;
+    background-color: #FFF4E6;
+    width: 100vw;
+    height: 100vh;
+}
+
+.spinner {
+    position: fixed;
+    position: fixed;
+    left: 50%;
+    top: 45%;
+    translate: -50% -50%;
+    width: 60px;
+    height: 60px;
+    border: 6px solid #FFFFFF;
+    border-top: 6px solid #001E3A;
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+}
+
+.loader p {
+    position: fixed;
+    position: fixed;
+    left: 50%;
+    top: 55%;
+    translate: -50% -50%;
+    width: 100vw;
+    padding: 5vw;
+    height: 10vh;
+    margin-top: 15px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #3d3d3d;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

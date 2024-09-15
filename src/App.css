@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  font-family: Montserrat;
+  margin: 0px;
+  padding: 0px;
+  user-select: none;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+*::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+* {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.wishlistBar {
+  position: fixed;
+  bottom: 1vh;
+  left: 50vw;
+  translate: -50%;
+  width: 90vw;
+  height: 8vh;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  background-color: #291A02;
+  border-radius: 15px;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  box-shadow: 0px 2px 10px #291A0235;
+  z-index: 5;
+}
+
+.wishlist {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background-color: #FFFFFF;
+  z-index: 20;
+  padding: 5vw;
+  overflow: scroll;
+}
+
+.closeWishlist {
+  width: 90vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.wishlistItem {
+  height: 12vh;
+  width: 90vw;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  margin: 25px 0px;
+  padding: 2vw 0vw 2vw 5vw;
+  box-shadow: 2px 5px 10px #291A0225;
+  border-radius: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wishlistItemName {
+  width: calc(85vw - 130px);
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 800;
+  margin-bottom: 2px;
+}
+
+.wishlistItemSize {
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 500;
+}
+
+.wishlistWishlistToggler {
+  width: 110px;
+  display: flex;
+}
+
+.cookies {
+  font-size: 10px;
+  color: #aaa;
+}

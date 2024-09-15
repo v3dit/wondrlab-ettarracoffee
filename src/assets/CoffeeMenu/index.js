@@ -1,0 +1,21 @@
+export { default as page1 } from './1.png';
+export { default as page2 } from './2.png';
+export { default as page3 } from './3.png';
+export { default as page4 } from './4.png';
+export { default as page5 } from './5.png';
+export { default as page6 } from './6.png';
+export { default as page7 } from './7.png';
+export { default as page8 } from './8.png';
+export { default as page9 } from './9.png';
+export { default as page10 } from './10.png';
+export { default as page11 } from './11.png';
+export { default as page12 } from './12.png';
+export { default as page13 } from './13.png';
+export { default as page14 } from './14.png';
+export { default as page15 } from './15.png';
+export { default as page16 } from './16.png';
+export { default as page17 } from './17.png';
+export { default as page18 } from './18.png';
+export { default as page19 } from './19.png';
+export { default as page20 } from './20.png';
+
