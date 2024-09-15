@@ -226,7 +226,6 @@ const Game = () => {
 
 export default Game;
 
-
 // import React, { useState, useEffect } from 'react';
 // import { useLocation, useNavigate } from 'react-router-dom';
 // import "../styles/Game.css";
@@ -379,7 +378,6 @@ export default Game;
 //         { this: "A tattoo of your ex's name?", that: "A piercing on your tongue?" },
 //         { this: "Have a photographic memory?", that: "Have the ability to forget anything you want?" }
 //     ];
-
 
 //     const getRandomStatement = () => {
 //         if (gameType === 'NHIE') {

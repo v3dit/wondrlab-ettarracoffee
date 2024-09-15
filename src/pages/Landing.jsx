@@ -6,13 +6,15 @@ import { useEffect, useState } from "react";
 
 const Landing = () => {
     const [index, setIndex] = useState(0)
-    const SOT = ['Coffee, Than Humans.', 
-        'Yawn: A silent scream of coffee', 
-        'Coffee like coca*ne but better', 
-        'Stay Grounded', 
-        'Life is what happens between coffee and wine.', 
-        'Todays good mood is sponsored by coffee.', 
+    const SOT = ['Coffee, Than Humans.',
+        'Yawn: A silent scream of coffee',
+        'Coffee like coca*ne but better',
+        'Stay Grounded',
+        'Life is what happens between coffee and wine.',
+        'Todays good mood is sponsored by coffee.',
         'E = mc² (Energy = my coffee²)']
+
+
 
     useEffect(() => {
         const timer = setInterval(() => {
@@ -51,14 +53,17 @@ const Landing = () => {
                     <div className="schoolOfThoughtThought">{SOT[index]}</div>
                 </div>
                 <div className="menuCardContainer">
-                    <button className="menuCard HotMenu" onClick={() => redirectTrigger('Menu/CoffeeMenu')}>Coffee</button>
+                    <button className="menuCard ColdMenu" onClick={() => redirectTrigger('Menu/ColdCoffeeMenu')}>Cold Coffee</button>
+                    <button className="menuCard HotMenu" onClick={() => redirectTrigger('Menu/HotCoffeeMenu')}>Hot Coffee</button>
                     {/* <button className="menuCard ColdMenu" onClick={() => redirectTrigger('Menu/ColdMenu')}>Cold Coffee</button>
                     <button className="menuCard ManualBrewMenu" onClick={() => redirectTrigger('Menu/ManualBrewMenu')}>Manual Brews</button>
                     <button className="menuCard NotCoffeeMenu" onClick={() => redirectTrigger('Menu/NotCoffeeMenu')}>Not Coffee</button>
                     <button className="menuCard SweetMenu" onClick={() => redirectTrigger('Menu/SweetMenu')}>Sweet</button> */}
-                    <button className="menuCard SavouryMenu" onClick={() => redirectTrigger('Menu/FoodMenu')}>Food</button>
+                    <button className="menuCard SavouryMenu" onClick={() => redirectTrigger('Menu/SavouryMenu')}>Savoury</button>
                 </div>
+                <br /><br /><br /><br /><br /><br />
             </div>
+            <br /><br /><br /><br /><br /><br />
         </div>
     );
 };

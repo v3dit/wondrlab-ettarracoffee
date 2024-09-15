@@ -1,21 +1,253 @@
-input {
-    margin: 10px;
-    padding: 10px;
-    font-size: 16px;
+.loginPage {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    min-height: 100vh;
+    width: 100vw;
 }
 
-button {
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
+.logo1 {
+    position: fixed;
+    top: 21px;
+    right: 21px;
+    width: 35px;
+    height: 35px;
 }
 
-button:hover {
-    background-color: #45a049;
+.loginBoxImg {
+    height: 100vh;
+    background-image: url('../assets/login.png');
+    background-size: cover;
+    background-position: left;
+    font-size: 58px;
+    font-weight: 700;
+    color: #291A02;
+    align-content: center;
+    text-shadow: 1px 1px 1px #EFEFEF;
+    padding: 25px;
+    box-shadow: inset 0px 0px 15px #291A02;
 }
 
-h2 {
-    color: #333;
+.loginBoxImg p {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 10px;
+    text-shadow: 1px 1px 1px #EFEFEF;
+    padding-left: 10px;
+}
+
+.loginBox {
+    align-content: center;
+    padding: 50px;
+    background-color: #FFFFFF;
+    height: 100vh;
+    /* background-image: url('./img/section1BG.png');
+    background-size: cover;
+    background-position: center; */
+}
+
+.logintitle {
+    text-align: left;
+    font-weight: 700;
+    color: #291A02;
+    font-size: 60px;
+}
+
+.loginBox input[type="email"],
+.loginBox input[type="password"],
+.loginBox input[type="text"] {
+    padding: 5px;
+    margin: 5px;
+    height: 45px;
+    font-size: 18px;
+    border: 0px;
+    border-radius: 0px;
+    border-bottom: 1px dashed #291A02;
+    color: #291A02;
+}
+
+input[type="email"]:hover,
+.loginBox input[type="password"]:hover,
+input[type="text"]:hover {
+    background-color: #EFEFEF;
+}
+
+.loginBox select {
+    margin: 5px;
+    height: 45px;
+    font-size: 18px;
+    border: 1px dashed #291A02;
+    border-radius: 3vw;
+    color: #291A02;
+}
+
+.toggleShowPassowrd {
+    font-size: 12px;
+    font-weight: 700;
+    width: 50px;
+    height: 20px;
+    margin: 10px 0px;
+    background-color: none;
+    color: #291A02;
+    border: 0px;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.loginBox button {
+    width: 125px;
+    margin: 5px;
+    height: 40px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #291A02;
+    background-color: #EFEFEF;
+    border: 1px dashed #291A02;
+    border-radius: 3vw;
+    overflow: hidden;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 480px) {
+    .loginPage {
+        padding: 25px;
+    }
+
+    .logo1 {
+        top: 30px;
+        right: 30px;
+    }
+
+    .loginBoxImg {
+        height: calc(35vh - 25px);
+        font-size: 46px;
+        text-align: center;
+    }
+
+    .loginBoxImg p {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 10px;
+        padding-left: 0px;
+    }
+
+    .loginBox {
+        padding: 45px 35px;
+        height: calc(65vh - 25px);
+        align-content: start;
+    }
+
+    .logintitle {
+        text-align: left !important;
+        padding: 0px;
+    }
+
+    .loginBox input[type="email"],
+    .loginBox input[type="password"],
+    .loginBox input[type="text"] {
+        padding: 5px;
+        margin: 5px;
+        height: 45px;
+        width: 65vw;
+        font-size: 18px;
+        border: 0px;
+        border-bottom: 1px dashed #291A02;
+        color: #291A02;
+    }
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+    .loginPage {
+        padding: 25px;
+        background-color: #EFEFEF;
+        overflow-y: scroll;
+    }
+
+    .logo1 {
+        top: 30px;
+        right: 30px;
+    }
+
+    .loginBoxImg {
+        height: calc(35vh - 25px);
+        font-size: 46px;
+        font-weight: 700;
+        text-align: center;
+        align-content: center;
+    }
+
+    .loginBoxImg p {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 10px;
+    }
+
+    .loginBox {
+        padding: 45px 35px;
+        height: calc(65vh - 25px);
+        align-content: start;
+    }
+
+    .loginBox input[type="email"],
+    .loginBox input[type="password"],
+    .loginBox input[type="text"] {
+        padding: 5px;
+        margin: 5px;
+        height: 45px;
+        width: 65vw;
+        font-size: 18px;
+        border: 0px;
+        border-bottom: 1px dashed #291A02;
+        color: #291A02;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .loginBoxImg {
+        height: 50vh;
+    }
+
+    .loginBox {
+        height: 50vh;
+    }
+
+    .loginBox input[type="email"],
+    .loginBox input[type="password"],
+    .loginBox input[type="text"] {
+        padding: 5px;
+        margin: 5px;
+        height: 45px;
+        width: 65vw;
+        font-size: 18px;
+        border: 0px;
+        border-bottom: 1px dashed #291A02;
+        color: #291A02;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .loginBox {
+        padding: 25px;
+    }
+
+    .loginBox input[type="email"],
+    .loginBox input[type="password"],
+    .loginBox input[type="text"] {
+        width: 40vw;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+    .loginBox input[type="email"],
+    .loginBox input[type="password"],
+    .loginBox input[type="text"] {
+        width: 40vw;
+    }
 }

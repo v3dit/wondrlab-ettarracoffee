@@ -1,6 +1,24 @@
 {
   "rules": {
-    ".read": true,
-    ".write": false
+    "KDS_Access": {
+      ".read": true,
+      ".write": false
+    },
+    "Reports_Access": {
+      ".read": true,
+      ".write": false
+    },
+    "Menus": {
+      ".read": true,
+      ".write": false
+    },
+    "orders": {
+      ".read": true,
+      ".write": true
+    },
+    "KDS": {
+      ".read": true,
+      ".write": true
+    }
   }
 }

@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.3b02421e.css",
-    "main.js": "/static/js/main.d429e720.js",
-    "static/js/206.85bbf7ce.chunk.js": "/static/js/206.85bbf7ce.chunk.js",
+    "main.css": "/static/css/main.7f6099fa.css",
+    "main.js": "/static/js/main.19cfcf35.js",
+    "static/js/206.9c3495ec.chunk.js": "/static/js/206.9c3495ec.chunk.js",
     "static/media/games.mov": "/static/media/games.3fcfa0240251724d20d3.mov",
     "static/media/TOT.png": "/static/media/TOT.38e09cd48294f4362d00.png",
     "static/media/NHIE.png": "/static/media/NHIE.38e5183efdd103b9d1a4.png",
     "static/media/WIMLT.png": "/static/media/WIMLT.2523bbb5282ef7bedf60.png",
     "static/media/games.mp4": "/static/media/games.236b33b9e2d7aa7c71c0.mp4",
+    "static/media/login.png": "/static/media/login.ed18a5bea7cbc44dafc1.png",
     "static/media/coldbrew Large.jpeg": "/static/media/coldbrew Large.f5921ac192ef3c60a8b9.jpeg",
     "static/media/vadapav Large.jpeg": "/static/media/vadapav Large.0ffd0f54a90e78a5b4b9.jpeg",
     "static/media/Berliners Large.jpeg": "/static/media/Berliners Large.7ad97cafaa7d7ccaa8ca.jpeg",
@@ -18,7 +19,7 @@
     "index.html": "/index.html"
   },
   "entrypoints": [
-    "static/css/main.3b02421e.css",
-    "static/js/main.d429e720.js"
+    "static/css/main.7f6099fa.css",
+    "static/js/main.19cfcf35.js"
   ]
 }

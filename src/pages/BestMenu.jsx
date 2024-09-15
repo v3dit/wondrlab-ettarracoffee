@@ -5,7 +5,7 @@ import '../styles/BestMenu.css'; // Import CSS for styling
 const BestMenu = ({ WHICH, wishlist, setWishlist }) => {
     const [Data, setData] = useState(null);
     const [selectedItem, setSelectedItem] = useState(null); // New state to handle selected item
-
+    
     useEffect(() => {
         const getData = async () => {
             const snapshot = await database.ref(`Menus/${WHICH}`).once('value');
@@ -32,11 +32,10 @@ const BestMenu = ({ WHICH, wishlist, setWishlist }) => {
         setSelectedItem(null); // Reset the selected item when closing the detailed view
     };
 
-
-    const itemAdd = (item, size, price) => {
+    const itemAdd = (item, size, price, WHICH) => {
         // Find the item in the wishlist
         const existingItemIndex = wishlist.findIndex(
-            (wishlistItem) => wishlistItem.Name === item.Name && wishlistItem.Size === size
+            (wishlistItem) => wishlistItem.Name === item.Name && wishlistItem.Size === size  && wishlistItem.Category === WHICH
         );
         if (existingItemIndex !== -1) {
             // Item exists, update the count
@@ -45,13 +44,13 @@ const BestMenu = ({ WHICH, wishlist, setWishlist }) => {
             setWishlist(updatedWishlist);
         } else {
             // Item doesn't exist, add it to the wishlist
-            setWishlist([...wishlist, { Name: item.Name, Size: size, Price: price, Count: 1 }]);
+            setWishlist([...wishlist, { Name: item.Name, Size: size, Price: price, Count: 1, Category: WHICH }]);
         }
     };
 
     const itemRemove = (item, size) => {
         const existingItemIndex = wishlist.findIndex(
-            (wishlistItem) => wishlistItem.Name === item.Name && wishlistItem.Size === size
+            (wishlistItem) => wishlistItem.Name === item.Name && wishlistItem.Size === size  && wishlistItem.Category === WHICH
         );
 
         if (existingItemIndex !== -1) {
@@ -69,7 +68,6 @@ const BestMenu = ({ WHICH, wishlist, setWishlist }) => {
             }
         }
     };
-
 
     return (
         <div className="best-menu-container">
@@ -92,13 +90,13 @@ const BestMenu = ({ WHICH, wishlist, setWishlist }) => {
                             <div className="detailed-item-card-price">
                                 {Object.entries(selectedItem.Price).map(([size, price]) => (
                                     <div key={size} className="detailed-price-row">
-                                        <span className="detailed-size">{size}:</span> <span className="detailed-price">{price}</span>
+                                        <span className="detailed-size">{size}</span> {/* <span className="detailed-price">{price}</span> */}
                                         <div className="wishlistToggler">
                                             <div className="itemRemove" onClick={() => itemRemove(selectedItem, size)}>-</div>
                                             <div className="itemCount">
                                                 {wishlist.find(i => i.Name === selectedItem.Name && i.Size === size)?.Count || 0}
                                             </div>
-                                            <div className="itemAdd" onClick={() => itemAdd(selectedItem, size, price)}>+</div>
+                                            <div className="itemAdd" onClick={() => itemAdd(selectedItem, size, price, WHICH)}>+</div>
                                         </div>
                                     </div>
                                 ))}
@@ -128,7 +126,7 @@ const BestMenu = ({ WHICH, wishlist, setWishlist }) => {
                                     <div className="item-card-price">
                                         {Object.entries(item.Price).map(([size, price]) => (
                                             <div key={size} className="price-row">
-                                                <span className="size">{size}:</span> <span className="price">{price}</span>
+                                                <span className="size">{size}</span>{/* <span className="price">{price}</span>*/}
                                             </div>
                                         ))}
                                     </div>

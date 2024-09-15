@@ -10,27 +10,27 @@ const Login = ({ setLoggedInUser }) => {
   const [errorMessage, setErrorMessage] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
-  const [userLocation, setUserLocation] = useState(null);
-  const locations = [{latitude:19.1011456,longitude:72.8273729}]
+  // const [userLocation, setUserLocation] = useState(null);
+  // const locations = [{latitude:19.1011456,longitude:72.8273729}]
 
   useEffect(() => {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        (position) => {
-          const { latitude, longitude } = position.coords;
-          setUserLocation({ latitude, longitude });
-          console.log({ latitude, longitude })
-        },
-        (error) => {
-            // display an error if we cant get the users position
-            console.error('Error getting user location:', error);
-        }
-    );
-  }
-  else {
-      // display an error if not supported
-      console.error('Geolocation is not supported by this browser.');
-  }
+  //   if (navigator.geolocation) {
+  //     navigator.geolocation.getCurrentPosition(
+  //       (position) => {
+  //         const { latitude, longitude } = position.coords;
+  //         setUserLocation({ latitude, longitude });
+  //         console.log({ latitude, longitude })
+  //       },
+  //       (error) => {
+  //           // display an error if we cant get the users position
+  //           console.error('Error getting user location:', error);
+  //       }
+  //   );
+  // }
+  // else {
+  //     // display an error if not supported
+  //     console.error('Geolocation is not supported by this browser.');
+  // }
     try {
       if (firebase.auth().currentUser.uid) {
         setLoggedInUser(firebase.auth().currentUser.uid);
@@ -45,7 +45,7 @@ const Login = ({ setLoggedInUser }) => {
     }
     catch (error) {
       if(error.name.toLowerCase() !== "typeerror"){
-      console.log(error.name)}
+      console.error(error.name)}
     }
   }, [setLoggedInUser, navigate])
 
@@ -88,7 +88,9 @@ const Login = ({ setLoggedInUser }) => {
 
   return (
     <div className="loginPage row justify-content-center align-items-center m-0">
-      
+      <div className="col-lg-6 col-md-12 col-sm-12 loginBoxImg">
+        {/* Welcome! */}
+      </div>
       <div className="col-lg-6 col-md-12 col-sm-12 loginBox">
 
         <form onSubmit={handleLogin}>

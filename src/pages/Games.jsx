@@ -7,8 +7,7 @@ import WIMLT from "../assets/WIMLT.png";
 import TOT from "../assets/TOT.png";
 
 const Games = () => {
-
-
+    
     const BackButton = (e) => {
         const timestamp = new Date();
         // Track successful login event
@@ -16,10 +15,9 @@ const Games = () => {
         window.location.href = "/";
     };
 
-
     return (
         <div className="Games">
-<div className='best-menu-container-top' onClick={() => BackButton('Back_Button')}><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#291A02"><path d="M400-80 0-480l400-400 71 71-329 329 329 329-71 71Z"/></svg></div>
+            <div className='best-menu-container-top' onClick={() => BackButton('Back_Button')}><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#291A02"><path d="M400-80 0-480l400-400 71 71-329 329 329 329-71 71Z" /></svg></div>
             <div className="GamesContainer">
                 {/* <img src={logo} alt={logo} className="GamesLogo" /> */}
                 <h1 className="GamesTitle">Ice Breakers</h1>
