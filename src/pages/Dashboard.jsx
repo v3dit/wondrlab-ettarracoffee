@@ -5,7 +5,7 @@ import database from "../config/FirbaseConfig";
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 
-import Ettarra from "../assets/ettarra_logo.png";
+import Ettarra from "../assets/Lookxettarra.png";
 import '../styles/Dashboard.css';
 
 const Dashboard = ({ loggedInUser }) => {
@@ -37,17 +37,17 @@ const Dashboard = ({ loggedInUser }) => {
             <div className="landingLogoContainer"><img className="landingLogo" src={Ettarra} alt="logo" /></div>
             
             {KDSAccess ?
-                <div className="CardMenu" onClick={() => openPage("KDS")} >
+                <div className="DashboardCardMenu" onClick={() => openPage("KDS")} >
                     Open KDS
                 </div>
                 : " "}
             {reportAccess ?
-                <div className="CardMenu" onClick={() => openPage("Reports")} >
+                <div className="DashboardCardMenu" onClick={() => openPage("Reports")} >
                     View Reports
                 </div>
                 : " "}
             <button
-            className="Card"
+            className="DashboardCard"
             onClick={() => {
               // Track sign out event
               window.gtag("event", "sign_out", {

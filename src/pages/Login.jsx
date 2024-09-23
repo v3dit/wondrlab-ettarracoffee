@@ -10,27 +10,8 @@ const Login = ({ setLoggedInUser }) => {
   const [errorMessage, setErrorMessage] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
-  // const [userLocation, setUserLocation] = useState(null);
-  // const locations = [{latitude:19.1011456,longitude:72.8273729}]
 
   useEffect(() => {
-  //   if (navigator.geolocation) {
-  //     navigator.geolocation.getCurrentPosition(
-  //       (position) => {
-  //         const { latitude, longitude } = position.coords;
-  //         setUserLocation({ latitude, longitude });
-  //         console.log({ latitude, longitude })
-  //       },
-  //       (error) => {
-  //           // display an error if we cant get the users position
-  //           console.error('Error getting user location:', error);
-  //       }
-  //   );
-  // }
-  // else {
-  //     // display an error if not supported
-  //     console.error('Geolocation is not supported by this browser.');
-  // }
     try {
       if (firebase.auth().currentUser.uid) {
         setLoggedInUser(firebase.auth().currentUser.uid);
@@ -44,32 +25,33 @@ const Login = ({ setLoggedInUser }) => {
       }
     }
     catch (error) {
-      if(error.name.toLowerCase() !== "typeerror"){
-      console.error(error.name)}
+      if (error.name.toLowerCase() !== "typeerror") {
+        console.error(error.name)
+      }
     }
   }, [setLoggedInUser, navigate])
 
   const handleLogin = (e) => {
     e.preventDefault();
     // Implement Firebase authentication here
-    firebase.auth().setPersistence('session').then(() =>
-      firebase
-        .auth()
-        .signInWithEmailAndPassword(email, password)
-        .then((userCredential) => {
-          const loggedInUser = userCredential.user.uid;
 
-          //const idToken = userCredential.user.getIdToken(); // Retrieve ID token
-          //localStorage.setItem('userToken', idToken);
+    firebase
+      .auth()
+      .signInWithEmailAndPassword(email, password)
+      .then((userCredential) => {
+        const loggedInUser = userCredential.user.uid;
 
-          setLoggedInUser(loggedInUser);
-          // Track successful login event
-          window.gtag("event", "login", {
-            event_category: "email/password",
-            event_label: "logged_in",
-          });
-          navigate("/dashboard");
-        }))
+        //const idToken = userCredential.user.getIdToken(); // Retrieve ID token
+        //localStorage.setItem('userToken', idToken);
+
+        setLoggedInUser(loggedInUser);
+        // Track successful login event
+        window.gtag("event", "login", {
+          event_category: "email/password",
+          event_label: "logged_in",
+        });
+        navigate("/dashboard");
+      })
       .catch((error) => {
         // Track login failed event
         window.gtag("event", "login_failed", {

@@ -28,7 +28,7 @@
     background-color: #FFFFFF;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     overflow: scroll;
 }
 
@@ -43,6 +43,7 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     overflow: scroll;
+    align-self: center;
 }
 
 .landingLogoContainer {

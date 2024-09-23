@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 import './App.css';
+import orderSound from "./assets/orderPlaced.mp3";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 
@@ -26,6 +27,8 @@ function App() {
   const [userName, setUserName] = useState(JSON.parse(localStorage.getItem('looksEttarraUserName')) || null);
   const [placedOrder, setPlacedOrder] = useState([]);
   const [placedOrderOpen, setPlacedOrderOpen] = useState(false);
+
+  const audio = new Audio(orderSound);
 
   useEffect(() => {
     // Update localStorage whenever the wishlist changes
@@ -107,15 +110,18 @@ function App() {
       } else {
         setWishlist([...wishlist, { Name: item.Name, Size: size, Price: price, Count: 1, Category: category }]);
       }
+      const timestamp = new Date();
+      window.gtag("event", `Looks_Item_Added`, { 'timestamp': timestamp.toLocaleString(), "Item": wishlist[existingItemIndex] });
+      console.log(wishlist[existingItemIndex])
     } catch (error) {
       console.error(error.message);
     }
   };
 
-  const itemRemove = (item, size) => {
+  const itemRemove = (item, size, category) => {
     try {
       const existingItemIndex = wishlist.findIndex(
-        (wishlistItem) => wishlistItem.Name === item.Name && wishlistItem.Size === size
+        (wishlistItem) => wishlistItem.Name === item.Name && wishlistItem.Size === size && wishlistItem.Category === category
       );
 
       if (existingItemIndex !== -1) {
@@ -130,9 +136,16 @@ function App() {
           setWishlist(updatedWishlist);
         }
       }
+      const timestamp = new Date();
+      window.gtag("event", `Looks_Item_Removed`, { 'timestamp': timestamp.toLocaleString(), "Order": wishlist[existingItemIndex] });
+      console.log(wishlist[existingItemIndex])
     } catch (error) {
       console.error(error.message);
     }
+  };
+
+  const playNotificationSound = () => {
+    audio.play(); // Play the notification sound
   };
 
   const handlePlaceOrder = async () => {
@@ -159,6 +172,8 @@ function App() {
           customer_name = name;
         }
 
+        playNotificationSound();
+
         // Use the updated customer_name for order placement
         const timestamp = new Date();
         for (const item in wishlist) {
@@ -169,13 +184,19 @@ function App() {
           wishlist[item]['created_on'] = timestamp.toLocaleString();
           wishlist[item]['created_on_date'] = timestamp.toLocaleDateString();
           wishlist[item]['created_on_time'] = timestamp.toLocaleTimeString();
+          wishlist[item]['Section'] = localStorage.getItem('looksEttarraSection');
+          wishlist[item]['Table'] = localStorage.getItem('looksEttarraTable');
           await database.ref(`orders/${customer_name}/${wishlist[item]['order_id']}${item}`).set(wishlist[item]);
           await database.ref(`KDS/new/${wishlist[item]['order_id']}${item}`).set(wishlist[item]);
         }
 
+        window.gtag("event", `Looks_Order_Placed`, { 'timestamp': timestamp.toLocaleString(), "Order": wishlist });
+
         // Clear the wishlist and localStorage after order is placed
         setWishlist([]);
         localStorage.removeItem('looksEttarraWishlist');
+        setWishlistOpen(false);
+        alert("Order Placed Successfully!");
       }
     } catch (error) {
       console.error(error.message);
@@ -251,7 +272,7 @@ function App() {
             <div key={`${item.Name}-${item.Size}`} className='wishlistItem'>
               <div className='wishlistItemName'>{item.Name}</div>
               <div className="wishlistWishlistToggler">
-                <div className="itemRemove" onClick={() => itemRemove(item, item.Size)}>-</div>
+                <div className="itemRemove" onClick={() => itemRemove(item, item.Size, item.Category)}>-</div>
                 <div className="itemCount">{item.Count}</div>
                 <div className="itemAdd" onClick={() => itemAdd(item, item.Size, item.Price, item.Category)}>+</div>
               </div>

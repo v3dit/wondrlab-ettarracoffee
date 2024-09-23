@@ -5,7 +5,7 @@ import '../styles/BestMenu.css'; // Import CSS for styling
 const BestMenu = ({ WHICH, wishlist, setWishlist }) => {
     const [Data, setData] = useState(null);
     const [selectedItem, setSelectedItem] = useState(null); // New state to handle selected item
-    
+
     useEffect(() => {
         const getData = async () => {
             const snapshot = await database.ref(`Menus/${WHICH}`).once('value');
@@ -17,14 +17,14 @@ const BestMenu = ({ WHICH, wishlist, setWishlist }) => {
 
     const BackButton = (e) => {
         const timestamp = new Date();
-        window.gtag("event", `${e}_Click`, { 'timestamp': timestamp.toLocaleString(), "click": e });
+        window.gtag("event", `Looks_${e}_Click`, { 'timestamp': timestamp.toLocaleString(), "click": e });
         // window.fbq('track', `${e}_Click`, { 'timestamp': timestamp.toLocaleString(), "click": e });
         window.location.href = "/";
     };
 
     const openDetailedCard = (item) => {
         const timestamp = new Date();
-        window.gtag("event", `${item.Name}_Card_Opened`, { 'timestamp': timestamp.toLocaleString(), "itemName": item.Name, "itemDetails": item });
+        window.gtag("event", `Looks_${item.Name}_Card_Opened`, { 'timestamp': timestamp.toLocaleString(), "itemName": item.Name, "itemDetails": item });
         setSelectedItem(item); // Update the state with the selected item
     };
 
@@ -35,7 +35,7 @@ const BestMenu = ({ WHICH, wishlist, setWishlist }) => {
     const itemAdd = (item, size, price, WHICH) => {
         // Find the item in the wishlist
         const existingItemIndex = wishlist.findIndex(
-            (wishlistItem) => wishlistItem.Name === item.Name && wishlistItem.Size === size  && wishlistItem.Category === WHICH
+            (wishlistItem) => wishlistItem.Name === item.Name && wishlistItem.Size === size && wishlistItem.Category === WHICH
         );
         if (existingItemIndex !== -1) {
             // Item exists, update the count
@@ -46,11 +46,14 @@ const BestMenu = ({ WHICH, wishlist, setWishlist }) => {
             // Item doesn't exist, add it to the wishlist
             setWishlist([...wishlist, { Name: item.Name, Size: size, Price: price, Count: 1, Category: WHICH }]);
         }
+        
+        const timestamp = new Date();
+        window.gtag("event", `Looks_Item_Added`, { 'timestamp': timestamp.toLocaleString(), "Item": wishlist[existingItemIndex] });
     };
 
     const itemRemove = (item, size) => {
         const existingItemIndex = wishlist.findIndex(
-            (wishlistItem) => wishlistItem.Name === item.Name && wishlistItem.Size === size  && wishlistItem.Category === WHICH
+            (wishlistItem) => wishlistItem.Name === item.Name && wishlistItem.Size === size && wishlistItem.Category === WHICH
         );
 
         if (existingItemIndex !== -1) {
@@ -67,6 +70,8 @@ const BestMenu = ({ WHICH, wishlist, setWishlist }) => {
                 setWishlist(updatedWishlist);
             }
         }
+        const timestamp = new Date();
+        window.gtag("event", `Looks_Item_Removed`, { 'timestamp': timestamp.toLocaleString(), "Order": wishlist[existingItemIndex] });
     };
 
     return (

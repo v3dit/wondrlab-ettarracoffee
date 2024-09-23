@@ -3,12 +3,14 @@ import database from "../config/FirbaseConfig";
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 import "../styles/KDS.css";
+import notify from "../assets/notify.mp3";
 
 const KDS = ({ loggedInUser }) => {
     const [KDSAccess, setKDSAccess] = useState(false);
     const [orders, setOrders] = useState({});
     const [time, setTime] = useState(new Date());
 
+    const audio = new Audio(notify);
 
     useEffect(() => {
         const getAccess = async () => {
@@ -23,7 +25,12 @@ const KDS = ({ loggedInUser }) => {
         getAccess();
     }, [loggedInUser]);
 
+    const playNotificationSound = () => {
+        audio.play(); // Play the notification sound
+    };
+
     useEffect(() => {
+
         const getPlacedOrders = async () => {
             try {
                 setTime(new Date());
@@ -32,8 +39,15 @@ const KDS = ({ loggedInUser }) => {
 
                 const unsubscribe = database.ref(`KDS/new`).on("value", updateOrders);
 
+                // Detect when new orders are added (using onChildAdded)
+                const onNewOrder = database.ref(`KDS/new`).on("child_added", (snapshot) => {
+                    playNotificationSound(); // Play the sound when new order is added
+                    // You can also trigger other notifications here (like browser notifications)
+                });
+
                 return () => {
                     unsubscribe();
+                    database.ref(`KDS/new`).off("child_added", onNewOrder); // Cleanup event listeners
                 };
             } catch (error) {
                 console.error(error.message);
@@ -114,7 +128,8 @@ const KDS = ({ loggedInUser }) => {
                                 <div className="ODSOrderBarOrderID">
                                     Name: {orders[order_id][0]['customer_name'].substring(0, orders[order_id][0]['customer_name'].length - 15)}
                                     <br />
-                                    Order ID:  {order_id}
+                                    {/* Order ID:  {order_id} */}
+                                    {orders[order_id][0]['Section']}, {orders[order_id][0]['Table']}
                                 </div>
                                 <div className="ODSOrderBarTime">Time:<br /> {parseInt(((time) - Date.parse(orders[order_id][0]["created_on"])) / 60000)} mins</div>
                                 <div className="ODSOrderStatus">

@@ -89,7 +89,8 @@ const Reports = ({ loggedInUser }) => {
 
   const calculateTotals = (data) => {
     const totalQty = data.reduce((sum, item) => sum + item.Count, 0);
-    const totalAmt = data.reduce((sum, item) => sum + parseFloat(item.Price.replace('Rs. ', '').replace(',', '')), 0);
+    const totalAmt = data.reduce((sum, item) => sum + parseFloat(item.Price.replace('Rs.', '').replace(/\//g, '').replace(/,/g, '').replace(/:/g, '').replace(/-/g, '').replace(' ', '')), 0);
+    console.log(totalAmt);
     setTotalQuantity(totalQty);
     setTotalAmount(totalAmt.toFixed(2));
   };
