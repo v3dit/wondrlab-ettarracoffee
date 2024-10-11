@@ -10,6 +10,7 @@ import '../styles/Dashboard.css';
 
 const Dashboard = ({ loggedInUser }) => {
     const [reportAccess, setReportAccess] = useState(false);
+    const [stocksAccess, setStocksAccess] = useState(false);
     const [KDSAccess, setKDSAccess] = useState(false);
     const navigate = useNavigate()
 
@@ -18,8 +19,10 @@ const Dashboard = ({ loggedInUser }) => {
             try {
                 const accessSnapshot1 = await database.ref(`KDS_Access/${loggedInUser}`).once('value');
                 setKDSAccess(accessSnapshot1.val())
-                const accessSnapshot2 = await database.ref(`Reports_Access/${loggedInUser}`).once('value');
-                setReportAccess(accessSnapshot2.val())
+                const accessSnapshot2 = await database.ref(`Stocks_Access/${loggedInUser}`).once('value');
+                setStocksAccess(accessSnapshot2.val())
+                const accessSnapshot3 = await database.ref(`Reports_Access/${loggedInUser}`).once('value');
+                setReportAccess(accessSnapshot3.val())
             } catch (error) {
                 console.error(error)
             }
@@ -35,10 +38,16 @@ const Dashboard = ({ loggedInUser }) => {
     return (
         <div className="Dashboard">
             <div className="landingLogoContainer"><img className="landingLogo" src={Ettarra} alt="logo" /></div>
-            
+
             {KDSAccess ?
                 <div className="DashboardCardMenu" onClick={() => openPage("KDS")} >
                     Open KDS
+                </div>
+                : " "}
+
+            {stocksAccess ?
+                <div className="DashboardCardMenu" onClick={() => openPage("Stocks")} >
+                    Stocks
                 </div>
                 : " "}
             {reportAccess ?
@@ -47,20 +56,20 @@ const Dashboard = ({ loggedInUser }) => {
                 </div>
                 : " "}
             <button
-            className="DashboardCard"
-            onClick={() => {
-              // Track sign out event
-              window.gtag("event", "sign_out", {
-                event_category: "email/password",
-                event_label: "signed out",
-              });
-              firebase.auth().signOut();
-              navigate("/login");
-            }}
-          >
-            Sign Out
-          </button>
-                
+                className="DashboardCard"
+                onClick={() => {
+                    // Track sign out event
+                    window.gtag("event", "sign_out", {
+                        event_category: "email/password",
+                        event_label: "signed out",
+                    });
+                    firebase.auth().signOut();
+                    navigate("/login");
+                }}
+            >
+                Sign Out
+            </button>
+
         </div>
     );
 };

@@ -18,6 +18,7 @@ import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import KDS from './pages/KDS';
 import Reports from './pages/Reports';
+import Stocks from './pages/Stocks';
 
 function App() {
   const [loggedInUser, setLoggedInUser] = useState('');
@@ -27,6 +28,7 @@ function App() {
   const [userName, setUserName] = useState(JSON.parse(localStorage.getItem('looksEttarraUserName')) || null);
   const [placedOrder, setPlacedOrder] = useState([]);
   const [placedOrderOpen, setPlacedOrderOpen] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const audio = new Audio(orderSound);
 
@@ -97,22 +99,45 @@ function App() {
     checkAuth();
   }, []);
 
+  if (loading) {
+    return <div className='loading-overlay'><div className='spinner'></div><br /><div className='spinner-message'>Placing Order!</div></div>;
+  }
+
   const itemAdd = (item, size, price, category) => {
     try {
       const existingItemIndex = wishlist.findIndex(
         (wishlistItem) => wishlistItem.Name === item.Name && wishlistItem.Size === size && wishlistItem.Category === category
       );
 
+      // Check if item is out of stock or if adding more would exceed stock
+      if (item.Stock <= 0) {
+        alert("This item is out of stock.");
+        return;
+      }
+
+      const currentWishlistCount = wishlist[existingItemIndex]?.Count || 0;
+
+      if (currentWishlistCount > item.Stock) {
+        const updatedWishlist = [...wishlist];
+        updatedWishlist[existingItemIndex].Count = item.Stock;
+        setWishlist(updatedWishlist);
+      }
+
+      if (currentWishlistCount >= item.Stock) {
+        alert(`Only ${item.Stock} ${item.Name} Available`);
+        return;
+      }
+
       if (existingItemIndex !== -1) {
         const updatedWishlist = [...wishlist];
         updatedWishlist[existingItemIndex].Count += 1;
         setWishlist(updatedWishlist);
       } else {
-        setWishlist([...wishlist, { Name: item.Name, Size: size, Price: price, Count: 1, Category: category }]);
+        setWishlist([...wishlist, { Name: item.Name, Size: size, Price: price, Count: 1, Category: category, Stock: item.Stock, Desc: item.Desc }]);
       }
       const timestamp = new Date();
-      window.gtag("event", `Looks_Item_Added`, { 'timestamp': timestamp.toLocaleString(), "Item": wishlist[existingItemIndex] });
-      console.log(wishlist[existingItemIndex])
+      window.gtag("event", `Looks_Item_Added`, { 'timestamp': timestamp.toLocaleString("en-GB"), "Item": wishlist[existingItemIndex] });
+
     } catch (error) {
       console.error(error.message);
     }
@@ -137,8 +162,8 @@ function App() {
         }
       }
       const timestamp = new Date();
-      window.gtag("event", `Looks_Item_Removed`, { 'timestamp': timestamp.toLocaleString(), "Order": wishlist[existingItemIndex] });
-      console.log(wishlist[existingItemIndex])
+      window.gtag("event", `Looks_Item_Removed`, { 'timestamp': timestamp.toLocaleString("en-GB"), "Order": wishlist[existingItemIndex] });
+
     } catch (error) {
       console.error(error.message);
     }
@@ -150,6 +175,7 @@ function App() {
 
   const handlePlaceOrder = async () => {
     try {
+      setLoading(true);
       let customer_name = userName;
 
       if (window.confirm("Confirm and Proceed")) {
@@ -162,7 +188,7 @@ function App() {
 
           // Append the date to the name
           const timestamp0 = new Date();
-          name = name + " " + timestamp0.toLocaleString().replace(/\//g, '').replace(/, /g, '').replace(/:/g, '').replace(' ', '');
+          name = name + " " + timestamp0.toLocaleString("en-GB").replace(/\//g, '').replace(/, /g, '').replace(/:/g, '').replace(' ', '');
 
           // Save to localStorage and state
           localStorage.setItem('looksEttarraUserName', JSON.stringify(name));
@@ -172,34 +198,103 @@ function App() {
           customer_name = name;
         }
 
-        playNotificationSound();
+        for (const item in wishlist) {
+          const snapshot = await database.ref(`Menus/${wishlist[item].Category}`).once('value');
+          const snapshotData = snapshot.val();
+          const existingItemIndex = Object.values(snapshotData).findIndex(
+            (snapshotDataItems) => wishlist[item].Name === snapshotDataItems.Name && wishlist[item].Desc === snapshotDataItems.Desc
+          );
+
+          const currentStock = snapshotData[existingItemIndex].Stock
+
+          if (currentStock && currentStock >= wishlist[item].Count) {
+
+            // Subtract the stock
+            const newStock = currentStock - wishlist[item].Count;
+
+            // Update the specific index in the array in Firebase
+            await database.ref(`Menus/${wishlist[item].Category}/${existingItemIndex}/Stock`).set(newStock);
+          }
+          else {
+            const existingItemIndex = wishlist.findIndex(
+              (wishlistItem) => wishlistItem.Name === wishlist[item].Name && wishlistItem.Size === wishlist[item].Size && wishlistItem.Category === wishlist[item].Category
+            );
+
+            const currentWishlistCount = wishlist[existingItemIndex]?.Count || 0;
+
+            if (currentWishlistCount > currentStock) {
+              const updatedWishlist = [...wishlist];
+              updatedWishlist[existingItemIndex].Count = currentStock;
+              updatedWishlist[existingItemIndex].Stock = currentStock;
+              setWishlist(updatedWishlist);
+            }
+
+            setLoading(false);
+            alert(`Only ${currentStock || 0} ${wishlist[item].Name} available.`);
+            return;
+          }
+        }
 
         // Use the updated customer_name for order placement
         const timestamp = new Date();
         for (const item in wishlist) {
           wishlist[item]['status'] = "Pending";
           wishlist[item]['customer_name'] = customer_name;  // Use updated customer_name
-          wishlist[item]['order_id'] = timestamp.toLocaleString().replace(/\//g, '').replace(/, /g, '').replace(/:/g, '').replace(' ', '');
-          wishlist[item]['order_item_id'] = timestamp.toLocaleString().replace(/\//g, '').replace(/, /g, '').replace(/:/g, '').replace(' ', '') + item;
-          wishlist[item]['created_on'] = timestamp.toLocaleString();
-          wishlist[item]['created_on_date'] = timestamp.toLocaleDateString();
-          wishlist[item]['created_on_time'] = timestamp.toLocaleTimeString();
+          wishlist[item]['order_id'] = timestamp.toLocaleString("en-GB").replace(/\//g, '').replace(/, /g, '').replace(/:/g, '').replace(' ', '');
+          wishlist[item]['order_item_id'] = timestamp.toLocaleString("en-GB").replace(/\//g, '').replace(/, /g, '').replace(/:/g, '').replace(' ', '') + item;
+          wishlist[item]['created_on'] = timestamp.toLocaleString("en-GB");
+          wishlist[item]['created_on_date'] = timestamp.toLocaleDateString("en-GB");
+          wishlist[item]['created_on_time'] = timestamp.toLocaleTimeString("en-GB");
           wishlist[item]['Section'] = localStorage.getItem('looksEttarraSection');
           wishlist[item]['Table'] = localStorage.getItem('looksEttarraTable');
           await database.ref(`orders/${customer_name}/${wishlist[item]['order_id']}${item}`).set(wishlist[item]);
           await database.ref(`KDS/new/${wishlist[item]['order_id']}${item}`).set(wishlist[item]);
         }
 
-        window.gtag("event", `Looks_Order_Placed`, { 'timestamp': timestamp.toLocaleString(), "Order": wishlist });
+        playNotificationSound();
+
+        window.gtag("event", `Looks_Order_Placed`, { 'timestamp': timestamp.toLocaleString("en-GB"), "Order": wishlist });
 
         // Clear the wishlist and localStorage after order is placed
         setWishlist([]);
         localStorage.removeItem('looksEttarraWishlist');
         setWishlistOpen(false);
+        setLoading(false);
         alert("Order Placed Successfully!");
       }
     } catch (error) {
       console.error(error.message);
+    }
+    finally {
+      setLoading(false);
+    }
+  };
+
+  const handleCancleItem = async (item) => {
+    try {
+      if (window.confirm("Procced Item Cancellation?")) {
+        setLoading(true);
+        const timestamp = new Date();
+        const data1 = await database.ref(`KDS/new/${item.id}`).once('value');
+        if (data1.val().status === 'Pending') {
+          await database.ref(`KDS/new/${item.id}`).remove();
+          await database.ref(`orders/${item.customer_name}/${item.id}`).update({ 'status': "Cancelled", 'cancelled_by': item.customer_name, 'cancelled_on': timestamp.toLocaleString("en-GB") });
+          const data2 = await database.ref(`KDS/new/${item.id}`).once('value');
+          window.gtag("event", `order_canclled`, data2.val());
+          setLoading(false);
+          alert("Cancelled Successfully!")
+        }
+        else {
+          setLoading(false);
+          alert("Can not cancle, already Brewing!");
+        }
+      }
+    }
+    catch (error) {
+      console.error(error.message);
+    }
+    finally {
+      setLoading(false);
     }
   };
 
@@ -228,6 +323,18 @@ function App() {
                 loggedInUser ? (
                   <div>
                     <KDS loggedInUser={loggedInUser} />
+                  </div>
+                ) : (
+                  <Navigate to="/login" />
+                )
+              }
+            />
+            <Route
+              path="Stocks"
+              element={
+                loggedInUser ? (
+                  <div>
+                    <Stocks loggedInUser={loggedInUser} />
                   </div>
                 ) : (
                   <Navigate to="/login" />
@@ -280,13 +387,13 @@ function App() {
             </div>
           ))}
 
-          <div className="placeOrderBar" onClick={() => handlePlaceOrder()}>Place Order</div>
+          <div className="placeOrderBar" onClick={() => handlePlaceOrder()} disabled={loading}>Place Order</div>
         </div>
       ) : (
         <>
           {wishlist.length !== 0 ? (
             <div className={placedOrder.length !== 0 ? 'placedOrderOpenWishlistBar' : 'wishlistBar'} onClick={() => setWishlistOpen(true)}>
-              Wishlist
+              <svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px" fill="#ffffff"><path d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM246-720l96 200h280l110-200H246Zm-38-80h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Zm134 280h280-280Z" /></svg> Cart
             </div>
           ) : " "}
         </>
@@ -300,6 +407,7 @@ function App() {
           </div>
           {placedOrder && Object.keys(placedOrder).map((item) => (
             <div key={`${placedOrder[item].order_item_id}`} className='placedOrderItem'>
+              {placedOrder && placedOrder[item].status === "Pending" && <div className='cancleItem' onClick={() => handleCancleItem(placedOrder[item])}>X</div>}
               <div className='placedOrderItemName'>{placedOrder[item].Name}</div>
               <div className="placedOrderToggler">
                 {/* Conditionally render based on placedOrder[item].status */}
@@ -348,7 +456,7 @@ function App() {
         <>
           {placedOrder.length !== 0 ? (
             <div className='placedOrderBar' onClick={() => setPlacedOrderOpen(true)}>
-              <svg xmlns="http://www.w3.org/2000/svg" height="42px" viewBox="0 -960 960 960" width="42px" fill="#FFFFFF"><path d="M286.67-613.33V-680H840v66.67H286.67Zm0 166.66v-66.66H840v66.66H286.67Zm0 166.67v-66.67H840V-280H286.67ZM153.33-613.33q-13.66 0-23.5-9.84Q120-633 120-647q0-14 9.83-23.5 9.84-9.5 23.84-9.5t23.5 9.58q9.5 9.59 9.5 23.75 0 13.67-9.59 23.5-9.58 9.84-23.75 9.84Zm0 166.66q-13.66 0-23.5-9.83-9.83-9.83-9.83-23.83 0-14 9.83-23.5 9.84-9.5 23.84-9.5t23.5 9.58q9.5 9.58 9.5 23.75 0 13.67-9.59 23.5-9.58 9.83-23.75 9.83Zm0 166.67q-13.66 0-23.5-9.83-9.83-9.84-9.83-23.84t9.83-23.5q9.84-9.5 23.84-9.5t23.5 9.59q9.5 9.58 9.5 23.75 0 13.66-9.59 23.5-9.58 9.83-23.75 9.83Z" /></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#FFFFFF"><path d="M286.67-613.33V-680H840v66.67H286.67Zm0 166.66v-66.66H840v66.66H286.67Zm0 166.67v-66.67H840V-280H286.67ZM153.33-613.33q-13.66 0-23.5-9.84Q120-633 120-647q0-14 9.83-23.5 9.84-9.5 23.84-9.5t23.5 9.58q9.5 9.59 9.5 23.75 0 13.67-9.59 23.5-9.58 9.84-23.75 9.84Zm0 166.66q-13.66 0-23.5-9.83-9.83-9.83-9.83-23.83 0-14 9.83-23.5 9.84-9.5 23.84-9.5t23.5 9.58q9.5 9.58 9.5 23.75 0 13.67-9.59 23.5-9.58 9.83-23.75 9.83Zm0 166.67q-13.66 0-23.5-9.83-9.83-9.84-9.83-23.84t9.83-23.5q9.84-9.5 23.84-9.5t23.5 9.59q9.5 9.58 9.5 23.75 0 13.66-9.59 23.5-9.58 9.83-23.75 9.83Z" /></svg> Orders
             </div>
           ) : " "}
         </>

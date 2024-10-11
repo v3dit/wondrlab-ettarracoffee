@@ -42,7 +42,7 @@ const Landing = () => {
     const redirectTrigger = (e) => {
         const timestamp = new Date();
         // Track successful login event
-        window.gtag("event", `Looks_${e}_Click`, { 'timestamp': timestamp.toLocaleString(), "click": e });
+        window.gtag("event", `Looks_${e}_Click`, { 'timestamp': timestamp.toLocaleString("en-GB"), "click": e });
         window.location.href = e
     };
 

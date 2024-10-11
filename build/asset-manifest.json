@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.493aee5f.css",
-    "main.js": "/static/js/main.63c48044.js",
+    "main.css": "/static/css/main.5144582b.css",
+    "main.js": "/static/js/main.e69317f8.js",
     "static/js/206.9c3495ec.chunk.js": "/static/js/206.9c3495ec.chunk.js",
     "static/media/games.mov": "/static/media/games.3fcfa0240251724d20d3.mov",
     "static/media/TOT.png": "/static/media/TOT.38e09cd48294f4362d00.png",
@@ -21,7 +21,7 @@
     "index.html": "/index.html"
   },
   "entrypoints": [
-    "static/css/main.493aee5f.css",
-    "static/js/main.63c48044.js"
+    "static/css/main.5144582b.css",
+    "static/js/main.e69317f8.js"
   ]
 }

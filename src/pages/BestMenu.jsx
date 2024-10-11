@@ -9,22 +9,39 @@ const BestMenu = ({ WHICH, wishlist, setWishlist }) => {
     useEffect(() => {
         const getData = async () => {
             const snapshot = await database.ref(`Menus/${WHICH}`).once('value');
-            const snapshotData = snapshot.val();
-            setData(snapshotData);
+            if (snapshot.exists()) { // Check if snapshot exists
+                const snapshotData = snapshot.val();
+                setData(snapshotData);
+            }
         };
         getData();
+
+        // Attach an on-value event listener to listen for real-time updates
+        const ref = database.ref(`Menus/${WHICH}`);
+        const unsubscribe = ref.on("value", (snapshot) => {
+            if (snapshot.exists()) { // Check if snapshot exists
+                const snapshotData2 = snapshot.val();
+                setData(snapshotData2);
+            }
+        });
+
+        // Clean up the listener when the component unmounts
+        return () => {
+            ref.off("value", unsubscribe); // Properly detach the listener
+        };
     }, [WHICH]);
+
 
     const BackButton = (e) => {
         const timestamp = new Date();
-        window.gtag("event", `Looks_${e}_Click`, { 'timestamp': timestamp.toLocaleString(), "click": e });
-        // window.fbq('track', `${e}_Click`, { 'timestamp': timestamp.toLocaleString(), "click": e });
+        window.gtag("event", `Looks_${e}_Click`, { 'timestamp': timestamp.toLocaleString("en-GB"), "click": e });
+        // window.fbq('track', `${e}_Click`, { 'timestamp': timestamp.toLocaleString("en-GB"), "click": e });
         window.location.href = "/";
     };
 
     const openDetailedCard = (item) => {
         const timestamp = new Date();
-        window.gtag("event", `Looks_${item.Name}_Card_Opened`, { 'timestamp': timestamp.toLocaleString(), "itemName": item.Name, "itemDetails": item });
+        window.gtag("event", `Looks_${item.Name}_Card_Opened`, { 'timestamp': timestamp.toLocaleString("en-GB"), "itemName": item.Name, "itemDetails": item });
         setSelectedItem(item); // Update the state with the selected item
     };
 
@@ -37,18 +54,39 @@ const BestMenu = ({ WHICH, wishlist, setWishlist }) => {
         const existingItemIndex = wishlist.findIndex(
             (wishlistItem) => wishlistItem.Name === item.Name && wishlistItem.Size === size && wishlistItem.Category === WHICH
         );
+
+        // Check if item is out of stock or if adding more would exceed stock
+        if (item.Stock <= 0) {
+            alert("This item is out of stock.");
+            return;
+        }
+
+        const currentWishlistCount = wishlist[existingItemIndex]?.Count || 0;
+
+        if(currentWishlistCount > item.Stock) {
+            const updatedWishlist = [...wishlist];
+            updatedWishlist[existingItemIndex].Count = item.Stock;
+            setWishlist(updatedWishlist);
+        }
+
+        if (currentWishlistCount >= item.Stock) {
+            alert(`Only ${item.Stock} ${item.Name} Available`);
+            return;
+        }
+
         if (existingItemIndex !== -1) {
             // Item exists, update the count
             const updatedWishlist = [...wishlist];
             updatedWishlist[existingItemIndex].Count += 1;
+            updatedWishlist[existingItemIndex].Stock = item.Stock
             setWishlist(updatedWishlist);
         } else {
             // Item doesn't exist, add it to the wishlist
-            setWishlist([...wishlist, { Name: item.Name, Size: size, Price: price, Count: 1, Category: WHICH }]);
+            setWishlist([...wishlist, { Name: item.Name, Size: size, Price: price, Count: 1, Category: WHICH, Stock: item.Stock, Desc: item.Desc }]);
         }
-        
+
         const timestamp = new Date();
-        window.gtag("event", `Looks_Item_Added`, { 'timestamp': timestamp.toLocaleString(), "Item": wishlist[existingItemIndex] });
+        window.gtag("event", `Looks_Item_Added`, { 'timestamp': timestamp.toLocaleString("en-GB"), "Item": wishlist[existingItemIndex] });
     };
 
     const itemRemove = (item, size) => {
@@ -63,15 +101,17 @@ const BestMenu = ({ WHICH, wishlist, setWishlist }) => {
             if (updatedItem.Count > 1) {
                 // Decrease the count
                 updatedItem.Count -= 1;
+                updatedWishlist[existingItemIndex].Stock = item.Stock
                 setWishlist(updatedWishlist);
             } else {
                 // Remove item from wishlist if count reaches 0
                 updatedWishlist.splice(existingItemIndex, 1);
+                updatedWishlist[existingItemIndex].Stock = item.Stock
                 setWishlist(updatedWishlist);
             }
         }
         const timestamp = new Date();
-        window.gtag("event", `Looks_Item_Removed`, { 'timestamp': timestamp.toLocaleString(), "Order": wishlist[existingItemIndex] });
+        window.gtag("event", `Looks_Item_Removed`, { 'timestamp': timestamp.toLocaleString("en-GB"), "Order": wishlist[existingItemIndex] });
     };
 
     return (
@@ -79,6 +119,7 @@ const BestMenu = ({ WHICH, wishlist, setWishlist }) => {
             {selectedItem ? (
                 // Render the detailed card view when an item is selected
                 <div className="openDetailedCardContainer">
+                    {selectedItem.Stock === 0 ? <div className="Unavailable">Unavailable</div> : ""}
                     <div className="closeButton" onClick={closeDetailedCard}><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#291A02">
                         <path d="M400-80 0-480l400-400 71 71-329 329 329 329-71 71Z" />
                     </svg>
@@ -101,7 +142,7 @@ const BestMenu = ({ WHICH, wishlist, setWishlist }) => {
                                             <div className="itemCount">
                                                 {wishlist.find(i => i.Name === selectedItem.Name && i.Size === size)?.Count || 0}
                                             </div>
-                                            <div className="itemAdd" onClick={() => itemAdd(selectedItem, size, price, WHICH)}>+</div>
+                                            <div className={`itemAdd ${selectedItem.Stock === 0 ? "Disabled" : ""}`} onClick={() => itemAdd(selectedItem, size, price, WHICH)}>+</div>
                                         </div>
                                     </div>
                                 ))}
@@ -120,7 +161,8 @@ const BestMenu = ({ WHICH, wishlist, setWishlist }) => {
                     </div>
                     {Data ? (
                         Data.map((item) => (
-                            <div className="item-card" key={`${item.Name}_${item.Desc}`} onClick={() => openDetailedCard(item)}>
+                            <div className={`item-card ${item.Stock === 0 ? "Disabled" : ""}`} key={`${item.Name}_${item.Desc}`} onClick={() => openDetailedCard(item)}>
+                                {item.Stock === 0 ? <div className="Unavailable">Unavailable</div> : ""}
                                 <div className="item-card-info">
                                     <div className="item-card-name">{item.Name}</div>
                                     {/* <div className="item-card-desc">{item['Img'] === '' ? <>{item.Desc}</> : <>{item['Desc'].length > 50 ? `${item.Desc.slice(0, 50)} ...` : item.Desc} */}

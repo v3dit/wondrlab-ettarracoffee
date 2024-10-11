@@ -20,6 +20,34 @@
     /* Firefox */
 }
 
+.Disabled {
+    background-color: #eee !important;
+    color: #000000 !important;
+    cursor: none;
+    user-select: none;
+    pointer-events: none;
+    
+}
+
+.Disabled * {
+    cursor: none;
+    user-select: none;
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.Unavailable {
+    font-size: 24px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: 3;
+    font-weight: 900;
+    opacity: 1 !important;
+    text-shadow: 1px 1px #555;
+}
+
 .best-menu-container {
     position: absolute;
     top: 0px;
