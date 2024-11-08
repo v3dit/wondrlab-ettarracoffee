@@ -8,13 +8,13 @@ import video2 from "../assets/games.mp4";
 
 const Landing = () => {
     const [index, setIndex] = useState(0)
-    const SOT = ['Coffee, Than Humans.',
-        'Yawn: A silent scream of coffee',
-        'Coffee like coca*ne but better',
-        'Stay Grounded',
-        'Life is what happens between coffee and wine.',
-        'Todays good mood is sponsored by coffee.',
-        'E = mc² (Energy = my coffee²)']
+    const SOT = ["I'd rather take coffee than compliments",
+        "E = mc² (Energy = my coffee²)",
+        "Yawn: A silent scream of coffee",
+        "Coffee like coca*ne but better",
+        "Stay Grounded",
+        "Life is what happens between coffee and wine.",
+        "Todays good mood is sponsored by coffee."]
 
     const location = useLocation();
 
@@ -32,7 +32,7 @@ const Landing = () => {
     useEffect(() => {
         const timer = setInterval(() => {
             setIndex((prevIndex) => (prevIndex + 1) % 7);
-        }, 600000);
+        }, 60000);
 
         return () => {
             clearInterval(timer);

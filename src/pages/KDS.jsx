@@ -9,6 +9,7 @@ const KDS = ({ loggedInUser }) => {
     const [KDSAccess, setKDSAccess] = useState(false);
     const [orders, setOrders] = useState({});
     const [time, setTime] = useState(new Date());
+    const [loading, setLoading] = useState(false);
 
     useEffect(() => {
         const getAccess = async () => {
@@ -34,8 +35,10 @@ const KDS = ({ loggedInUser }) => {
 
         const getPlacedOrders = async () => {
             try {
+                setLoading(true);
                 setTime(new Date());
                 const snapshot = await database.ref(`KDS/new`).once("value");
+                setLoading(false);
                 updateOrders(snapshot);
 
                 const unsubscribe = database.ref(`KDS/new`).on("value", updateOrders);
@@ -52,6 +55,9 @@ const KDS = ({ loggedInUser }) => {
                 };
             } catch (error) {
                 console.error(error.message);
+            }
+            finally {
+                setLoading(false);
             }
         };
 
@@ -85,26 +91,35 @@ const KDS = ({ loggedInUser }) => {
         getPlacedOrders();
     }, []);
 
+    if (loading) {
+        return <div className='loading-overlay'><div className='spinner'></div><br /><div className='spinner-message'>Placing Order!</div></div>;
+    }
+
     const handleCheckboxChange = async (orderId, itemId, isChecked) => {
         try {
+            setLoading(true);
             const newStatus = isChecked ? "Preparing" : "Pending";
             const timestamp = new Date();
             await database.ref(`KDS/new/${itemId}`).update({ status: newStatus, prepared: timestamp.toLocaleString("en-GB"), prepared_by_id: firebase.auth().currentUser.uid, prepared_by_email: firebase.auth().currentUser.email });
-
             await database.ref(`orders/${orders[orderId][0]['customer_name']}/${itemId}/status`).set(newStatus);
+            setLoading(false);
         } catch (error) {
+            setLoading(false);
             console.error(error.message);
+        }
+        finally {
+            setLoading(false);
         }
     };
 
     const handleOrderCheckboxChange = async (orderId, isChecked) => {
         try {
+            setLoading(true);
             const newStatus = isChecked ? "Served" : "Pending";
             let itemIds = []
             for (const item in orders[orderId]) {
                 itemIds = [...itemIds, orders[orderId][item]['order_item_id']];
             }
-
             // database.ref(`KDS/new/${itemId}/status`).set(newStatus);
             for (const itemId in itemIds) {
                 const timestamp = new Date();
@@ -114,8 +129,13 @@ const KDS = ({ loggedInUser }) => {
                 await database.ref(`KDS/completed/${itemIds[itemId]}`).set(snapshot.val());
                 await database.ref(`KDS/new/${itemIds[itemId]}`).remove();
             }
+            setLoading(false);
         } catch (error) {
+            setLoading(false);
             console.error(error.message);
+        }
+        finally {
+            setLoading(false);
         }
     };
 
