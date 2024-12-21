@@ -1,0 +1,84 @@
+.main-container {
+    position: relative;
+    height: 615vh; /* Extra height to allow scrolling */
+    background-color: #201b14; 
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    margin-bottom: "20px";
+    background: url('../assets/kaapiFest/landingbg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-color: #201b14 !important; 
+}
+
+.KF-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    background: transparent;
+    z-index: 20;
+    padding: 10px 0px 50px 0px;
+}
+
+.KF-landingLogoContainer {
+    width: 100vw;
+    height: fit-content;
+    padding: 25px 10px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+
+
+.KF-landingLogo {
+    width: 45vw;
+    max-width: 200px;
+    height: auto;
+    animation: openAni 3s ease-in-out;
+    animation-iteration-count: 0;
+}
+
+.KF-title1 {
+    font-size: 36px;
+    font-weight: 900;
+    line-height: 32px;
+    padding: 10px 50px;
+    text-align: center;
+}
+
+.KF-title2 {
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 18px;
+    text-align: center;
+}
+
+.KF-title3 {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 12px;
+    text-align: center;
+}
+
+.content {
+    position: relative;
+    padding-top: 25px; /* To avoid overlap with the header */
+    height: 100%;
+}
+
+.image-list {
+    position: relative;
+    height: 100%;
+}
+
+.image-card {
+    position: absolute;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    will-change: transform, opacity;
+    perspective: 1000px; /* Add perspective for 3D effect */
+}
+

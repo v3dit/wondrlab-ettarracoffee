@@ -10,6 +10,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 import database from './config/FirbaseConfig';
 
 import Landing from './pages/Landing';
+import LandingKaapiFest from './pages/LandingKaapiFest';
 import BestMenu from './pages/BestMenu';
 import Games from './pages/Games';
 import Game from './pages/Game';
@@ -19,6 +20,7 @@ import Dashboard from './pages/Dashboard';
 import KDS from './pages/KDS';
 import Reports from './pages/Reports';
 import Stocks from './pages/Stocks';
+import KaapiFest from './pages/KaapiFest';
 
 function App() {
   const [loggedInUser, setLoggedInUser] = useState('');
@@ -302,7 +304,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Landing />} />
+          <Route path="/" element={<LandingKaapiFest />} />
           <Route path="/login" element={<Login setLoggedInUser={setLoggedInUser} />} />
           <Route
             path="/dashboard/"
@@ -354,12 +356,13 @@ function App() {
               }
             />
           </Route>
-          <Route path="/Menus" element={<Landing />} />
+          <Route path="/Menus" element={<LandingKaapiFest />} />
           <Route path="Menu/">
             <Route index element={<PageNotFound />} />
             <Route path="ColdCoffeeMenu" element={<BestMenu WHICH={"ColdCoffeeMenu"} wishlist={wishlist} setWishlist={setWishlist} />} />
             <Route path="HotCoffeeMenu" element={<BestMenu WHICH={"HotCoffeeMenu"} wishlist={wishlist} setWishlist={setWishlist} />} />
             <Route path="SavouryMenu" element={<BestMenu WHICH={"SavouryMenu"} wishlist={wishlist} setWishlist={setWishlist} />} />
+            <Route path="KaapiFest" element={<KaapiFest WHICH={"KaapiFestMenu"} wishlist={wishlist} setWishlist={setWishlist}  />} />
           </Route>
           <Route path="/Games" element={<Games />} />
           <Route path="/Game" element={<Game />} />
