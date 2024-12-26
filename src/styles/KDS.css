@@ -12,6 +12,21 @@
     margin-top: 50px;
 }
 
+.KDSHeader {
+    width: 100vw;
+    height: 50px;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background-color: #001E3A;
+    color: #FFFFFF;
+    font-weight: 700;
+}
+
 .KDSOrderCard {
     width: calc(100vw - 50px);
     max-width: 450px;
