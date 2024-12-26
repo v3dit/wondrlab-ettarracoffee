@@ -19,40 +19,7 @@ const KDS = ({ loggedInUser }) => {
             } catch (error) {
                 console.error(error);
             }
-
-            const createNotification = () => {
-                const options = {
-                    body: "Welcome Brew Master!", // Notification body
-                    icon: "https://firebasestorage.googleapis.com/v0/b/ettarracoffee-house.appspot.com/o/logo192.png?alt=media&token=830703e1-b7a9-4d08-9312-d53106c99089", // Replace with your icon URL
-                    vibrate: [100, 50, 100],
-                };
-
-                // Create the notification
-                const notification = new Notification("Hello from Ettarra!", options);
-
-                // Optional: Handle notification click event
-                notification.onclick = () => {
-                    window.focus();
-                    console.log("Notification clicked!");
-                };
-            };
-
-            // Request notification permission if not already granted
-            if (Notification.permission === "default") {
-                Notification.requestPermission().then((permission) => {
-                    if (permission === "granted") {
-                        createNotification();
-                    } else {
-                        console.warn("Permission to display notifications was denied.");
-                    }
-                });
-            } else if (Notification.permission === "granted") {
-                // Permission already granted
-                createNotification()
-            } else {
-                console.log("Permission to display notifications is blocked.");
-            }
-        };
+        }
 
         getAccess();
     }, [loggedInUser]);
@@ -63,50 +30,6 @@ const KDS = ({ loggedInUser }) => {
         const playNotificationSound = () => {
             audio.play(); // Play the notification sound
         };
-
-        const createNotification = () => {
-            const options = {
-                body: "New Order Received", // Notification body
-                icon: "https://firebasestorage.googleapis.com/v0/b/ettarracoffee-house.appspot.com/o/logo192.png?alt=media&token=830703e1-b7a9-4d08-9312-d53106c99089", // Replace with your icon URL
-                vibrate: [100, 50, 100],
-            };
-
-            // Create the notification
-            const notification = new Notification("Hello from Ettarra!", options);
-
-            // Optional: Handle notification click event
-            notification.onclick = () => {
-                window.focus();
-                console.log("Notification clicked!");
-            };
-        };
-
-
-        const showNotification = () => {
-            // Check if the browser supports notifications
-            if (!("Notification" in window)) {
-                console.warn("This browser does not support desktop notifications.");
-                return;
-            }
-
-            // Request notification permission if not already granted
-            if (Notification.permission === "default") {
-                Notification.requestPermission().then((permission) => {
-                    if (permission === "granted") {
-                        createNotification();
-                        playNotificationSound();
-                    } else {
-                        console.warn("Permission to display notifications was denied.");
-                    }
-                });
-            } else if (Notification.permission === "granted") {
-                // Permission already granted
-                createNotification();
-                playNotificationSound();
-            } else {
-                console.log("Permission to display notifications is blocked.");
-            }
-        }
 
         const getPlacedOrders = async () => {
             try {
@@ -122,7 +45,6 @@ const KDS = ({ loggedInUser }) => {
                 const onNewOrder = database.ref(`KDS/new`).on("child_added", (snapshot) => {
                     playNotificationSound(); // Play the sound when new order is added
                     // You can also trigger other notifications here (like browser notifications)
-                    showNotification();
                 });
 
                 return () => {
@@ -163,7 +85,7 @@ const KDS = ({ loggedInUser }) => {
             } finally {
                 setTimeout(function () {
                     playNotificationSound();
-                }, 500); //delay is in milliseconds 
+                }, 1000); //delay is in milliseconds 
             }
         };
 
@@ -171,7 +93,7 @@ const KDS = ({ loggedInUser }) => {
     }, []);
 
     if (loading) {
-        return <div className='loading-overlay'><div className='spinner'></div><br /><div className='spinner-message'>Placing Order!</div></div>;
+        return <div className='loading-overlay'><div className='spinner'></div><br /><div className='spinner-message'>Loading...</div></div>;
     }
 
     const handleCheckboxChange = async (orderId, itemId, isChecked) => {
