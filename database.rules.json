@@ -34,8 +34,11 @@
     },
     "UserCoupons": {
       ".read": "auth != null",
-      ".write": "auth != null && root.child('Coupon_Access').child(auth.uid).exists()",
-      ".indexOn": ["email"]
+      ".indexOn": ["email"],
+      "$coupon_id": {
+        ".read": "data.child('email').val() === auth.email",
+        ".write": "auth != null && (!data.exists() || data.child('email').val() === auth.email)"
+      }
     },
     "CouponUsageLog": {
       ".read": "auth.uid !== null",
@@ -46,11 +49,9 @@
       ".write": "root.child('Admin_Access').child(auth.uid).exists()"
     },
     "users": {
-      ".read": "auth.uid !== null",
-      ".write": "auth.uid !== null",
-      "$user_id": {
-        ".read": "$user_id === auth.uid || root.child('Admin_Access').child(auth.uid).exists()",
-        ".write": "$user_id === auth.uid || root.child('Admin_Access').child(auth.uid).exists()"
+      "$uid": {
+        ".read": "$uid === auth.uid",
+        ".write": "$uid === auth.uid"
       }
     },
     "Reports_Access_Data": {

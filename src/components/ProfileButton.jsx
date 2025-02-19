@@ -1,18 +1,39 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import firebase from 'firebase/compat/app';
 import '../styles/ProfileButton.css';
 
 const ProfileButton = ({ userName }) => {
     const navigate = useNavigate();
+    const [profileImage, setProfileImage] = useState(null);
+
+    useEffect(() => {
+        const fetchProfileImage = async () => {
+            const user = firebase.auth().currentUser;
+            if (user && user.photoURL) {
+                setProfileImage(user.photoURL);
+            }
+        };
+
+        fetchProfileImage();
+    }, []);
+
     const firstLetter = userName ? userName.charAt(0).toUpperCase() : 'P';
 
     return (
-        <button 
+        <button
             className="profile-circle-button"
             onClick={() => navigate('/profile')}
-            title="View Profile"
         >
-            {firstLetter}
+            {profileImage ? (
+                <img 
+                    src={profileImage} 
+                    alt="Profile" 
+                    className="profile-button-image"
+                />
+            ) : (
+                firstLetter
+            )}
         </button>
     );
 };

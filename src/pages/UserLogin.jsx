@@ -33,19 +33,27 @@ const UserLogin = ({ setLoggedInUser }) => {
         try {
             const result = await firebase.auth().signInWithPopup(provider);
             const user = result.user;
+            
+            // Get user profile data
+            const userData = {
+                name: user.displayName, // This gets their Google profile name
+                email: user.email,
+                photoURL: user.photoURL
+            };
+
+            // Save to Firebase database
+            await firebase.database().ref(`users/${user.uid}`).set(userData);
+
             setLoggedInUser(user.uid);
-            window.gtag("event", "user_login_attempt", {
+            window.gtag("event", "user_login_success", {
                 event_category: "google_auth",
-                event_label: "attempt",
+                event_label: "logged_in",
+                user: user.email
             });
             navigate("/menu");
         } catch (error) {
-            console.error("Google sign-in error:", error);
+            console.error("Login Error:", error);
             setErrorMessage(error.message);
-            window.gtag("event", "user_login_error", {
-                event_category: "google_auth",
-                event_label: error.message,
-            });
         }
     };
 

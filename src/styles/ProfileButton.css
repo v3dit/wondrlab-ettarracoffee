@@ -15,8 +15,15 @@
     align-items: center;
     justify-content: center;
     box-shadow: 0 2px 8px rgba(41, 26, 2, 0.2);
+    overflow: hidden;
     z-index: 9999;
     transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.profile-button-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .profile-circle-button:hover {
