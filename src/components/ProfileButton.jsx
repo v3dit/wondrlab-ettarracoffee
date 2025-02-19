@@ -6,33 +6,51 @@ import '../styles/ProfileButton.css';
 const ProfileButton = ({ userName }) => {
     const navigate = useNavigate();
     const [profileImage, setProfileImage] = useState(null);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const fetchProfileImage = async () => {
-            const user = firebase.auth().currentUser;
-            if (user && user.photoURL) {
-                setProfileImage(user.photoURL);
+            try {
+                const user = firebase.auth().currentUser;
+                if (user) {
+                    // Get fresh user data
+                    const userRef = firebase.database().ref(`users/${user.uid}`);
+                    const snapshot = await userRef.once('value');
+                    const userData = snapshot.val();
+                    
+                    // Use Google profile photo or stored photo
+                    setProfileImage(user.photoURL || userData?.photoURL);
+                }
+            } catch (error) {
+                console.error("Error fetching profile image:", error);
+            } finally {
+                setLoading(false);
             }
         };
 
         fetchProfileImage();
     }, []);
 
-    const firstLetter = userName ? userName.charAt(0).toUpperCase() : 'P';
+    if (loading) return null;
 
     return (
         <button
             className="profile-circle-button"
             onClick={() => navigate('/profile')}
+            aria-label="Profile"
         >
             {profileImage ? (
-                <img 
-                    src={profileImage} 
-                    alt="Profile" 
-                    className="profile-button-image"
-                />
+                <div className="profile-image-container">
+                    <img 
+                        src={profileImage} 
+                        alt="Profile" 
+                        className="profile-button-image"
+                    />
+                </div>
             ) : (
-                firstLetter
+                <div className="profile-initial">
+                    {userName ? userName.charAt(0).toUpperCase() : 'U'}
+                </div>
             )}
         </button>
     );
