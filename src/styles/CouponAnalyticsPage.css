@@ -1,0 +1,87 @@
+.analytics-dashboard {
+  padding: 20px;
+  background: #FFF9E3;
+  min-height: 100vh;
+}
+
+.analytics-dashboard h1 {
+  color: #291A02;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.chart-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 30px;
+  padding: 20px;
+}
+
+.chart-container {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(41, 26, 2, 0.1);
+}
+
+.chart-container h2 {
+  color: #291A02;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.unused-coupons-list {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.unused-coupon-item {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  font-size: 0.9rem;
+}
+
+.unused-coupon-item:hover {
+  background: #f5f5f5;
+}
+
+.unused-coupon-item.exhausted {
+  color: #d32f2f;
+}
+
+.unused-coupon-item.exhausted span:last-child {
+  font-weight: 600;
+  color: #d32f2f;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 1.2rem;
+  color: #291A02;
+}
+
+@media (max-width: 768px) {
+  .chart-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .chart-container {
+    padding: 15px;
+  }
+}
+
+.no-data-message {
+    text-align: center;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    margin: 20px;
+    color: #666;
+    box-shadow: 0 2px 8px rgba(41, 26, 2, 0.1);
+} 

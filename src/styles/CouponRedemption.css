@@ -1,0 +1,24 @@
+.coupon-redemption {
+  margin: 10px 0;
+  text-align: center;
+}
+
+.redeem-button {
+  background-color: #291A02;
+  color: #FFF9E3;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+}
+
+.redeem-button:hover {
+  background-color: #3C2A21;
+}
+
+.redeem-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+} 

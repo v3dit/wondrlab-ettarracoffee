@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 import "../styles/Landing.css";
 import Ettarra from "../assets/Lookxettarra.png";
 import video from "../assets/games.mov";
 import video2 from "../assets/games.mp4";
+import heroImage from "../assets/hero-image.png";
 
 const Landing = () => {
     const [index, setIndex] = useState(0)
@@ -17,6 +18,7 @@ const Landing = () => {
         "Todays good mood is sponsored by coffee."]
 
     const location = useLocation();
+    const navigate = useNavigate();
 
     // Parse query parameters from the URL
     const params = new URLSearchParams(location.search);
@@ -47,7 +49,42 @@ const Landing = () => {
     };
 
     return (
-        <div className="LandingContainer">
+        <div className="landing-container">
+            {/* Hero Section with Kaapi Fest Link */}
+            <div 
+                className="hero-section" 
+                onClick={() => navigate("/Menu/KaapiFest")}
+            >
+                <img src={heroImage} alt="Kaapi Festival" className="hero-image" />
+            </div>
+
+            {/* Navigation Menu */}
+            <nav className="landing-nav">
+                <button 
+                    className="nav-button"
+                    onClick={() => navigate("/Menu/KaapiFest")}
+                >
+                    <h2>Kaapi Festival</h2>
+                    <p>Explore our coffee festival menu</p>
+                </button>
+
+                <button 
+                    className="nav-button"
+                    onClick={() => navigate("/Games")}
+                >
+                    <h2>Ice Breaker</h2>
+                    <p>Fun games and activities</p>
+                </button>
+
+                <button 
+                    className="nav-button"
+                    onClick={() => navigate("/menu")}
+                >
+                    <h2>Regular Menu</h2>
+                    <p>Our everyday coffee selection</p>
+                </button>
+            </nav>
+
             <div className="Landing">
                 <div className="landingLogoContainer"><img className="landingLogo" src={Ettarra} alt="logo" /></div>
                 <div className="gameCardContainer" onClick={() => redirectTrigger('Games')}>
@@ -66,13 +103,13 @@ const Landing = () => {
                     <div className="schoolOfThoughtThought">{SOT[index]}</div>
                 </div>
                 <div className="menuCardContainer">
-                    <button className="menuCard ColdMenu" onClick={() => redirectTrigger(`Menu/ColdCoffeeMenu`)}>Cold Coffee</button>
-                    <button className="menuCard HotMenu" onClick={() => redirectTrigger(`Menu/HotCoffeeMenu`)}>Hot Coffee</button>
-                    {/* <button className="menuCard ColdMenu" onClick={() => redirectTrigger('Menu/ColdMenu')}>Cold Coffee</button>
-                    <button className="menuCard ManualBrewMenu" onClick={() => redirectTrigger('Menu/ManualBrewMenu')}>Manual Brews</button>
-                    <button className="menuCard NotCoffeeMenu" onClick={() => redirectTrigger('Menu/NotCoffeeMenu')}>Not Coffee</button>
-                    <button className="menuCard SweetMenu" onClick={() => redirectTrigger('Menu/SweetMenu')}>Sweet</button> */}
-                    <button className="menuCard SavouryMenu" onClick={() => redirectTrigger(`Menu/SavouryMenu`)}>Savoury</button>
+                    <button className="menuCard ColdMenu" onClick={() => redirectTrigger(`menu/cold-coffee`)}>Cold Coffee</button>
+                    <button className="menuCard HotMenu" onClick={() => redirectTrigger(`menu/hot-coffee`)}>Hot Coffee</button>
+                    {/* <button className="menuCard ColdMenu" onClick={() => redirectTrigger('menu/cold-coffee')}>Cold Coffee</button>
+                    <button className="menuCard ManualBrewMenu" onClick={() => redirectTrigger('menu/manual-brew')}>Manual Brews</button>
+                    <button className="menuCard NotCoffeeMenu" onClick={() => redirectTrigger('menu/not-coffee')}>Not Coffee</button>
+                    <button className="menuCard SweetMenu" onClick={() => redirectTrigger('menu/sweet')}>Sweet</button> */}
+                    <button className="menuCard SavouryMenu" onClick={() => redirectTrigger(`menu/savoury`)}>Savoury</button>
                 </div>
                 <br /><br /><br /><br /><br /><br />
             </div>

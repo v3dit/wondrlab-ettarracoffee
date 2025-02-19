@@ -1,43 +1,264 @@
 .Dashboard {
-    width: 100vw;
-    gap: 15px;
-    height: 100vh;
+    min-height: 100vh;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #FFF9E3 0%, #FFF 100%);
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: start;
-    padding: 5vw;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
 }
 
+.landingLogoContainer {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.landingLogo {
+    max-width: 300px;
+    height: auto;
+}
+
+.DashboardCardMenu, 
 .DashboardCard {
-    background-color: #fff;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0px 2px 5px #00000025;
-    overflow: hidden;
+    width: 100%;
     max-width: 600px;
-    width: 90vw;
-    height: 15vh;
-    padding: 15px;
-    text-align: center;
-    align-content: center;
-    align-items: center;
-    font-weight: 600;
+    padding: 25px 30px;
+    background: #FFFFFF;
+    border-radius: 15px;
+    box-shadow: 0px 4px 20px rgba(41, 26, 2, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: relative;
+    overflow: hidden;
 }
 
-.DashboardCardMenu {
-    background-color: #fff;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0px 2px 5px #00000025;
-    overflow: hidden;
-    max-width: 600px;
-    width: 90vw;
-    height: 15vh;
-    padding: 15px;
+.DashboardCardMenu:hover,
+.DashboardCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 25px rgba(41, 26, 2, 0.15);
+}
+
+.DashboardCardMenu::after,
+.DashboardCard::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(135deg, #3C2A21 0%, #291A02 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.DashboardCardMenu:hover::after,
+.DashboardCard:hover::after {
+    opacity: 1;
+}
+
+.DashboardCardMenu h2,
+.DashboardCard h2 {
+    color: #291A02;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.DashboardCardMenu p,
+.DashboardCard p {
+    color: #666;
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* Special styling for Sign Out button */
+.DashboardCard:last-child {
+    background: linear-gradient(135deg, #3C2A21 0%, #291A02 100%);
+    color: #FFF9E3;
     text-align: center;
-    align-content: center;
+    margin-top: 20px;
+}
+
+.DashboardCard:last-child h2 {
+    color: #FFF9E3;
+}
+
+.DashboardCard:last-child p {
+    color: rgba(255, 249, 227, 0.8);
+}
+
+.DashboardCard:last-child::after {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .Dashboard {
+        padding: 20px 15px;
+    }
+
+    .landingLogo {
+        max-width: 250px;
+    }
+
+    .DashboardCardMenu,
+    .DashboardCard {
+        padding: 20px 25px;
+    }
+}
+
+.dashboard-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #FFF9E3 0%, #FFF 100%);
+    padding: 2rem;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    font-weight: 700;
-    font-size: x-large;
+    margin-bottom: 2rem;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.dashboard-logo {
+    width: 120px;
+    height: auto;
+    object-fit: contain;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #291A02;
+    margin: 0.5rem 0;
+}
+
+.dashboard-navigation {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.dashboard-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    text-align: left;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-2px);
+}
+
+.dashboard-card h2 {
+    color: #291A02;
+    margin-bottom: 0.5rem;
+}
+
+.dashboard-card p {
+    color: #666;
+    margin: 0;
+}
+
+.logout-btn {
+    padding: 0.5rem 1rem;
+    background-color: #291A02;
+    color: #FFF9E3;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Loading and Error States */
+.loading-spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+}
+
+.error-message {
+    color: #dc3545;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dashboard-container {
+        padding: 1rem;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .dashboard-navigation {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-logo {
+        width: 80px;
+    }
+}
+
+.SignOutButton {
+    width: 100%;
+    padding: 20px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 12px;
+    background-color: #291A02;
+    color: #FFF9E3;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.SignOutButton h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #FFF9E3;
+}
+
+.SignOutButton p {
+    margin: 5px 0 0;
+    font-size: 1rem;
+    color: rgba(255, 249, 227, 0.8);
+}
+
+.SignOutButton:hover {
+    background-color: #3d2503;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(41, 26, 2, 0.2);
 }

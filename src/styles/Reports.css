@@ -1,105 +1,183 @@
 /* ReportsContainer Styles */
-.ReportsContainer {
-  padding: 20px;
-  font-family: Arial, sans-serif;
+.reports-container {
+  padding: 30px;
+  background: #FFF9E3;
+  min-height: 100vh;
+  color: #291A02;
 }
 
 /* ReportsFilters Styles */
-.ReportsFilters {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
+.reports-controls {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(41, 26, 2, 0.1);
+  margin-bottom: 30px;
+  display: grid;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto 30px;
 }
 
-.ReportsFilters input[type="text"] {
-  padding: 8px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
+.search-input {
+  width: 100%;
+  padding: 12px 20px;
+  border: 2px solid #E0E0E0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
 }
 
-.dateInput {
-  width: 250px;
+.search-input:focus {
+  border-color: #4A2B0F;
+  outline: none;
 }
 
-.ReportsFilters select {
-  padding: 8px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
-}
-
-.ReportsFilters button {
-  padding: 10px 15px;
-  border: none;
-  border-radius: 4px;
-  background-color: #007bff;
-  color: white;
-  font-size: 16px;
+.category-select {
+  width: 100%;
+  padding: 12px 20px;
+  border: 2px solid #E0E0E0;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: white;
   cursor: pointer;
 }
 
-.ReportsFilters button:hover {
-  background-color: #0056b3;
+.date-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.date-input {
+  padding: 12px 20px;
+  border: 2px solid #E0E0E0;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.export-button {
+  background: #291A02;
+  color: #FFF9E3;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+.export-button:hover {
+  background: #4A2B0F;
 }
 
 /* ReportsSummary Styles */
-.ReportsSummary {
-  margin-bottom: 20px;
+.reports-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+  max-width: 1200px;
+  margin: 0 auto 30px;
 }
 
-.ReportsSummary p {
-  font-size: 18px;
-  margin: 5px 0;
+.summary-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(41, 26, 2, 0.1);
+  text-align: center;
+}
+
+.summary-label {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.summary-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #291A02;
 }
 
 /* ReportsTable Styles */
-.ReportsTable {
+.reports-table-container {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(41, 26, 2, 0.1);
+  overflow: hidden;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.reports-table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 20px;
+  font-size: 0.9rem;
 }
 
-.ReportsTable thead {
-  background-color: #f2f2f2;
-}
-
-.ReportsTable th,
-.ReportsTable td {
-  padding: 10px;
-  border: 1px solid #ddd;
+.reports-table th {
+  background: #291A02;
+  color: #FFF9E3;
+  padding: 15px;
   text-align: left;
+  font-weight: 600;
 }
 
-.ReportsTable th {
-  background-color: #007bff;
-  color: white;
-  font-weight: bold;
+.reports-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #E0E0E0;
 }
 
-.ReportsTable tr:nth-child(even) {
-  background-color: #f9f9f9;
+.reports-table tr:hover {
+  background: #FFF9E3;
 }
 
-.ReportsTable tr:hover {
-  background-color: #f1f1f1;
+.timestamp-cell {
+  color: #666;
+  font-size: 0.85rem;
+}
+
+.price-cell {
+  font-weight: 600;
+  color: #291A02;
+}
+
+.customer-cell {
+  color: #4A2B0F;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .ReportsFilters {
-    flex-direction: column;
+  .reports-container {
+    padding: 15px;
   }
+  
+  .date-inputs {
+    grid-template-columns: 1fr;
+  }
+  
+  .reports-table-container {
+    overflow-x: auto;
+  }
+}
 
-  .ReportsFilters input[type="text"],
-  .ReportsFilters select {
-    width: 100%;
-    margin-bottom: 10px;
-  }
+/* Loading State */
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  color: #291A02;
+}
 
-  .ReportsFilters button {
-    width: 100%;
-  }
+/* Empty State */
+.no-data-message {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+  font-size: 1.1rem;
 }

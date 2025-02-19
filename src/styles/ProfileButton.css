@@ -1,0 +1,36 @@
+.profile-circle-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #4A2B0F;
+    color: #FFF9E3;
+    border: none;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(41, 26, 2, 0.2);
+    z-index: 9999;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.profile-circle-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(41, 26, 2, 0.3);
+    background: #6B3F15;
+}
+
+@media (max-width: 768px) {
+    .profile-circle-button {
+        top: 10px;
+        left: 10px;
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+} 

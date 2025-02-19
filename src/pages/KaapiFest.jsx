@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import database from '../config/FirbaseConfig';
+import MenuItem from '../components/MenuItem';
 import '../styles/BestMenu.css'; // Import CSS for styling
+import { useNavigate } from 'react-router-dom';
 
-const BestMenu = ({ WHICH, wishlist, setWishlist }) => {
+const KaapiFest = ({ WHICH, wishlist, setWishlist, loggedInUser, itemAdd, itemRemove }) => {
     const [Data, setData] = useState(null);
     const [selectedItem, setSelectedItem] = useState(null); // New state to handle selected item
+    const navigate = useNavigate();
 
     useEffect(() => {
         const getData = async () => {
@@ -31,6 +34,15 @@ const BestMenu = ({ WHICH, wishlist, setWishlist }) => {
         };
     }, [WHICH]);
 
+    const handleOrder = (item) => {
+        // Add item to wishlist (cart)
+        const existingItem = wishlist.find(i => i.Name === item.Name);
+        if (existingItem) {
+            itemAdd(item);
+        } else {
+            setWishlist(prev => [...prev, { ...item, Count: 1 }]);
+        }
+    };
 
     const BackButton = (e) => {
         const timestamp = new Date();
@@ -49,73 +61,17 @@ const BestMenu = ({ WHICH, wishlist, setWishlist }) => {
         setSelectedItem(null); // Reset the selected item when closing the detailed view
     };
 
-    const itemAdd = (item, size, price, WHICH) => {
-        // Find the item in the wishlist
-        const existingItemIndex = wishlist.findIndex(
-            (wishlistItem) => wishlistItem.Name === item.Name && wishlistItem.Size === size && wishlistItem.Category === WHICH
-        );
-
-        // Check if item is out of stock or if adding more would exceed stock
-        if (item.Stock <= 0) {
-            alert("This item is out of stock.");
-            return;
-        }
-
-        const currentWishlistCount = wishlist[existingItemIndex]?.Count || 0;
-
-        if(currentWishlistCount > item.Stock) {
-            const updatedWishlist = [...wishlist];
-            updatedWishlist[existingItemIndex].Count = item.Stock;
-            setWishlist(updatedWishlist);
-        }
-
-        if (currentWishlistCount >= item.Stock) {
-            alert(`Only ${item.Stock} ${item.Name} Available`);
-            return;
-        }
-
-        if (existingItemIndex !== -1) {
-            // Item exists, update the count
-            const updatedWishlist = [...wishlist];
-            updatedWishlist[existingItemIndex].Count += 1;
-            updatedWishlist[existingItemIndex].Stock = item.Stock
-            setWishlist(updatedWishlist);
-        } else {
-            // Item doesn't exist, add it to the wishlist
-            setWishlist([...wishlist, { Name: item.Name, Size: size, Price: price, Count: 1, Category: WHICH, Stock: item.Stock, Desc: item.Desc }]);
-        }
-
-        const timestamp = new Date();
-        window.gtag("event", `Looks_Item_Added`, { 'timestamp': timestamp.toLocaleString("en-GB"), "Item": wishlist[existingItemIndex] });
-    };
-
-    const itemRemove = (item, size) => {
-        const existingItemIndex = wishlist.findIndex(
-            (wishlistItem) => wishlistItem.Name === item.Name && wishlistItem.Size === size && wishlistItem.Category === WHICH
-        );
-
-        if (existingItemIndex !== -1) {
-            const updatedWishlist = [...wishlist];
-            const updatedItem = updatedWishlist[existingItemIndex];
-
-            if (updatedItem.Count > 1) {
-                // Decrease the count
-                updatedItem.Count -= 1;
-                updatedWishlist[existingItemIndex].Stock = item.Stock
-                setWishlist(updatedWishlist);
-            } else {
-                // Remove item from wishlist if count reaches 0
-                updatedWishlist.splice(existingItemIndex, 1);
-                updatedWishlist[existingItemIndex].Stock = item.Stock
-                setWishlist(updatedWishlist);
-            }
-        }
-        const timestamp = new Date();
-        window.gtag("event", `Looks_Item_Removed`, { 'timestamp': timestamp.toLocaleString("en-GB"), "Order": wishlist[existingItemIndex] });
+    const handleProfileClick = () => {
+        navigate('/profile');
     };
 
     return (
         <div className="best-menu-container">
+            <button className="profile-button" onClick={handleProfileClick}>
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" fill="#FFF9E3">
+                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                </svg>
+            </button>
             {selectedItem ? (
                 // Render the detailed card view when an item is selected
                 <div className="openDetailedCardContainer">
@@ -161,30 +117,12 @@ const BestMenu = ({ WHICH, wishlist, setWishlist }) => {
                     </div>
                     {Data ? (
                         Data.map((item) => (
-                            <div className={`item-card ${item.Stock === 0 ? "Disabled" : ""}`} key={`${item.Name}_${item.Desc}`} onClick={() => openDetailedCard(item)}>
-                                {item.Stock === 0 ? <div className="Unavailable">Unavailable</div> : ""}
-                                <div className="item-card-info">
-                                    <div className="item-card-name">{item.Name}</div>
-                                    {/* <div className="item-card-desc">{item['Img'] === '' ? <>{item.Desc}</> : <>{item['Desc'].length > 50 ? `${item.Desc.slice(0, 50)} ...` : item.Desc} */}
-                                    <div className="item-card-desc">{item['Desc'].length > 50 ? `${item.Desc.slice(0, 50)} ...` : item.Desc}
-                                        {item['Desc'].length > 50 && (
-                                            <span className="read-more">(Read more)</span>
-                                        )}</div>
-                                    <div className="item-card-price">
-                                        {Object.entries(item.Price).map(([size, price]) => (
-                                            <div key={size} className="price-row">
-                                                <span className="size">{size}</span>{/* <span className="price">{price}</span>*/}
-                                            </div>
-                                        ))}
-                                    </div>
-                                </div>
-                                {item['Img'] && (
-                                    <div className="item-card-img">
-                                        <img src={item['Img']} alt={item.Name} />
-                                    </div>
-                                )}
-                                <span className='addIcon'>Add +</span>
-                            </div>
+                            <MenuItem 
+                                key={`${item.Name}_${item.Desc}`}
+                                item={item}
+                                loggedInUser={loggedInUser}
+                                onOrder={handleOrder}
+                            />
                         ))
                     ) : (
                         <div className="loading">Loading...</div>
@@ -196,4 +134,4 @@ const BestMenu = ({ WHICH, wishlist, setWishlist }) => {
     );
 };
 
-export default BestMenu;
+export default KaapiFest;

@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import img9 from "../assets/kaapiFest/landing.png";
+import ProfileButton from '../components/ProfileButton';
+import firebase from 'firebase/compat/app';
+import database from '../config/FirbaseConfig';
 
 import "../styles/LandingKaapiFest.css";
 import Ettarra from "../assets/Lookxettarra.png";
@@ -19,6 +22,7 @@ const Landing = () => {
         "Stay Grounded"]
 
     const location = useLocation();
+    const [userName, setUserName] = useState('');
 
     // Parse query parameters from the URL
     const params = new URLSearchParams(location.search);
@@ -36,6 +40,24 @@ const Landing = () => {
             setIndex((prevIndex) => (prevIndex + 1) % 7);
         }, 60000);
 
+        const fetchUserName = async () => {
+            const user = firebase.auth().currentUser;
+            if (user) {
+                try {
+                    const userRef = database.ref(`users/${user.uid}`);
+                    const snapshot = await userRef.once('value');
+                    const userData = snapshot.val();
+                    if (userData && userData.name) {
+                        setUserName(userData.name);
+                    }
+                } catch (error) {
+                    console.error("Error fetching user name:", error);
+                }
+            }
+        };
+
+        fetchUserName();
+
         return () => {
             clearInterval(timer);
         };
@@ -50,6 +72,7 @@ const Landing = () => {
 
     return (
         <div className="LandingContainer">
+            <ProfileButton userName={userName} />
             <div className="Landing">
                 <div className="kaapifestbannder" onClick={() => redirectTrigger('Menu/KaapiFest')}>
                     <img src={img9} alt="KaapiFest" />
@@ -73,13 +96,13 @@ const Landing = () => {
                     </div>
                 </div>
                 <div className="menuCardContainer">
-                    <button className="menuCard ColdMenu" onClick={() => redirectTrigger(`Menu/ColdCoffeeMenu`)}>Cold Coffee</button>
-                    <button className="menuCard HotMenu" onClick={() => redirectTrigger(`Menu/HotCoffeeMenu`)}>Hot Coffee</button>
-                    {/* <button className="menuCard ColdMenu" onClick={() => redirectTrigger('Menu/ColdMenu')}>Cold Coffee</button>
-                    <button className="menuCard ManualBrewMenu" onClick={() => redirectTrigger('Menu/ManualBrewMenu')}>Manual Brews</button>
-                    <button className="menuCard NotCoffeeMenu" onClick={() => redirectTrigger('Menu/NotCoffeeMenu')}>Not Coffee</button>
-                    <button className="menuCard SweetMenu" onClick={() => redirectTrigger('Menu/SweetMenu')}>Sweet</button> */}
-                    <button className="menuCard SavouryMenu" onClick={() => redirectTrigger(`Menu/SavouryMenu`)}>Savoury</button>
+                    <button className="menuCard ColdMenu" onClick={() => redirectTrigger(`menu/cold-coffee`)}>Cold Coffee</button>
+                    <button className="menuCard HotMenu" onClick={() => redirectTrigger(`menu/hot-coffee`)}>Hot Coffee</button>
+                    {/* <button className="menuCard ColdMenu" onClick={() => redirectTrigger('menu/cold-coffee')}>Cold Coffee</button>
+                    <button className="menuCard ManualBrewMenu" onClick={() => redirectTrigger('menu/manual-brew')}>Manual Brews</button>
+                    <button className="menuCard NotCoffeeMenu" onClick={() => redirectTrigger('menu/not-coffee')}>Not Coffee</button>
+                    <button className="menuCard SweetMenu" onClick={() => redirectTrigger('menu/sweet')}>Sweet</button> */}
+                    <button className="menuCard SavouryMenu" onClick={() => redirectTrigger(`menu/savoury`)}>Savoury</button>
                 </div>
                 <div className="schoolOfThought">
                     <div className="schoolOfThoughtTitle">Quote For The Day</div>

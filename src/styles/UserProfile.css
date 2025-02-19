@@ -1,0 +1,276 @@
+.profile-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: linear-gradient(135deg, #FFF9E3 0%, #FFF 100%);
+    min-height: 100vh;
+}
+
+.profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.logout-btn {
+    padding: 0.5rem 1rem;
+    background-color: #291A02;
+    color: #FFF9E3;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.profile-section {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.info-item {
+    padding: 1rem;
+    background: #f8f8f8;
+    border-radius: 4px;
+}
+
+.info-item label {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.order-history {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.order-card {
+    background: #f8f8f8;
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.order-items {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.order-item {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 1rem;
+    align-items: center;
+}
+
+.order-total {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid #ddd;
+    font-weight: bold;
+}
+
+/* Loading and Error States */
+.loading-spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+}
+
+.error-message {
+    color: #dc3545;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile-container {
+        padding: 1rem;
+    }
+    
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .order-item {
+        grid-template-columns: 1fr auto;
+    }
+}
+
+.profile-content {
+    display: grid;
+    gap: 2rem;
+}
+
+.user-info-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.info-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    gap: 1rem;
+}
+
+.info-row h3 {
+    min-width: 100px;
+    margin: 0;
+}
+
+.edit-name-container {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.name-input {
+    padding: 0.5rem;
+    border: 1px solid #291A02;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.save-btn, .cancel-btn, .edit-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.save-btn {
+    background: #291A02;
+    color: #FFF9E3;
+}
+
+.cancel-btn {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+}
+
+.edit-btn {
+    background: #291A02;
+    color: #FFF9E3;
+    margin-left: 1rem;
+}
+
+.coupon-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-top: 2rem;
+}
+
+.active-coupons {
+    background: #291A02;
+    color: #FFF9E3;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 700;
+    display: block;
+    margin: 1rem 0;
+}
+
+.last-allocation {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    display: block;
+    margin-top: 0.5rem;
+}
+
+.redemption-history {
+    margin-top: 2rem;
+}
+
+.history-list {
+    margin-top: 1rem;
+}
+
+.redemption-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.redemption-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.item-name {
+    font-weight: 600;
+    color: #291A02;
+}
+
+.redemption-date {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.item-price {
+    font-weight: 600;
+    color: #291A02;
+}
+
+.no-history {
+    text-align: center;
+    color: #6c757d;
+    padding: 2rem;
+}
+
+@media (max-width: 768px) {
+    .profile-container {
+        padding: 1rem;
+    }
+    
+    .redemption-item {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+    
+    .info-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .edit-name-container {
+        flex-wrap: wrap;
+    }
+} 

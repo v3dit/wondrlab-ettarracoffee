@@ -1,10 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import database from '../config/FirbaseConfig';
 import '../styles/BestMenu.css'; // Import CSS for styling
+import { useNavigate } from 'react-router-dom';
+import ProfileButton from '../components/ProfileButton';
+import firebase from 'firebase/compat/app';
 
-const BestMenu = ({ WHICH, wishlist, setWishlist }) => {
+const BestMenu = ({ WHICH, wishlist, setWishlist, itemAdd, itemRemove }) => {
     const [Data, setData] = useState(null);
     const [selectedItem, setSelectedItem] = useState(null); // New state to handle selected item
+    const [userName, setUserName] = useState('');
+    const navigate = useNavigate();
 
     useEffect(() => {
         const getData = async () => {
@@ -31,12 +36,31 @@ const BestMenu = ({ WHICH, wishlist, setWishlist }) => {
         };
     }, [WHICH]);
 
+    useEffect(() => {
+        const fetchUserName = async () => {
+            const user = firebase.auth().currentUser;
+            if (user) {
+                try {
+                    const userRef = database.ref(`users/${user.uid}`);
+                    const snapshot = await userRef.once('value');
+                    const userData = snapshot.val();
+                    if (userData && userData.name) {
+                        setUserName(userData.name);
+                    }
+                } catch (error) {
+                    console.error("Error fetching user name:", error);
+                }
+            }
+        };
+
+        fetchUserName();
+    }, []);
 
     const BackButton = (e) => {
         const timestamp = new Date();
         window.gtag("event", `Looks_${e}_Click`, { 'timestamp': timestamp.toLocaleString("en-GB"), "click": e });
-        // window.fbq('track', `${e}_Click`, { 'timestamp': timestamp.toLocaleString("en-GB"), "click": e });
-        window.location.href = "/";
+        // Use React Router instead of window.location for smoother navigation
+        navigate("/menu");  // Add useNavigate hook
     };
 
     const openDetailedCard = (item) => {
@@ -49,73 +73,9 @@ const BestMenu = ({ WHICH, wishlist, setWishlist }) => {
         setSelectedItem(null); // Reset the selected item when closing the detailed view
     };
 
-    const itemAdd = (item, size, price, WHICH) => {
-        // Find the item in the wishlist
-        const existingItemIndex = wishlist.findIndex(
-            (wishlistItem) => wishlistItem.Name === item.Name && wishlistItem.Size === size && wishlistItem.Category === WHICH
-        );
-
-        // Check if item is out of stock or if adding more would exceed stock
-        if (item.Stock <= 0) {
-            alert("This item is out of stock.");
-            return;
-        }
-
-        const currentWishlistCount = wishlist[existingItemIndex]?.Count || 0;
-
-        if(currentWishlistCount > item.Stock) {
-            const updatedWishlist = [...wishlist];
-            updatedWishlist[existingItemIndex].Count = item.Stock;
-            setWishlist(updatedWishlist);
-        }
-
-        if (currentWishlistCount >= item.Stock) {
-            alert(`Only ${item.Stock} ${item.Name} Available`);
-            return;
-        }
-
-        if (existingItemIndex !== -1) {
-            // Item exists, update the count
-            const updatedWishlist = [...wishlist];
-            updatedWishlist[existingItemIndex].Count += 1;
-            updatedWishlist[existingItemIndex].Stock = item.Stock
-            setWishlist(updatedWishlist);
-        } else {
-            // Item doesn't exist, add it to the wishlist
-            setWishlist([...wishlist, { Name: item.Name, Size: size, Price: price, Count: 1, Category: WHICH, Stock: item.Stock, Desc: item.Desc }]);
-        }
-
-        const timestamp = new Date();
-        window.gtag("event", `Looks_Item_Added`, { 'timestamp': timestamp.toLocaleString("en-GB"), "Item": wishlist[existingItemIndex] });
-    };
-
-    const itemRemove = (item, size) => {
-        const existingItemIndex = wishlist.findIndex(
-            (wishlistItem) => wishlistItem.Name === item.Name && wishlistItem.Size === size && wishlistItem.Category === WHICH
-        );
-
-        if (existingItemIndex !== -1) {
-            const updatedWishlist = [...wishlist];
-            const updatedItem = updatedWishlist[existingItemIndex];
-
-            if (updatedItem.Count > 1) {
-                // Decrease the count
-                updatedItem.Count -= 1;
-                updatedWishlist[existingItemIndex].Stock = item.Stock
-                setWishlist(updatedWishlist);
-            } else {
-                // Remove item from wishlist if count reaches 0
-                updatedWishlist.splice(existingItemIndex, 1);
-                updatedWishlist[existingItemIndex].Stock = item.Stock
-                setWishlist(updatedWishlist);
-            }
-        }
-        const timestamp = new Date();
-        window.gtag("event", `Looks_Item_Removed`, { 'timestamp': timestamp.toLocaleString("en-GB"), "Order": wishlist[existingItemIndex] });
-    };
-
     return (
         <div className="best-menu-container">
+            <ProfileButton userName={userName} />
             {selectedItem ? (
                 // Render the detailed card view when an item is selected
                 <div className="openDetailedCardContainer">

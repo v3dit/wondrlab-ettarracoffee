@@ -32,18 +32,13 @@ const Reports = ({ loggedInUser }) => {
   useEffect(() => {
     if (reportsAccess) {
       const fetchData = async () => {
-        try {
-          const snapshot = await database.ref('KDS/completed').once('value');
-          const data = snapshot.val();
-          const parsedData = data ? Object.keys(data).map(key => ({ ...data[key], id: key })) : [];
-          setData(parsedData);
-          setFilteredData(parsedData);
-          calculateTotals(parsedData);
-        } catch (error) {
-          console.error(error);
-        }
+        const snapshot = await database.ref('KDS/completed').once('value');
+        const data = snapshot.val();
+        const parsedData = data ? Object.keys(data).map(key => ({ ...data[key], id: key })) : [];
+        setData(parsedData);
+        setFilteredData(parsedData);
+        calculateTotals(parsedData);
       };
-
       fetchData();
     }
   }, [reportsAccess]);
@@ -88,9 +83,18 @@ const Reports = ({ loggedInUser }) => {
   };
 
   const calculateTotals = (data) => {
-    const totalQty = data.reduce((sum, item) => sum + item.Count, 0);
-    const totalAmt = data.reduce((sum, item) => sum + parseFloat(item.Price.replace('Rs.', '').replace(/\//g, '').replace(/,/g, '').replace(/:/g, '').replace(/-/g, '').replace(' ', '')), 0);
-    console.log(totalAmt);
+    const totalQty = data.reduce((sum, item) => sum + (item.Count || 0), 0);
+    const totalAmt = data.reduce((sum, item) => {
+        if (!item.Price) return sum;
+        const price = item.Price.toString().replace('Rs.', '')
+            .replace(/\//g, '')
+            .replace(/,/g, '')
+            .replace(/:/g, '')
+            .replace(/-/g, '')
+            .replace(' ', '');
+        return sum + parseFloat(price || 0);
+    }, 0);
+    
     setTotalQuantity(totalQty);
     setTotalAmount(totalAmt.toFixed(2));
   };
@@ -103,82 +107,100 @@ const Reports = ({ loggedInUser }) => {
   };
 
   return (
-    <div className="ReportsContainer">
-      {reportsAccess && (
-        <>
-          <div className="ReportsFilters">
-            <input
-              type="text"
-              placeholder="Search..."
-              value={search}
-              onChange={handleSearch}
-            />
-            <select value={categoryFilter} onChange={handleCategoryFilter}>
-              <option value="">All Categories</option>
-              <option value="ColdCoffeeMenu">Cold Coffee</option>
-              <option value="HotCoffeeMenu">Hot Coffee</option>
-              <option value="SavouryMenu">Savoury Coffee</option>
-            </select>
-            <input
-              className="dateInput"
-              type="date"
-              value={startDate}
-              onChange={handleStartDateChange}
-              placeholder="Start Date"
-            />
-            <input
-              className="dateInput"
-              type="date"
-              value={endDate}
-              onChange={handleEndDateChange}
-              placeholder="End Date"
-            />
-            <button onClick={exportToExcel}>Export to Excel</button>
-          </div>
-          <div className="ReportsSummary">
-            <p>Total Quantity Sold: {totalQuantity}</p>
-            <p>Total Amount: Rs. {totalAmount}</p>
-          </div>
-          <table className="ReportsTable">
-            <thead>
-              <tr>
-                <th>Timestamp</th>
-                <th>Date</th>
-                <th>Time</th>
-                <th>Name</th>
-                <th>Category</th>
-                <th>Count</th>
-                <th>Price</th>
-                <th>Size</th>
-                <th>Customer</th>
-                <th>Prepared On</th>
-                <th>Prepared By</th>
-                <th>Served On</th>
-                <th>Served By</th>
+    <div className="reports-container">
+      <h1 className="reports-header">☕ Sales Reports</h1>
+      
+      <div className="reports-controls">
+        <input
+          type="text"
+          placeholder="Search orders..."
+          className="search-input"
+          value={search}
+          onChange={handleSearch}
+        />
+        
+        <select 
+          className="category-select"
+          value={categoryFilter}
+          onChange={handleCategoryFilter}
+        >
+          <option value="All Categories">All Categories</option>
+          <option value="ColdCoffeeMenu">Cold Coffee</option>
+          <option value="HotCoffeeMenu">Hot Coffee</option>
+          <option value="SavouryMenu">Savoury Coffee</option>
+        </select>
+        
+        <div className="date-inputs">
+          <input
+            type="date"
+            className="date-input"
+            value={startDate}
+            onChange={handleStartDateChange}
+          />
+          <input
+            type="date"
+            className="date-input"
+            value={endDate}
+            onChange={handleEndDateChange}
+          />
+        </div>
+        
+        <button className="export-button" onClick={exportToExcel}>
+          Export to Excel
+        </button>
+      </div>
+
+      <div className="reports-summary">
+        <div className="summary-card">
+          <div className="summary-label">Total Quantity Sold</div>
+          <div className="summary-value">{totalQuantity}</div>
+        </div>
+        <div className="summary-card">
+          <div className="summary-label">Total Amount</div>
+          <div className="summary-value">Rs. {totalAmount}</div>
+        </div>
+      </div>
+
+      <div className="reports-table-container">
+        <table className="reports-table">
+          <thead>
+            <tr>
+              <th>Timestamp</th>
+              <th>Date</th>
+              <th>Time</th>
+              <th>Name</th>
+              <th>Category</th>
+              <th>Count</th>
+              <th>Price</th>
+              <th>Size</th>
+              <th>Customer</th>
+              <th>Prepared On</th>
+              <th>Prepared By</th>
+              <th>Served On</th>
+              <th>Served By</th>
+            </tr>
+          </thead>
+          <tbody>
+            {filteredData.map((item, index) => (
+              <tr key={index}>
+                <td className="timestamp-cell">{item.created_on}</td>
+                <td>{item.created_on_date}</td>
+                <td>{item.created_on_time}</td>
+                <td>{item.Name}</td>
+                <td>{item.Category}</td>
+                <td>{item.Count}</td>
+                <td className="price-cell">Rs. {item.Price}</td>
+                <td>{item.Size}</td>
+                <td className="customer-cell">{item.customer_name}</td>
+                <td>{item.prepared}</td>
+                <td>{item.prepared_by_email}</td>
+                <td>{item.served}</td>
+                <td>{item.served_by_email}</td>
               </tr>
-            </thead>
-            <tbody>
-              {filteredData.map(item => (
-                <tr key={item.id}>
-                  <td>{item.created_on}</td>
-                  <td>{item.created_on_date}</td>
-                  <td>{item.created_on_time}</td>
-                  <td>{item.Name}</td>
-                  <td>{item.Category}</td>
-                  <td>{item.Count}</td>
-                  <td>{item.Price}</td>
-                  <td>{item.Size}</td>
-                  <td>{item.customer_name}</td>
-                  <td>{item.prepared}</td>
-                  <td>{item.prepared_by_email}</td>
-                  <td>{item.served}</td>
-                  <td>{item.served_by_email}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </>
-      )}
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };

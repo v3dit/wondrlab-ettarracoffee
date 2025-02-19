@@ -28,7 +28,7 @@ const KDS = ({ loggedInUser }) => {
         const audio = new Audio(notify);
 
         const playNotificationSound = () => {
-            audio.play(); // Play the notification sound
+            audio.play();
         };
 
         const getPlacedOrders = async () => {
@@ -36,25 +36,20 @@ const KDS = ({ loggedInUser }) => {
                 setLoading(true);
                 setTime(new Date());
                 const snapshot = await database.ref(`KDS/new`).once("value");
-                setLoading(false);
                 updateOrders(snapshot);
 
                 const unsubscribe = database.ref(`KDS/new`).on("value", updateOrders);
-
-                // Detect when new orders are added (using onChildAdded)
-                const onNewOrder = database.ref(`KDS/new`).on("child_added", (snapshot) => {
-                    playNotificationSound(); // Play the sound when new order is added
-                    // You can also trigger other notifications here (like browser notifications)
+                const onNewOrder = database.ref(`KDS/new`).on("child_added", () => {
+                    playNotificationSound();
                 });
 
                 return () => {
                     unsubscribe();
-                    database.ref(`KDS/new`).off("child_added", onNewOrder); // Cleanup event listeners
+                    database.ref(`KDS/new`).off("child_added", onNewOrder);
                 };
             } catch (error) {
                 console.error(error.message);
-            }
-            finally {
+            } finally {
                 setLoading(false);
             }
         };
@@ -66,6 +61,7 @@ const KDS = ({ loggedInUser }) => {
                     const sortedOrders = Object.keys(ordersObject)
                         .map(key => ({ ...ordersObject[key], id: key }))
                         .sort((a, b) => new Date(b.created_on) - new Date(a.created_on));
+                    
                     const groupedOrders = sortedOrders.reduce((acc, order) => {
                         const orderId = order.order_id;
                         if (!acc[orderId]) {
@@ -76,39 +72,37 @@ const KDS = ({ loggedInUser }) => {
                     }, {});
                     setOrders(groupedOrders);
                 } else {
-                    // Clear orders if snapshot.val() is null
                     setOrders({});
                 }
-            }
-            catch (error) {
+            } catch (error) {
                 console.error(error.message);
-            } finally {
-                setTimeout(function () {
-                    playNotificationSound();
-                }, 1000); //delay is in milliseconds 
             }
         };
 
         getPlacedOrders();
+        
+        // Update time every minute
+        const timeInterval = setInterval(() => setTime(new Date()), 60000);
+        return () => clearInterval(timeInterval);
     }, []);
-
-    if (loading) {
-        return <div className='loading-overlay'><div className='spinner'></div><br /><div className='spinner-message'>Loading...</div></div>;
-    }
 
     const handleCheckboxChange = async (orderId, itemId, isChecked) => {
         try {
             setLoading(true);
             const newStatus = isChecked ? "Preparing" : "Pending";
             const timestamp = new Date();
-            await database.ref(`KDS/new/${itemId}`).update({ status: newStatus, prepared: timestamp.toLocaleString("en-GB"), prepared_by_id: firebase.auth().currentUser.uid, prepared_by_email: firebase.auth().currentUser.email });
+            
+            await database.ref(`KDS/new/${itemId}`).update({
+                status: newStatus,
+                prepared: timestamp.toLocaleString("en-GB"),
+                prepared_by_id: firebase.auth().currentUser.uid,
+                prepared_by_email: firebase.auth().currentUser.email
+            });
+            
             await database.ref(`orders/${orders[orderId][0]['customer_name']}/${itemId}/status`).set(newStatus);
-            setLoading(false);
         } catch (error) {
-            setLoading(false);
             console.error(error.message);
-        }
-        finally {
+        } finally {
             setLoading(false);
         }
     };
@@ -117,25 +111,28 @@ const KDS = ({ loggedInUser }) => {
         try {
             setLoading(true);
             const newStatus = isChecked ? "Served" : "Pending";
-            let itemIds = []
-            for (const item in orders[orderId]) {
-                itemIds = [...itemIds, orders[orderId][item]['order_item_id']];
-            }
-            // database.ref(`KDS/new/${itemId}/status`).set(newStatus);
-            for (const itemId in itemIds) {
+            const itemIds = orders[orderId].map(item => item.order_item_id);
+            
+            for (const itemId of itemIds) {
                 const timestamp = new Date();
-                await database.ref(`KDS/new/${itemIds[itemId]}`).update({ status: newStatus, served: timestamp.toLocaleString("en-GB"), served_by_id: firebase.auth().currentUser.uid, served_by_email: firebase.auth().currentUser.email });
-                await database.ref(`orders/${orders[orderId][0]['customer_name']}/${itemIds[itemId]}/status`).set(newStatus);
-                const snapshot = await database.ref(`KDS/new/${itemIds[itemId]}`).once('value');
-                await database.ref(`KDS/completed/${itemIds[itemId]}`).set(snapshot.val());
-                await database.ref(`KDS/new/${itemIds[itemId]}`).remove();
+                await database.ref(`KDS/new/${itemId}`).update({
+                    status: newStatus,
+                    served: timestamp.toLocaleString("en-GB"),
+                    served_by_id: firebase.auth().currentUser.uid,
+                    served_by_email: firebase.auth().currentUser.email
+                });
+                
+                await database.ref(`orders/${orders[orderId][0]['customer_name']}/${itemId}/status`).set(newStatus);
+                
+                if (newStatus === "Served") {
+                    const snapshot = await database.ref(`KDS/new/${itemId}`).once('value');
+                    await database.ref(`KDS/completed/${itemId}`).set(snapshot.val());
+                    await database.ref(`KDS/new/${itemId}`).remove();
+                }
             }
-            setLoading(false);
         } catch (error) {
-            setLoading(false);
             console.error(error.message);
-        }
-        finally {
+        } finally {
             setLoading(false);
         }
     };
@@ -144,49 +141,79 @@ const KDS = ({ loggedInUser }) => {
         const [datePart, timePart] = timestampString.split(", ");
         const [day, month, year] = datePart.split("/");
         const [hour, minute, second] = timePart.split(":");
-        return new Date(year, month - 1, day, hour, minute, second); // Month is zero-indexed
+        return new Date(year, month - 1, day, hour, minute, second);
     };
+
+    if (loading) {
+        return <div className='loading-overlay'><div className='spinner'></div><br /><div className='spinner-message'>Loading...</div></div>;
+    }
 
     return (
         <div className="KDSContainer">
-            {KDSAccess &&
+            {KDSAccess && (
                 <>
-                    <h1 className="KDSHeader">Kitchen Display System</h1>
-                    {orders && Object.keys(orders).map((order_id) => (
-                        <div className="KDSOrderCard" key={order_id}>
-                            <div className="ODSOrderBar">
-                                <div className="ODSOrderBarOrderID">
-                                    Name: {orders[order_id][0]['customer_name'].substring(0, orders[order_id][0]['customer_name'].length - 15)}
-                                    <br />
-                                    {/* Order ID:  {order_id} */}
-                                    {orders[order_id][0]['Section']}, {orders[order_id][0]['Table']}
-                                </div>
-                                <div className="ODSOrderBarTime">Time:<br /> {parseInt(((time) - parseCustomTimestamp(orders[order_id][0]["created_on"]).getTime()) / 60000)} mins</div>
-                                <div className="ODSOrderStatus">
-                                    Served: <input type="checkbox" checked={orders[order_id][0].status === 'Served'} onChange={(e) => (handleOrderCheckboxChange(order_id, e.target.checked))} />
-                                </div>
-                            </div>
-                            <div className="ODSOrderItems">
-                                {orders[order_id] && orders[order_id].map((item) => (
-                                    <div className="ODSOrderItem" key={item['order_item_id']}>
-                                        <div className="ODSOrderItemName">{item.Name}</div>
-                                        <div className="ODSOrderItemCount">{item.Count}</div>
-                                        <input
-                                            className="ODSOrderItemStatus"
-                                            type="checkbox"
-                                            checked={item.status === 'Preparing'}
-                                            onChange={(e) => handleCheckboxChange(order_id, item['order_item_id'], e.target.checked)}
-                                        />
+                    <h1 className="KDSHeader">☕ Kitchen Display System</h1>
+                    {Object.keys(orders).map((order_id) => {
+                        const orderItems = orders[order_id];
+                        if (!orderItems || !orderItems[0]) return null;
+                        
+                        const customerName = orderItems[0].customer_name;
+                        const section = orderItems[0].Section;
+                        const table = orderItems[0].Table;
+                        const createdOn = orderItems[0].created_on;
+
+                        return (
+                            <div className="KDSOrderCard" key={order_id}>
+                                <div className="ODSOrderBar">
+                                    <div className="ODSOrderBarOrderID">
+                                        {customerName && (
+                                            <>
+                                                Customer: {customerName.substring(0, customerName.length - 15)}
+                                                <br />
+                                            </>
+                                        )}
+                                        {section && table && `Location: ${section}, Table ${table}`}
                                     </div>
-                                ))}
+                                    <div className="time-display">
+                                        Waiting time: {createdOn && 
+                                            parseInt(((time) - parseCustomTimestamp(createdOn).getTime()) / 60000)} mins
+                                    </div>
+                                    <div className="ODSOrderStatus">
+                                        <div className="checkbox-wrapper" data-tooltip="Mark order as served">
+                                            Order Complete
+                                            <input 
+                                                type="checkbox" 
+                                                checked={orderItems[0].status === 'Served'} 
+                                                onChange={(e) => handleOrderCheckboxChange(order_id, e.target.checked)}
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="ODSOrderItems">
+                                    {orderItems.map((item) => (
+                                        <div className="ODSOrderItem" key={item.order_item_id}>
+                                            <div className="ODSOrderItemName">{item.Name}</div>
+                                            <div className="ODSOrderItemCount">×{item.Count}</div>
+                                            <div className="checkbox-wrapper" data-tooltip="Mark as preparing">
+                                                <input
+                                                    className="ODSOrderItemStatus"
+                                                    type="checkbox"
+                                                    checked={item.status === 'Preparing'}
+                                                    onChange={(e) => handleCheckboxChange(order_id, item.order_item_id, e.target.checked)}
+                                                />
+                                                <span className="status-label">
+                                                    {item.status === 'Preparing' ? 'Preparing' : 'Pending'}
+                                                </span>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
-                        </div>
-                    ))}
-                    <br />
-                    <br />
-                    <br />
+                        );
+                    })}
+                    <br /><br /><br />
                 </>
-            }
+            )}
         </div>
     );
 };

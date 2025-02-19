@@ -13,7 +13,7 @@ const Login = ({ setLoggedInUser }) => {
 
   useEffect(() => {
     try {
-      if (firebase.auth().currentUser.uid) {
+      if (firebase.auth().currentUser?.uid) {
         setLoggedInUser(firebase.auth().currentUser.uid);
         // Track successful login event
         window.gtag("event", "session_continued", {
@@ -69,53 +69,46 @@ const Login = ({ setLoggedInUser }) => {
   };
 
   return (
-    <div className="loginPage row justify-content-center align-items-center m-0">
-      <div className="col-lg-6 col-md-12 col-sm-12 loginBoxImg">
-        {/* Welcome! */}
-      </div>
-      <div className="col-lg-6 col-md-12 col-sm-12 loginBox">
-
-        <form onSubmit={handleLogin}>
-          <h1 className="logintitle col-10">Login</h1>
-          <input
-            className="col-10"
-            type="email"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <input
-            className="col-10"
-            type={showPassword ? "text" : "password"}
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          <div
-            className="toggleShowPassowrd"
-            onClick={toggleShowPassword}
-          >
-            {showPassword ? "Hide" : "Show"}
-          </div>
-          <div />
-          {errorMessage ? (
-            <p
-              className="text-danger"
-              style={{
-                fontSize: "100%",
-                marginBottom: "-1%",
-                cursor: "pointer",
-              }}
-            >
-              {errorMessage.split(":")[1]}
-            </p>
-          ) : (
-            ""
-          )}
-          <button className="col-6" onClick={handleLogin}>
-            Login &#8594;
-          </button>
-        </form>
+    <div className="login-container">
+      <div className="login-box">
+        <div className="logo-container">
+          <div className="logo">ಎ</div>
+        </div>
+        <div className="form-container">
+          <h1>Login</h1>
+          <form onSubmit={handleLogin}>
+            <div className="input-group">
+              <input
+                type="email"
+                placeholder="Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </div>
+            <div className="input-group">
+              <input
+                type={showPassword ? "text" : "password"}
+                placeholder="Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+              <span 
+                className="show-password"
+                onClick={toggleShowPassword}
+              >
+                {showPassword ? "Hide" : "Show"}
+              </span>
+            </div>
+            {errorMessage && (
+              <div className="error-message">
+                {errorMessage.split(":")[1]}
+              </div>
+            )}
+            <button type="submit">
+              Login →
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   );

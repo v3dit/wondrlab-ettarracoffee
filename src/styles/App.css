@@ -1,0 +1,113 @@
+.wishlistBar {
+  position: fixed;
+  bottom: 1vh;
+  left: 50vw;
+  translate: -50%;
+  width: 90vw;
+  height: 8vh;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #d5cfcf;
+  background-color: #291A02;
+  border-radius: 15px;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  box-shadow: 0px 2px 10px #291A0235;
+  z-index: 5;
+}
+
+.placeOrderBar {
+  position: fixed;
+  bottom: 1vh;
+  left: 50vw;
+  translate: -50%;
+  width: 90vw;
+  height: 8vh;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  background-color: #291A02;
+  border-radius: 15px;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  box-shadow: 0px 2px 10px #291A0235;
+  z-index: 5;
+}
+
+.placedOrderOpenWishlistBar {
+  position: fixed;
+  bottom: 1vh;
+  left: 49vw;
+  translate: -100%;
+  width: 45vw;
+  height: 8vh;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  background-color: #291A02;
+  border-radius: 15px;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  box-shadow: 0px 2px 10px #291A0235;
+  z-index: 5;
+}
+
+.wishlist {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #FFF9E3;
+  z-index: 10;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.wishlistItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  margin: 10px 0;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.wishlistWishlistToggler {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.itemAdd, .itemRemove {
+  cursor: pointer;
+  padding: 5px 10px;
+  background-color: #291A02;
+  color: white;
+  border-radius: 4px;
+}
+
+.itemCount {
+  padding: 0 10px;
+}
+
+.coupon-btn {
+  background: #291A02;
+  color: #FFF9E3;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+  margin-top: 8px;
+}
+
+.coupon-applied {
+  color: #2e7d32;
+  font-size: 0.9em;
+  margin-top: 4px;
+} 

@@ -1,10 +1,10 @@
 {
   "rules": {
     "KDS_Access": {
-      ".read": "auth.uid !== null",
-      ".write": false
+      ".read": "auth != null",
+      ".write": "root.child('Admin_Access').child(auth.uid).exists()"
     },
-      "Stocks_Access":{
+    "Stocks_Access":{
       ".read": "auth.uid !== null",
       ".write": false
     },
@@ -21,12 +21,93 @@
       ".write": true
     },
     "KDS": {
-      ".read": true,
-      ".write": true
+      ".read": "auth != null",
+      ".write": "auth != null"
     },
     "Stocks_Log":{
       ".read": "auth.uid !== null",
       ".write": "auth.uid !== null"
+    },
+    "Coupon_Access": {
+      ".read": "auth.uid !== null",
+      ".write": false
+    },
+    "UserCoupons": {
+      ".read": "auth != null",
+      ".write": "auth != null && root.child('Coupon_Access').child(auth.uid).exists()",
+      ".indexOn": ["email"]
+    },
+    "CouponUsageLog": {
+      ".read": "auth.uid !== null",
+      ".write": "auth.uid !== null"
+    },
+    "CouponAnalytics": {
+      ".read": "root.child('Admin_Access').child(auth.uid).exists()",
+      ".write": "root.child('Admin_Access').child(auth.uid).exists()"
+    },
+    "users": {
+      ".read": "auth.uid !== null",
+      ".write": "auth.uid !== null",
+      "$user_id": {
+        ".read": "$user_id === auth.uid || root.child('Admin_Access').child(auth.uid).exists()",
+        ".write": "$user_id === auth.uid || root.child('Admin_Access').child(auth.uid).exists()"
+      }
+    },
+    "Reports_Access_Data": {
+      "Coupons": {
+        "users": {
+          "$user_id": {
+            ".read": "$user_id === auth.uid || root.child('Coupon_Access').child(auth.uid).exists()",
+            ".write": "$user_id === auth.uid || root.child('Coupon_Access').child(auth.uid).exists()"
+          }
+        },
+        "allocations": {
+          ".read": "root.child('Coupon_Access').child(auth.uid).exists()",
+          ".write": "root.child('Coupon_Access').child(auth.uid).exists()"
+        },
+        "revocations": {
+          ".read": "root.child('Admin_Access').child(auth.uid).exists()",
+          ".write": "root.child('Admin_Access').child(auth.uid).exists()"
+        },
+        "analytics": {
+          ".read": "root.child('Admin_Access').child(auth.uid).exists()",
+          ".write": "root.child('Admin_Access').child(auth.uid).exists()"
+        }
+      }
+    },
+    "Orders": {
+      ".read": "auth != null",
+      ".write": "auth != null",
+      "$orderId": {
+        ".validate": "newData.hasChildren(['items', 'user', 'userId', 'timestamp', 'status'])",
+        "items": {
+          "$item": {
+            "Price": {
+              ".validate": "newData.isNumber()",
+              ".write": "true"
+            },
+            "Count": {
+              ".validate": "newData.isNumber()",
+              ".write": "true"
+            }
+          }
+        },
+        "userId": {
+          ".validate": "newData.val() === auth.uid"
+        },
+        "total": {
+          ".validate": "newData.isNumber()",
+          ".write": "true"
+        }
+      }
+    },
+    "Admin_Access": {
+      ".read": "auth != null",
+      ".write": "root.child('Admin_Access').child(auth.uid).exists()"
+    },
+    "Menu": {
+      ".read": "auth != null",
+      ".write": "root.child('Admin_Access').child(auth.uid).exists()"
     }
   }
 }

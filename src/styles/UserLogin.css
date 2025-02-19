@@ -1,0 +1,147 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+.login-box {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    position: relative;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    background: #291A02;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2.5rem;
+    position: relative;
+}
+
+.logo::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border: 2px dashed #291A02;
+    border-radius: 50%;
+    animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.form-container {
+    width: 100%;
+}
+
+.form-container h1 {
+    color: #291A02;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.error-message {
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    padding: 0.75rem;
+    background-color: rgba(220, 53, 69, 0.1);
+    border-radius: 8px;
+}
+
+.google-signin-button {
+    width: 100%;
+    padding: 12px;
+    background: white;
+    color: #291A02;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.google-signin-button img {
+    width: 24px;
+    height: 24px;
+}
+
+.google-signin-button:hover {
+    background: #f8f9fa;
+    border-color: #291A02;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.loading-spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+    color: #291A02;
+    font-size: 1.1rem;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 480px) {
+    .login-box {
+        padding: 1.5rem;
+    }
+
+    .logo {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+    }
+
+    .form-container h1 {
+        font-size: 1.75rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .google-signin-button {
+        padding: 10px;
+        font-size: 0.95rem;
+    }
+}
+
+/* Tablet Responsive Styles */
+@media (min-width: 481px) and (max-width: 768px) {
+    .login-box {
+        max-width: 440px;
+    }
+} 
