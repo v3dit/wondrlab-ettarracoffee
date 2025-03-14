@@ -1,62 +1,68 @@
 .profile-circle-button {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    width: 45px;
-    height: 45px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    background: #291A02;
-    color: #FFF9E3;
+    background-color: #4A2B0F;
     border: none;
-    font-size: 20px;
-    font-weight: 600;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 2px 8px rgba(41, 26, 2, 0.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    z-index: 10;
     overflow: hidden;
-    z-index: 9999;
-    transition: transform 0.2s, box-shadow 0.2s;
     padding: 0;
 }
 
-.profile-image-container {
-    width: 100%;
-    height: 100%;
+.profile-circle-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.profile-loading {
+    width: 24px;
+    height: 24px;
     border-radius: 50%;
-    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: #fff;
+    animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .profile-button-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
+    border-radius: 50%;
 }
 
-.profile-initial {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #291A02;
-    color: #FFF9E3;
-    font-size: 20px;
-    font-weight: 600;
+.profile-circle-button:not(:hover) .profile-button-image {
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.profile-circle-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(41, 26, 2, 0.3);
+.profile-circle-button:hover .profile-button-image {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    filter: brightness(1.1);
 }
 
 @media (max-width: 768px) {
     .profile-circle-button {
         top: 10px;
-        left: 10px;
-        width: 40px;
-        height: 40px;
-        font-size: 18px;
+        right: 10px;
+        width: 36px;
+        height: 36px;
     }
 } 

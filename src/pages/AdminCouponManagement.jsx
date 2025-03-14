@@ -195,10 +195,44 @@ const AdminCouponManagement = ({ loggedInUser }) => {
     });
   };
 
+  const downloadSampleCsv = () => {
+    const sampleData = [
+      {
+        "Sr.No": "1",
+        "Emp Code": "WYP-201",
+        "Name": "Sanjana",
+        "Personal Contact number": "8082639106",
+        "Official E mail add": "sanjana@drilldown.online",
+        "number_of_coupons": "10"
+      },
+      {
+        "Sr.No": "2",
+        "Emp Code": "WYP-271",
+        "Name": "Aniruddh S",
+        "Personal Contact number": "8928335178",
+        "Official E mail add": "aniruddhs105@gmail.com",
+        "number_of_coupons": "10"
+      }
+    ];
+    
+    const csv = Papa.unparse(sampleData);
+    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+    const link = document.createElement('a');
+    
+    link.href = URL.createObjectURL(blob);
+    link.setAttribute('download', 'coupon_allocation_template.csv');
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   const handleFileUpload = async (event) => {
     try {
         const file = event.target.files[0];
-        if (!file) return;
+        if (!file) {
+            alert('No file selected');
+            return;
+        }
 
         // Check if user has coupon access first
         const accessSnapshot = await database.ref(`Coupon_Access/${loggedInUser}`).once('value');
@@ -211,145 +245,178 @@ const AdminCouponManagement = ({ loggedInUser }) => {
         // Ask for confirmation before proceeding
         const confirmUpload = window.confirm('Are you sure you want to upload and process this CSV file?');
         if (!confirmUpload) {
-            event.target.value = ''; // Clear the file input
+            event.target.value = '';
             return;
         }
 
         setLoading(true);
         
         Papa.parse(file, {
+            header: true,
+            skipEmptyLines: true,
             complete: async (results) => {
-                const validData = results.data.filter(row => row.email && row.number_of_coupons);
-                const skippedUsers = [];
-                const successfulUsers = [];
-                
-                for (const row of validData) {
-                    try {
-                        // Query existing user by email
-                        const couponQuery = database.ref('UserCoupons')
-                            .orderByChild('email')
-                            .equalTo(row.email);
-                        
-                        const snapshot = await couponQuery.once('value');
-                        const existingUserData = snapshot.val();
+                try {
+                    if (!results.data || results.data.length === 0) {
+                        alert('No valid data found in CSV file');
+                        setLoading(false);
+                        return;
+                    }
 
-                        if (existingUserData) {
-                            // Handle existing user logic...
-                            const userId = Object.keys(existingUserData)[0];
-                            const userData = existingUserData[userId];
-                            const now = Date.now();
+                    console.log("Raw CSV data:", results.data);
+
+                    // Check if we have the correct columns
+                    const firstRow = results.data[0];
+                    if (!firstRow["Official E mail add"] || !firstRow["number_of_coupons"]) {
+                        alert('CSV file is missing required columns. Please use the correct format.');
+                        setLoading(false);
+                        return;
+                    }
+
+                    const validData = results.data.filter(row => {
+                        const hasEmail = row["Official E mail add"] && row["Official E mail add"].trim();
+                        const hasCoupons = row["number_of_coupons"] && !isNaN(parseInt(row["number_of_coupons"]));
+                        return hasEmail && hasCoupons;
+                    });
+
+                    console.log("Valid data after filtering:", validData);
+
+                    if (validData.length === 0) {
+                        alert('No valid data found after filtering');
+                        setLoading(false);
+                        return;
+                    }
+
+                    const skippedUsers = [];
+                    const successfulUsers = [];
+                    
+                    for (const row of validData) {
+                        try {
+                            const email = row["Official E mail add"].trim();
+                            const numberOfCoupons = parseInt(row["number_of_coupons"]);
+
+                            console.log(`Processing: Email=${email}, Coupons=${numberOfCoupons}`);
+
+                            // Query existing user by email
+                            const couponQuery = database.ref('UserCoupons')
+                                .orderByChild('email')
+                                .equalTo(email);
                             
-                            if (userData.active_coupons > 0) {
-                                const lastAllocation = userData.last_allocation_date;
-                                const daysSinceAllocation = lastAllocation ? 
-                                    Math.floor((now - Number(lastAllocation)) / (24 * 60 * 60 * 1000)) : 
-                                    31;
+                            const snapshot = await couponQuery.once('value');
+                            const existingUserData = snapshot.val();
 
-                                if (daysSinceAllocation < 30) {
-                                    skippedUsers.push({
-                                        email: row.email,
-                                        reason: `Already has ${userData.active_coupons} active coupons, allocated ${daysSinceAllocation} days ago. Must wait ${30 - daysSinceAllocation} more days.`
-                                    });
-                                    continue;
+                            if (existingUserData) {
+                                const userId = Object.keys(existingUserData)[0];
+                                const userData = existingUserData[userId];
+                                const now = Date.now();
+                                
+                                if (userData.active_coupons > 0) {
+                                    const lastAllocation = userData.last_allocation_date;
+                                    const daysSinceAllocation = lastAllocation ? 
+                                        Math.floor((now - Number(lastAllocation)) / (24 * 60 * 60 * 1000)) : 
+                                        31;
+
+                                    if (daysSinceAllocation < 30) {
+                                        skippedUsers.push({
+                                            email: email,
+                                            reason: `Already has ${userData.active_coupons} active coupons, allocated ${daysSinceAllocation} days ago. Must wait ${30 - daysSinceAllocation} more days.`
+                                        });
+                                        console.log(`Skipped ${email}: Has active coupons`);
+                                        continue;
+                                    }
                                 }
+
+                                const updateData = {
+                                    active_coupons: numberOfCoupons,
+                                    last_allocation_date: now,
+                                    allocation_history: {
+                                        ...(userData.allocation_history || {}),
+                                        [now]: {
+                                            amount: numberOfCoupons,
+                                            admin_id: loggedInUser
+                                        }
+                                    }
+                                };
+
+                                await database.ref(`UserCoupons/${userId}`).update(updateData);
+                                successfulUsers.push(email);
+                                console.log(`Updated ${email} with ${numberOfCoupons} coupons`);
+
+                            } else {
+                                // Create new user entry
+                                const newCouponRef = database.ref('UserCoupons').push();
+                                await newCouponRef.set({
+                                    email: email,
+                                    active_coupons: numberOfCoupons,
+                                    last_allocation_date: Date.now(),
+                                    redemption_history: [],
+                                    allocation_history: {
+                                        [Date.now()]: {
+                                            amount: numberOfCoupons,
+                                            admin_id: loggedInUser
+                                        }
+                                    },
+                                    created_at: Date.now(),
+                                    total_redemptions: 0
+                                });
+                                successfulUsers.push(email);
+                                console.log(`Created new user ${email} with ${numberOfCoupons} coupons`);
                             }
 
-                            const updateData = {
-                                active_coupons: parseInt(row.number_of_coupons),
-                                last_allocation_date: now,
-                                allocation_history: {
-                                    ...(userData.allocation_history || {}),
-                                    [now]: {
-                                        amount: parseInt(row.number_of_coupons),
-                                        admin_id: loggedInUser
-                                    }
-                                }
-                            };
-
-                            await database.ref(`UserCoupons/${userId}`).update(updateData);
-                            successfulUsers.push(row.email);
-
-                        } else {
-                            // Create new user entry
-                            const newCouponRef = database.ref('UserCoupons').push();
-                            await newCouponRef.set({
-                                email: row.email,
-                                active_coupons: parseInt(row.number_of_coupons),
-                                last_allocation_date: Date.now(),
-                                redemption_history: [],
-                                allocation_history: {
-                                    [Date.now()]: {
-                                        amount: parseInt(row.number_of_coupons),
-                                        admin_id: loggedInUser
-                                    }
-                                },
-                                created_at: Date.now(),
-                                total_redemptions: 0
+                        } catch (error) {
+                            console.error(`Error processing ${row["Official E mail add"]}:`, error);
+                            skippedUsers.push({
+                                email: row["Official E mail add"],
+                                reason: `Error: ${error.message}`
                             });
-                            successfulUsers.push(row.email);
                         }
-
-                    } catch (error) {
-                        console.error(`Error processing ${row.email}:`, error);
-                        skippedUsers.push({
-                            email: row.email,
-                            reason: `Error: ${error.message}`
-                        });
                     }
-                }
 
-                // Show summary alert with both skipped and successful users
-                let message = 'Coupon Allocation Summary:\n\n';
-                
-                if (successfulUsers.length > 0) {
-                    message += `Successfully allocated to ${successfulUsers.length} users:\n`;
-                    message += successfulUsers.join('\n') + '\n\n';
-                }
-                
-                if (skippedUsers.length > 0) {
-                    message += `Skipped ${skippedUsers.length} users:\n`;
-                    message += skippedUsers.map(user => 
-                        `${user.email}: ${user.reason}`
-                    ).join('\n');
-                }
-                
-                alert(message);
+                    console.log("Processing complete:", {
+                        successful: successfulUsers,
+                        skipped: skippedUsers
+                    });
 
+                    // Build and show summary
+                    let summaryMessage = 'Coupon Allocation Summary:\n\n';
+                    
+                    if (successfulUsers.length > 0) {
+                        summaryMessage += `Successfully allocated to ${successfulUsers.length} users:\n`;
+                        summaryMessage += successfulUsers.join('\n') + '\n\n';
+                    } else {
+                        summaryMessage += "No successful allocations.\n\n";
+                    }
+                    
+                    if (skippedUsers.length > 0) {
+                        summaryMessage += `Skipped ${skippedUsers.length} users:\n`;
+                        summaryMessage += skippedUsers.map(user => 
+                            `${user.email}: ${user.reason}`
+                        ).join('\n');
+                    }
+
+                    // Show the summary in an alert
+                    alert(summaryMessage);
+                    
+                } catch (error) {
+                    console.error("Error in CSV processing:", error);
+                    alert(`Error processing CSV: ${error.message}`);
+                } finally {
+                    setLoading(false);
+                }
             },
-            header: true,
-            skipEmptyLines: true
+            error: (error) => {
+                console.error("CSV parsing error:", error);
+                alert(`Error parsing CSV file: ${error.message}`);
+                setLoading(false);
+            }
         });
     } catch (error) {
-        console.error("Error processing file:", error);
-        alert('Error processing file. Please try again.');
-    } finally {
+        console.error("Error in file upload:", error);
+        alert(`Error uploading file: ${error.message}`);
         setLoading(false);
+    } finally {
         event.target.value = '';
     }
 };
-
-  const downloadSampleCsv = () => {
-    const sampleData = [
-      {
-        email: 'user@example.com',
-        number_of_coupons: '5'
-      },
-      {
-        email: 'another@example.com',
-        number_of_coupons: '3'
-      }
-    ];
-    
-    const csv = Papa.unparse(sampleData);
-    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
-    const link = document.createElement('a');
-    
-    link.href = URL.createObjectURL(blob);
-    link.setAttribute('download', 'coupon_allocation_sample.csv');
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
 
   const awardCoupon = async (userId, reason) => {
     await database.ref(`UserCoupons/${userId}`).update({

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import img9 from "../assets/kaapiFest/landing.png";
 import ProfileButton from '../components/ProfileButton';
 import firebase from 'firebase/compat/app';
@@ -23,6 +23,7 @@ const Landing = () => {
 
     const location = useLocation();
     const [userName, setUserName] = useState('');
+    const navigate = useNavigate();
 
     // Parse query parameters from the URL
     const params = new URLSearchParams(location.search);
@@ -63,19 +64,52 @@ const Landing = () => {
         };
     });
 
-    const redirectTrigger = (e) => {
-        const timestamp = new Date();
-        // Track successful login event
-        window.gtag("event", `Looks_${e}_Click`, { 'timestamp': timestamp.toLocaleString("en-GB"), "click": e });
-        window.location.href = e
+    const redirectTrigger = (path) => {
+        try {
+            const timestamp = new Date();
+            // Check if gtag exists before calling it
+            if (typeof window.gtag === 'function') {
+                window.gtag("event", `Looks_Menu_${path.split('/').pop()}`, {
+                    'timestamp': timestamp.toLocaleString("en-GB")
+                });
+            }
+            // Fix the navigation path to ensure it starts with /menu/
+            const fixedPath = path.startsWith('/') ? path : `/menu/${path.toLowerCase()}`;
+            navigate(fixedPath);
+        } catch (error) {
+            // If there's any error with analytics, still proceed with navigation
+            console.warn("Analytics error:", error);
+            navigate(`/menu/${path.toLowerCase()}`);
+        }
+    };
+
+    const handleProfileClick = () => {
+        // Get current user
+        const user = firebase.auth().currentUser;
+        if (user) {
+            // Navigate to profile page
+            navigate('/profile');
+        } else {
+            // If no user is logged in, redirect to login
+            navigate('/');
+        }
     };
 
     return (
         <div className="LandingContainer">
-            <ProfileButton userName={userName} />
+            <ProfileButton onClick={handleProfileClick} />
             <div className="Landing">
-                <div className="kaapifestbannder" onClick={() => redirectTrigger('Menu/KaapiFest')}>
-                    <img src={img9} alt="KaapiFest" />
+                <div className="logoContainer" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: 'white' }}>
+                    <img 
+                        src={require('../assets/sloution-logo.png')} 
+                        alt="Ettarra Logo" 
+                        style={{ width: '70px', height: 'auto', margin: '0 20px' }}
+                    />
+                    <img 
+                        src={require('../assets/ettarra_w_logo.png')} 
+                        alt="Sloution Logo" 
+                        style={{ width: '150px', height: 'auto', margin: '0 20px', filter: 'invert(1)' }}
+                    />
                 </div>
 
                 <div className="gameCardContainer" onClick={() => redirectTrigger('Games')}>
@@ -89,20 +123,19 @@ const Landing = () => {
                         <source src={video2} type="video/mp4" />
                     </video>
                 </div>
-                <div className="NewMenuCards">
-                    <div className="kaapifestCard" onClick={() => redirectTrigger('Menu/KaapiFest')}>
+                {/* <div className="NewMenuCards">
+                    <div className="kaapifestCard" onClick={() => redirectTrigger('kaapi-fest')}>
                         Latte Festival
                         <span>Try Now</span>
-                    </div>
-                </div>
+                    </div> 
+                </div> */}
                 <div className="menuCardContainer">
-                    <button className="menuCard ColdMenu" onClick={() => redirectTrigger(`menu/cold-coffee`)}>Cold Coffee</button>
-                    <button className="menuCard HotMenu" onClick={() => redirectTrigger(`menu/hot-coffee`)}>Hot Coffee</button>
-                    {/* <button className="menuCard ColdMenu" onClick={() => redirectTrigger('menu/cold-coffee')}>Cold Coffee</button>
-                    <button className="menuCard ManualBrewMenu" onClick={() => redirectTrigger('menu/manual-brew')}>Manual Brews</button>
-                    <button className="menuCard NotCoffeeMenu" onClick={() => redirectTrigger('menu/not-coffee')}>Not Coffee</button>
-                    <button className="menuCard SweetMenu" onClick={() => redirectTrigger('menu/sweet')}>Sweet</button> */}
-                    <button className="menuCard SavouryMenu" onClick={() => redirectTrigger(`menu/savoury`)}>Savoury</button>
+                    <button className="menuCard ColdMenu" onClick={() => redirectTrigger('tea')}>Tea</button>
+                    <button className="menuCard HotMenu" onClick={() => redirectTrigger('coffee')}>Coffee</button>
+                    {/* <button className="menuCard ColdMenu" onClick={() => redirectTrigger('cold-coffee')}>Cold Coffee</button>
+                    <button className="menuCard ManualBrewMenu" onClick={() => redirectTrigger('manual-brew')}>Manual Brews</button>
+                    <button className="menuCard NotCoffeeMenu" onClick={() => redirectTrigger('not-coffee')}>Not Coffee</button>
+                    <button className="menuCard SweetMenu" onClick={() => redirectTrigger('sweet')}>Sweet</button> */}
                 </div>
                 <div className="schoolOfThought">
                     <div className="schoolOfThoughtTitle">Quote For The Day</div>

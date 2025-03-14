@@ -1,76 +1,148 @@
-.StocksContainer {
-    max-width: 800px;
-    margin: 0 auto;
+.stocks-container {
     padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-family: 'Arial', sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.StocksContainer h3 {
-    font-size: 1.5rem;
-    color: #333;
-    margin-bottom: 10px;
-    border-bottom: 2px solid #eee;
-    padding-bottom: 5px;
+.stocks-container h1 {
+    color: #291A02;
+    margin-bottom: 30px;
+    text-align: center;
 }
 
-.StocksContainer div {
-    margin-bottom: 20px;
+.category-selector {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
 }
 
-label {
-    font-weight: bold;
-    font-size: 1rem;
-    margin-right: 10px;
-    color: #555;
-}
-
-input[type="number"] {
-    padding: 5px 10px;
-    width: 80px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-bottom: 10px;
-}
-
-input[type="number"]:focus {
-    border-color: #007BFF;
-    outline: none;
-}
-
-.stocksButton {
-    background-color: #007BFF;
-    color: white;
+.category-selector button {
     padding: 10px 20px;
     border: none;
-    border-radius: 5px;
-    font-size: 1rem;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+    color: #291A02;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    font-weight: 600;
+    transition: all 0.3s ease;
 }
 
-.stocksButton:hover {
-    background-color: #0056b3;
+.category-selector button:hover {
+    background-color: #e0e0e0;
 }
 
-.stocksButton:focus {
+.category-selector button.active {
+    background-color: #291A02;
+    color: #FFF9E3;
+}
+
+.stocks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.stock-item {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.item-info {
+    flex: 1;
+}
+
+.item-info h3 {
+    margin: 0 0 10px 0;
+    color: #291A02;
+    font-size: 18px;
+}
+
+.item-sizes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.size-tag {
+    background-color: #f5f5f5;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #666;
+}
+
+.item-price {
+    margin-top: 8px;
+}
+
+.price-tag {
+    background-color: #fff3e0;
+    color: #e65100;
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.stock-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: auto;
+}
+
+.stock-control label {
+    font-weight: 600;
+    color: #291A02;
+}
+
+.stock-control input {
+    width: 80px;
+    padding: 8px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.stock-control input:focus {
     outline: none;
+    border-color: #291A02;
 }
 
-@media (max-width: 600px) {
-    .StocksContainer {
-        padding: 10px;
-    }
+.loading {
+    text-align: center;
+    padding: 50px;
+    font-size: 18px;
+    color: #291A02;
+}
 
-    label {
-        display: block;
-        margin-bottom: 5px;
-    }
+.access-denied {
+    text-align: center;
+    padding: 50px;
+    font-size: 24px;
+    color: #d32f2f;
+    font-weight: bold;
+}
 
-    input[type="number"] {
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .stocks-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .category-selector {
+        flex-direction: column;
+    }
+    
+    .category-selector button {
         width: 100%;
     }
 }

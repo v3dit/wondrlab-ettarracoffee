@@ -6,7 +6,7 @@
     },
     "Stocks_Access":{
       ".read": "auth.uid !== null",
-      ".write": false
+      ".write": "root.child('Admin_Access').child(auth.uid).exists()"
     },
     "Reports_Access": {
       ".read": "auth.uid !== null",
@@ -14,9 +14,27 @@
     },
     "Menus": {
       ".read": true,
-      ".write": true
+      ".write": "root.child('Stocks_Access').child(auth.uid).exists() || root.child('Admin_Access').child(auth.uid).exists()"
+    },
+    "Syrups": {
+      ".read": true,
+      ".write": "root.child('Stocks_Access').child(auth.uid).exists() || root.child('Admin_Access').child(auth.uid).exists()",
+      "$syrup": {
+        "Stock": {
+          ".write": "root.child('Stocks_Access').child(auth.uid).exists() || root.child('Admin_Access').child(auth.uid).exists()",
+          ".validate": "newData.isNumber() && newData.val() >= 0"
+        }
+      }
     },
     "orders": {
+      ".read": true,
+      ".write": true
+    },
+    "new": {
+      ".read": true,
+      ".write": true
+    },
+    "completed": {
       ".read": true,
       ".write": true
     },
@@ -33,12 +51,9 @@
       ".write": false
     },
     "UserCoupons": {
-      ".read": "auth != null",
-      ".indexOn": ["email"],
-      "$coupon_id": {
-        ".read": "data.child('email').val() === auth.email",
-        ".write": "auth != null && (!data.exists() || data.child('email').val() === auth.email)"
-      }
+      ".read": true,
+      ".write": true,
+      ".indexOn": ["email"]
     },
     "CouponUsageLog": {
       ".read": "auth.uid !== null",
@@ -77,30 +92,8 @@
       }
     },
     "Orders": {
-      ".read": "auth != null",
-      ".write": "auth != null",
-      "$orderId": {
-        ".validate": "newData.hasChildren(['items', 'user', 'userId', 'timestamp', 'status'])",
-        "items": {
-          "$item": {
-            "Price": {
-              ".validate": "newData.isNumber()",
-              ".write": "true"
-            },
-            "Count": {
-              ".validate": "newData.isNumber()",
-              ".write": "true"
-            }
-          }
-        },
-        "userId": {
-          ".validate": "newData.val() === auth.uid"
-        },
-        "total": {
-          ".validate": "newData.isNumber()",
-          ".write": "true"
-        }
-      }
+      ".read": true,
+      ".write": true
     },
     "Admin_Access": {
       ".read": "auth != null",

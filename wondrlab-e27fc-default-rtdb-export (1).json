@@ -1,0 +1,4523 @@
+{
+  "Coupon_Access": {
+    "Qon8vrBEcQUTGb1ZUZD5VZDyWq02": true,
+    "plXROqmXFGeKdpgjU0qhwbG9BPt2": true
+  },
+  "KDS_Access": {
+    "0pU28JhYbqaO54kurivO9nuzMQF3": true,
+    "5tw54t8hSsd4N4RZQWFWT5u1aDT2": true,
+    "Qon8vrBEcQUTGb1ZUZD5VZDyWq02": true,
+    "UxjKuIhkfnZ7vHHCa1GcgBKD81U2": true,
+    "hRCdLKbU97gqLCp9B6TuzBmOUd52": true,
+    "n1hCvQMvuYNhvfHDHdqSCJnDFrm1": true,
+    "plXROqmXFGeKdpgjU0qhwbG9BPt2": true,
+    "ux5PRqaHhMYoeJMvpuO51BGcTiL2": true
+  },
+  "Menus": {
+    "CoffeeMenu": [
+      null,
+      null,
+      {
+        "Desc": "'Safest Bet' Coffee With A Balanced Proportion Of Coffee, Milk And Silky Milk Foam",
+        "Img": "https://firebasestorage.googleapis.com/v0/b/ettarracoffee-house.appspot.com/o/cappa%20Large.jpeg?alt=media&token=c565e6f8-dc0e-46f1-86bd-4522ffbe9d7c",
+        "Name": "Cappuccino",
+        "Price": {
+          "250ml": "Rs. 235",
+          "350ml": "Rs. 260"
+        },
+        "Stock": 20
+      },
+      {
+        "Desc": "'Looks Cute' Coffee With A Biased Milk To Milk Foam Ratio And Solid Coffee Composition",
+        "Img": "https://firebasestorage.googleapis.com/v0/b/ettarracoffee-house.appspot.com/o/Latte%20Large.jpeg?alt=media&token=65824ce5-a8ed-49db-b55e-30d801627926",
+        "Name": "Café Latte",
+        "Price": {
+          "250ml": "Rs. 235",
+          "350ml": "Rs. 260"
+        },
+        "Stock": 12
+      },
+      {
+        "Desc": "Milk Coffee With Special Dark Cocoa From Madagascar",
+        "Img": "https://firebasestorage.googleapis.com/v0/b/ettarracoffee-house.appspot.com/o/mocha%20Large.jpeg?alt=media&token=4f5f01e5-0919-46c9-b720-5e495fe5389a",
+        "Name": "Café Mocha",
+        "Price": {
+          "250ml": "Rs. 245",
+          "350ml": "Rs. 270"
+        },
+        "Stock": 13
+      },
+      {
+        "Desc": "'Not In The Mood For Coffee But I Want My Daily Caffeine Intake' Beverage",
+        "Img": "https://firebasestorage.googleapis.com/v0/b/ettarracoffee-house.appspot.com/o/hotchocolet%20Large.jpeg?alt=media&token=c0a95d3f-a11a-405b-a655-77293d3fb492",
+        "Name": "Hot Chocolate",
+        "Price": {
+          "250ml": "Rs. 280",
+          "350ml": "Rs. 335"
+        },
+        "Stock": 12
+      },
+      {
+        "Desc": "The 30ml 'Wake Me Up' Coffee Shot",
+        "Img": "https://firebasestorage.googleapis.com/v0/b/ettarracoffee-house.appspot.com/o/espresso%20Large.jpeg?alt=media&token=77aec37a-d896-45e6-aaa0-869318ed8014",
+        "Name": "Espresso",
+        "Price": {
+          "30ml": "Rs. 145"
+        },
+        "Stock": 6
+      },
+      {
+        "Desc": "Intense Espresso shot with Milk foam",
+        "Img": "",
+        "Name": "Macchiato",
+        "Price": {
+          "250ml": "Rs. 145"
+        },
+        "Stock": 21
+      },
+      {
+        "Desc": "Authentic Double Ristreto Served With Warm Water And Some Sweet Irish Syrup (A.K.A. Up All Night Recovery But Sweet)",
+        "Img": "https://firebasestorage.googleapis.com/v0/b/ettarracoffee-house.appspot.com/o/irishAmericano%20Large.jpeg?alt=media&token=e311ccbb-070c-4c3b-9aef-1a6716b8b56e",
+        "Name": "Irish Americano",
+        "Price": {
+          "250ml": "Rs. 235",
+          "350ml": "Rs. 260"
+        },
+        "Stock": 5
+      }
+    ],
+    "TeaMenu": [
+      null,
+      null,
+      {
+        "Desc": "'Safest Bet' Coffee With A Balanced Proportion Of Coffee, Milk And Silky Milk Foam",
+        "Img": "https://firebasestorage.googleapis.com/v0/b/ettarracoffee-house.appspot.com/o/cappa%20Large.jpeg?alt=media&token=c565e6f8-dc0e-46f1-86bd-4522ffbe9d7c",
+        "Name": "Green Tea",
+        "Price": {
+          "250ml": "Rs. 235",
+          "350ml": "Rs. 260"
+        },
+        "Stock": 20
+      },
+      {
+        "Desc": "'Looks Cute' Coffee With A Biased Milk To Milk Foam Ratio And Solid Coffee Composition",
+        "Img": "https://firebasestorage.googleapis.com/v0/b/ettarracoffee-house.appspot.com/o/Latte%20Large.jpeg?alt=media&token=65824ce5-a8ed-49db-b55e-30d801627926",
+        "Name": "Ginger Tea",
+        "Price": {
+          "250ml": "Rs. 235",
+          "350ml": "Rs. 260"
+        },
+        "Stock": 12
+      },
+      {
+        "Desc": "Milk Coffee With Special Dark Cocoa From Madagascar",
+        "Img": "https://firebasestorage.googleapis.com/v0/b/ettarracoffee-house.appspot.com/o/mocha%20Large.jpeg?alt=media&token=4f5f01e5-0919-46c9-b720-5e495fe5389a",
+        "Name": "Lemon Tea",
+        "Price": {
+          "250ml": "Rs. 245",
+          "350ml": "Rs. 270"
+        },
+        "Stock": 13
+      },
+      {
+        "Desc": "'Not In The Mood For Coffee But I Want My Daily Caffeine Intake' Beverage",
+        "Img": "https://firebasestorage.googleapis.com/v0/b/ettarracoffee-house.appspot.com/o/hotchocolet%20Large.jpeg?alt=media&token=c0a95d3f-a11a-405b-a655-77293d3fb492",
+        "Name": "Lemon Ice Tea",
+        "Price": {
+          "250ml": "Rs. 280",
+          "350ml": "Rs. 335"
+        },
+        "Stock": 12
+      }
+      
+    ]
+  },
+  "Syrups": {
+    "Hazelnut": {
+      "Name": "Hazelnut Syrup",
+      "Price": 75,
+      "Stock": 50,
+      "Description": "Rich hazelnut flavored syrup"
+    },
+    "Caramel": {
+      "Name": "Caramel Syrup", 
+      "Price": 75,
+      "Stock": 50,
+      "Description": "Sweet caramel flavored syrup"
+    },
+    "Irish": {
+      "Name": "Irish Syrup",
+      "Price": 75,
+      "Stock": 50,
+      "Description": "Classic Irish cream flavored syrup"
+    },
+    "Vanilla": {
+      "Name": "Vanilla Syrup",
+      "Price": 75,
+      "Stock": 50,
+      "Description": "Smooth vanilla flavored syrup"
+    }
+  },
+  "Orders": {
+    "-OJNjpNy6Uy8CDy6yIyN": {
+      "finalTotal": 0,
+      "items": [
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 2,
+          "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+          "Name": "Original South India Frappe",
+          "Price": "Rs. 100",
+          "Size": "250ml",
+          "Stock": 6,
+          "usedCoupon": false
+        }
+      ],
+      "orderId": "1739876945247-w58ur6",
+      "originalTotal": 0,
+      "status": "pending",
+      "timestamp": 1739876945247,
+      "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+    },
+    "-OJNjqdC1dNUuBkLRUR7": {
+      "finalTotal": 0,
+      "orderId": "1739876950383-bmgzqb",
+      "originalTotal": 0,
+      "status": "pending",
+      "timestamp": 1739876950383,
+      "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+    },
+    "-OJOkG_Qs5UAfezdhpSW": {
+      "completedAt": 1740823889668,
+      "items": [
+        {
+          "Category": "HotCoffeeMenu",
+          "Count": 2,
+          "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+          "Name": "Kaapiccino",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 3
+        },
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 1,
+          "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+          "Name": "Original South India Frappe",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 4
+        },
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 2,
+          "Desc": "Coffee and Caramel unite is a dreamy blend",
+          "Name": "Caramel Frappe",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 5
+        }
+      ],
+      "status": "completed",
+      "timestamp": 1739893840498,
+      "total": 0,
+      "totalCouponsUsed": 0,
+      "user": "sengupta.a@somaiya.edu",
+      "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+    },
+    "-OJOmHJ77f9vQSbwOAPS": {
+      "appliedCoupons": {
+        "Caramel Frappe": 1,
+        "Vanilla Praline Frappe": 1
+      },
+      "items": [
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 2,
+          "Desc": "Coffee and Caramel unite is a dreamy blend",
+          "Name": "Caramel Frappe",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 5
+        },
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 1,
+          "Desc": "Praline-perfect fusion: creamy, nutty and vanilla delight",
+          "Name": "Vanilla Praline Frappe",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 8
+        }
+      ],
+      "status": "new",
+      "timestamp": 1739894368071,
+      "total": 0,
+      "totalCouponsUsed": 2,
+      "user": "sengupta.a@somaiya.edu",
+      "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+    },
+    "-OJgs1kTSWzFEZj6DOJF": {
+      "items": [
+        {
+          "Category": "HotCoffeeMenu",
+          "Count": 1,
+          "Desc": "Bass Naam Hi Kaapi Hai",
+          "Name": "South Indian Filter Kaapi",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 9
+        }
+      ],
+      "status": "new",
+      "timestamp": 1740214644348,
+      "total": 0,
+      "totalCouponsUsed": 0,
+      "user": "vedit@drilldown.online",
+      "userId": "fDPk44Pb3adClkgHLfymSljLahp2"
+    },
+    "-OJgs60PoNny5M3v9JKi": {
+      "items": [
+        {
+          "Category": "HotCoffeeMenu",
+          "Count": 2,
+          "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+          "Name": "Kaapiccino",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 3
+        }
+      ],
+      "status": "new",
+      "timestamp": 1740214661918,
+      "total": 0,
+      "totalCouponsUsed": 0,
+      "user": "vedit@drilldown.online",
+      "userId": "fDPk44Pb3adClkgHLfymSljLahp2"
+    },
+    "-OJgu0E964eyn5etPXcn": {
+      "items": [
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 1,
+          "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+          "Name": "Original South India Frappe",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 4
+        }
+      ],
+      "status": "new",
+      "timestamp": 1740215162457,
+      "total": 0,
+      "totalCouponsUsed": 0,
+      "user": "vedit@drilldown.online",
+      "userId": "fDPk44Pb3adClkgHLfymSljLahp2"
+    },
+    "-OKF_6v0PWgq0PL55j3q": {
+      "items": [
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 2,
+          "Desc": "Coffee and Caramel unite is a dreamy blend",
+          "Name": "Caramel Frappe",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 5
+        }
+      ],
+      "status": "new",
+      "timestamp": 1740813664526,
+      "total": 0,
+      "totalCouponsUsed": 0,
+      "user": "sengupta.a@somaiya.edu",
+      "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+    },
+    "-OKFb0kPPuz-IPJ4qB8r": {
+      "items": [
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 1,
+          "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+          "Name": "Original South India Frappe",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 4
+        }
+      ],
+      "status": "new",
+      "timestamp": 1740814163813,
+      "total": 0,
+      "totalCouponsUsed": 0,
+      "user": "kbhatt0904@drilldown.online",
+      "userId": "8qjyeK8XsRP9ZxcdcqKq9I6SWYl2"
+    },
+    "-OKFbS4TxvB65VAv2FRQ": {
+      "appliedCoupons": {
+        "Kaapiccino": 2
+      },
+      "items": [
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 1,
+          "Desc": "Coffee and Caramel unite is a dreamy blend",
+          "Name": "Caramel Frappe",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 5
+        },
+        {
+          "Category": "HotCoffeeMenu",
+          "Count": 2,
+          "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+          "Name": "Kaapiccino",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 3
+        }
+      ],
+      "status": "new",
+      "timestamp": 1740814275766,
+      "total": 0,
+      "totalCouponsUsed": 2,
+      "user": "kbhatt0904@drilldown.online",
+      "userId": "8qjyeK8XsRP9ZxcdcqKq9I6SWYl2"
+    },
+    "-OKFdxEt4ZJwwaRThhnZ": {
+      "appliedCoupons": {
+        "Caramel Frappe": 2
+      },
+      "items": [
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 2,
+          "Desc": "Coffee and Caramel unite is a dreamy blend",
+          "Name": "Caramel Frappe",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 5
+        }
+      ],
+      "status": "new",
+      "timestamp": 1740814931658,
+      "total": 0,
+      "totalCouponsUsed": 2,
+      "user": "sengupta.a@somaiya.edu",
+      "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+    },
+    "-OKFw-FLPYHEu6rrlHRZ": {
+      "appliedCoupons": {
+        "Caramel Frappe": 1
+      },
+      "items": [
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 2,
+          "Desc": "Coffee and Caramel unite is a dreamy blend",
+          "Name": "Caramel Frappe",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 5
+        }
+      ],
+      "status": "new",
+      "timestamp": 1740819662889,
+      "total": 0,
+      "totalCouponsUsed": 1,
+      "user": "aniruddhs105@gmail.com",
+      "userId": "FSXq6EoVWOQwNCmfZpanzQkSpW02"
+    },
+    "-OKG1Bcdwf2Xqro9vM-J": {
+      "appliedCoupons": {
+        "Hazelnut Frappe": 1,
+        "Original South India Frappe": 3
+      },
+      "items": [
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 3,
+          "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+          "Name": "Original South India Frappe",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 4
+        },
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 1,
+          "Desc": "Coffee Frappe With Everyone's Favourite Hazelnut Flavour Notes",
+          "Name": "Hazelnut Frappe",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 6
+        }
+      ],
+      "status": "new",
+      "timestamp": 1740821286319,
+      "total": 0,
+      "totalCouponsUsed": 4,
+      "user": "aniruddhs105@gmail.com",
+      "userId": "FSXq6EoVWOQwNCmfZpanzQkSpW02"
+    },
+    "-OKG2E5UiMspTXFB574V": {
+      "appliedCoupons": {
+        "Caramel Frappe": 2,
+        "Original South India Frappe": 2
+      },
+      "items": [
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 2,
+          "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+          "Name": "Original South India Frappe",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 4
+        },
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 2,
+          "Desc": "Coffee and Caramel unite is a dreamy blend",
+          "Name": "Caramel Frappe",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 5
+        }
+      ],
+      "status": "new",
+      "timestamp": 1740821558300,
+      "total": 0,
+      "totalCouponsUsed": 4,
+      "user": "aniruddhs105@gmail.com",
+      "userId": "FSXq6EoVWOQwNCmfZpanzQkSpW02"
+    },
+    "-OKG2MUp72tc3kTBpAwO": {
+      "appliedCoupons": {
+        "Original South India Frappe": 2
+      },
+      "items": [
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 2,
+          "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+          "Name": "Original South India Frappe",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 4
+        }
+      ],
+      "status": "new",
+      "timestamp": 1740821592713,
+      "total": 0,
+      "totalCouponsUsed": 2,
+      "user": "aniruddhs105@gmail.com",
+      "userId": "FSXq6EoVWOQwNCmfZpanzQkSpW02"
+    },
+    "-OKG2wB5eEGpKB4_pNu3": {
+      "appliedCoupons": {
+        "Original South India Frappe": 2,
+        "South Indian Filter Kaapi": 4
+      },
+      "items": [
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 2,
+          "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+          "Name": "Original South India Frappe",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 4
+        },
+        {
+          "Category": "HotCoffeeMenu",
+          "Count": 4,
+          "Desc": "Bass Naam Hi Kaapi Hai",
+          "Name": "South Indian Filter Kaapi",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 9
+        }
+      ],
+      "status": "new",
+      "timestamp": 1740821743021,
+      "total": 0,
+      "totalCouponsUsed": 6,
+      "user": "aniruddhs105@gmail.com",
+      "userId": "FSXq6EoVWOQwNCmfZpanzQkSpW02"
+    },
+    "-OKG4a32R3qbUVR144uL": {
+      "appliedCoupons": {
+        "Original South India Frappe": 1
+      },
+      "items": [
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 1,
+          "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+          "Name": "Original South India Frappe",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 4
+        }
+      ],
+      "status": "new",
+      "timestamp": 1740822176605,
+      "total": 0,
+      "totalCouponsUsed": 1,
+      "user": "aniruddhs105@gmail.com",
+      "userId": "FSXq6EoVWOQwNCmfZpanzQkSpW02"
+    },
+    "-OKGHp1HGgl0-zZ_GCma": {
+      "appliedCoupons": {
+        "South Indian Filter Kaapi": 2
+      },
+      "items": [
+        {
+          "Category": "HotCoffeeMenu",
+          "Count": 2,
+          "Desc": "Bass Naam Hi Kaapi Hai",
+          "Name": "South Indian Filter Kaapi",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 9
+        }
+      ],
+      "status": "new",
+      "timestamp": 1740825645819,
+      "total": 0,
+      "totalCouponsUsed": 2,
+      "user": "sengupta.a@somaiya.edu",
+      "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+    },
+    "-OKGaJGWlvhs8CdmX7Tz": {
+      "appliedCoupons": {
+        "Original South India Frappe": 2
+      },
+      "items": [
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 2,
+          "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+          "Name": "Original South India Frappe",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 4
+        }
+      ],
+      "status": "new",
+      "timestamp": 1740830754435,
+      "total": 0,
+      "totalCouponsUsed": 2,
+      "user": "aniruddhs105@gmail.com",
+      "userId": "FSXq6EoVWOQwNCmfZpanzQkSpW02"
+    },
+    "-OKGdeI1Sru9EMGXKrtb": {
+      "appliedCoupons": {
+        "Caramel Frappe": 1
+      },
+      "items": [
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 1,
+          "Desc": "Coffee and Caramel unite is a dreamy blend",
+          "Name": "Caramel Frappe",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 5
+        }
+      ],
+      "status": "new",
+      "timestamp": 1740831687407,
+      "total": 0,
+      "totalCouponsUsed": 1,
+      "user": "aniruddhs105@gmail.com",
+      "userId": "FSXq6EoVWOQwNCmfZpanzQkSpW02"
+    },
+    "-OKGigAqCeY116EHJise": {
+      "appliedCoupons": {
+        "Original South India Frappe": 4
+      },
+      "items": [
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 4,
+          "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+          "Name": "Original South India Frappe",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 4
+        }
+      ],
+      "status": "new",
+      "timestamp": 1740832951959,
+      "total": 0,
+      "totalCouponsUsed": 4,
+      "user": "sengupta.a@somaiya.edu",
+      "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+    },
+    "-OKGjlG6keHfKl7BNYvy": {
+      "appliedCoupons": {
+        "Baked Vada Pav": 5,
+        "Caramel Frappe": 5,
+        "Cold Brew": 7,
+        "Original South India Frappe": 4,
+        "South Indian Filter Kaapi": 9,
+        "Vanilla Praline Frappe": 8
+      },
+      "items": [
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 4,
+          "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+          "Name": "Original South India Frappe",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 4
+        },
+        {
+          "Category": "HotCoffeeMenu",
+          "Count": 9,
+          "Desc": "Bass Naam Hi Kaapi Hai",
+          "Name": "South Indian Filter Kaapi",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 9
+        },
+        {
+          "Category": "SavouryMenu",
+          "Count": 5,
+          "Desc": "Modern and healthy take on our classic Maharashtrian Street food. With comparatively less calories.",
+          "Name": "Baked Vada Pav",
+          "Price": 0,
+          "Size": "1pc",
+          "Stock": 5
+        },
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 5,
+          "Desc": "Coffee and Caramel unite is a dreamy blend",
+          "Name": "Caramel Frappe",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 5
+        },
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 8,
+          "Desc": "Praline-perfect fusion: creamy, nutty and vanilla delight",
+          "Name": "Vanilla Praline Frappe",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 8
+        },
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 9,
+          "Desc": "",
+          "Name": "Cold Brew",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 9
+        },
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 2,
+          "Desc": "Tonic Water/ Ginger Ale - Cold Brewed South Indian Coffee With Tonic, Tastes Mild And Sparkling With A Finish Of Subtle Ginger Notes",
+          "Name": "Malnad Tonic",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 10
+        }
+      ],
+      "status": "new",
+      "timestamp": 1740833232833,
+      "total": 0,
+      "totalCouponsUsed": 38,
+      "user": "kbhatt0904@drilldown.online",
+      "userId": "8qjyeK8XsRP9ZxcdcqKq9I6SWYl2"
+    },
+    "-OKGmO0mthGqTxza5xPx": {
+      "appliedCoupons": {
+        "Original South India Frappe": 1
+      },
+      "items": [
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 1,
+          "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+          "Name": "Original South India Frappe",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 43
+        }
+      ],
+      "status": "new",
+      "timestamp": 1740833919701,
+      "total": 0,
+      "totalCouponsUsed": 1,
+      "user": "aniruddhs105@gmail.com",
+      "userId": "FSXq6EoVWOQwNCmfZpanzQkSpW02"
+    },
+    "-OKGmXdNrTZ1vktLIFhp": {
+      "appliedCoupons": {
+        "Caramel Frappe": 4
+      },
+      "items": [
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 4,
+          "Desc": "Coffee and Caramel unite is a dreamy blend",
+          "Name": "Caramel Frappe",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 56
+        }
+      ],
+      "status": "new",
+      "timestamp": 1740833959094,
+      "total": 0,
+      "totalCouponsUsed": 4,
+      "user": "aniruddhs105@gmail.com",
+      "userId": "FSXq6EoVWOQwNCmfZpanzQkSpW02"
+    },
+    "-OKGn8SB-aXozJDaWgEq": {
+      "appliedCoupons": {
+        "Kaapiccino": 1,
+        "Original South India Frappe": 4
+      },
+      "items": [
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 4,
+          "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+          "Name": "Original South India Frappe",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 4
+        },
+        {
+          "Category": "HotCoffeeMenu",
+          "Count": 3,
+          "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+          "Name": "Kaapiccino",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 3
+        }
+      ],
+      "status": "new",
+      "timestamp": 1740834118431,
+      "total": 0,
+      "totalCouponsUsed": 5,
+      "user": "kbhatt0904@drilldown.online",
+      "userId": "8qjyeK8XsRP9ZxcdcqKq9I6SWYl2"
+    },
+    "-OKGoiLxsrIKrqTC6R8U": {
+      "appliedCoupons": {
+        "South Indian Filter Kaapi": 5
+      },
+      "items": [
+        {
+          "Category": "HotCoffeeMenu",
+          "Count": 9,
+          "Desc": "Bass Naam Hi Kaapi Hai",
+          "Name": "South Indian Filter Kaapi",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 9
+        }
+      ],
+      "status": "new",
+      "timestamp": 1740834531496,
+      "total": 0,
+      "totalCouponsUsed": 5,
+      "user": "kbhatt0904@drilldown.online",
+      "userId": "8qjyeK8XsRP9ZxcdcqKq9I6SWYl2"
+    },
+    "-OKGooJUlboH8tfPdxBH": {
+      "appliedCoupons": {
+        "South Indian Filter Kaapi": 5
+      },
+      "items": [
+        {
+          "Category": "HotCoffeeMenu",
+          "Count": 7,
+          "Desc": "Bass Naam Hi Kaapi Hai",
+          "Name": "South Indian Filter Kaapi",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 9
+        }
+      ],
+      "status": "new",
+      "timestamp": 1740834555912,
+      "total": 0,
+      "totalCouponsUsed": 5,
+      "user": "kbhatt0904@drilldown.online",
+      "userId": "8qjyeK8XsRP9ZxcdcqKq9I6SWYl2"
+    },
+    "-OKLOgenNHD0NiEJs0tl": {
+      "appliedCoupons": {
+        "Original South India Frappe": 2
+      },
+      "items": [
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 2,
+          "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+          "Name": "Original South India Frappe",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 43
+        }
+      ],
+      "status": "new",
+      "timestamp": 1740911332818,
+      "total": 0,
+      "totalCouponsUsed": 2,
+      "user": "aniruddhs105@gmail.com",
+      "userId": "FSXq6EoVWOQwNCmfZpanzQkSpW02"
+    },
+    "-OKLWenzjBnUgLV_demo": {
+      "appliedCoupons": {
+        "Original South India Frappe": 2
+      },
+      "items": [
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 2,
+          "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+          "Name": "Original South India Frappe",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 43
+        }
+      ],
+      "status": "new",
+      "timestamp": 1740913422155,
+      "total": 0,
+      "totalCouponsUsed": 2,
+      "user": "aniruddhs105@gmail.com",
+      "userId": "FSXq6EoVWOQwNCmfZpanzQkSpW02"
+    },
+    "-OKLXFtZ1OKdlIAGDCEF": {
+      "appliedCoupons": {
+        "Original South India Frappe": 1
+      },
+      "created_on": "02/03/2025, 16:36:17",
+      "created_on_date": "02/03/2025",
+      "created_on_time": "16:36:17",
+      "customer_name": "Aniruddh Sengupta",
+      "items": [
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 1,
+          "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+          "Name": "Original South India Frappe",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 43,
+          "order_item_id": "020320251636170"
+        }
+      ],
+      "order_id": "02032025163617",
+      "status": "Pending",
+      "timestamp": 1740913578169,
+      "total": 0,
+      "totalCouponsUsed": 1,
+      "user": "sengupta.a@somaiya.edu",
+      "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+    },
+    "-OKLXIf9ugqBGrGSdU_B": {
+      "appliedCoupons": {
+        "Original South India Frappe": 3
+      },
+      "created_on": "02/03/2025, 16:36:29",
+      "created_on_date": "02/03/2025",
+      "created_on_time": "16:36:29",
+      "customer_name": "Aniruddh Sengupta",
+      "items": [
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 3,
+          "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+          "Name": "Original South India Frappe",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 43,
+          "order_item_id": "020320251636290"
+        }
+      ],
+      "order_id": "02032025163629",
+      "status": "Pending",
+      "timestamp": 1740913589528,
+      "total": 0,
+      "totalCouponsUsed": 3,
+      "user": "sengupta.a@somaiya.edu",
+      "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+    },
+    "-OKLY69orjNjxLWvjF0Z": {
+      "appliedCoupons": {
+        "Original South India Frappe": 3
+      },
+      "created_on": "02/03/2025, 16:40:00",
+      "created_on_date": "02/03/2025",
+      "created_on_time": "16:40:00",
+      "customer_name": "Aniruddh Sengupta",
+      "items": [
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 3,
+          "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+          "Name": "Original South India Frappe",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 43,
+          "order_item_id": "020320251640000"
+        }
+      ],
+      "order_id": "02032025164000",
+      "status": "Pending",
+      "timestamp": 1740913800493,
+      "total": 0,
+      "totalCouponsUsed": 3,
+      "user": "sengupta.a@somaiya.edu",
+      "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+    },
+    "-OKLrGYwRzoFcqmivWKC": {
+      "appliedCoupons": {
+        "Caramel Frappe": 2,
+        "Original South India Frappe": 4
+      },
+      "created_on": "02/03/2025, 18:08:05",
+      "created_on_date": "02/03/2025",
+      "created_on_time": "18:08:05",
+      "customer_name": "Aniruddh Sengupta",
+      "items": [
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 4,
+          "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+          "Name": "Original South India Frappe",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 43,
+          "order_item_id": "020320251808050"
+        },
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 2,
+          "Desc": "Coffee and Caramel unite is a dreamy blend",
+          "Name": "Caramel Frappe",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 56,
+          "order_item_id": "020320251808051"
+        }
+      ],
+      "order_id": "02032025180805",
+      "status": "Pending",
+      "timestamp": 1740919086058,
+      "total": 0,
+      "totalCouponsUsed": 6,
+      "user": "sengupta.a@somaiya.edu",
+      "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+    },
+    "-OKLsjdNtQtKaOkvVDq1": {
+      "appliedCoupons": {
+        "Original South India Frappe": 3
+      },
+      "created_on": "02/03/2025, 18:14:30",
+      "created_on_date": "02/03/2025",
+      "created_on_time": "18:14:30",
+      "customer_name": "Aniruddh Sengupta",
+      "items": [
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 3,
+          "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+          "Name": "Original South India Frappe",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 43,
+          "order_item_id": "020320251814300"
+        }
+      ],
+      "order_id": "02032025181430",
+      "status": "Pending",
+      "timestamp": 1740919471375,
+      "total": 0,
+      "totalCouponsUsed": 3,
+      "user": "sengupta.a@somaiya.edu",
+      "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+    },
+    "-OKM24vkufTK4YlPEyT3": {
+      "appliedCoupons": {
+        "Original South India Frappe": 1
+      },
+      "created_on": "02/03/2025, 18:59:43",
+      "created_on_date": "02/03/2025",
+      "created_on_time": "18:59:43",
+      "customer_name": "Aniruddh Sengupta",
+      "items": [
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 1,
+          "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+          "Name": "Original South India Frappe",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 43,
+          "order_item_id": "020320251859430"
+        }
+      ],
+      "order_id": "02032025185943",
+      "status": "Pending",
+      "timestamp": 1740922184731,
+      "total": 0,
+      "totalCouponsUsed": 1,
+      "user": "aniruddhs105@gmail.com",
+      "userId": "FSXq6EoVWOQwNCmfZpanzQkSpW02"
+    },
+    "-OKM6A6k4IxSxX5V6LIo": {
+      "appliedCoupons": {
+        "Caramel Frappe": 3,
+        "Kaapiccino": 2
+      },
+      "created_on": "02/03/2025, 19:17:33",
+      "created_on_date": "02/03/2025",
+      "created_on_time": "19:17:33",
+      "customer_name": "Aniruddh Sengupta",
+      "items": [
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 3,
+          "Desc": "Coffee and Caramel unite is a dreamy blend",
+          "Name": "Caramel Frappe",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 56,
+          "order_item_id": "020320251917330"
+        },
+        {
+          "Category": "HotCoffeeMenu",
+          "Count": 2,
+          "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+          "Name": "Kaapiccino",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 3,
+          "order_item_id": "020320251917331"
+        }
+      ],
+      "order_id": "02032025191733",
+      "status": "Pending",
+      "timestamp": 1740923253911,
+      "total": 0,
+      "totalCouponsUsed": 5,
+      "user": "sengupta.a@somaiya.edu",
+      "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+    },
+    "-OKM9xzYfrdWhF4D0ZWJ": {
+      "appliedCoupons": {
+        "South Indian Filter Kaapi": 5
+      },
+      "created_on": "02/03/2025, 19:34:08",
+      "created_on_date": "02/03/2025",
+      "created_on_time": "19:34:08",
+      "customer_name": "Aniruddh Sengupta",
+      "items": [
+        {
+          "Category": "HotCoffeeMenu",
+          "Count": 5,
+          "Desc": "Bass Naam Hi Kaapi Hai",
+          "Name": "South Indian Filter Kaapi",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 9,
+          "order_item_id": "020320251934080"
+        }
+      ],
+      "order_id": "02032025193408",
+      "status": "Pending",
+      "timestamp": 1740924251619,
+      "total": 0,
+      "totalCouponsUsed": 5,
+      "user": "sengupta.a@somaiya.edu",
+      "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+    },
+    "-OKMAV1KGgmrHAcf1ZOs": {
+      "appliedCoupons": {
+        "Caramel Frappe": 2,
+        "South Indian Filter Kaapi": 3
+      },
+      "created_on": "02/03/2025, 19:36:27",
+      "created_on_date": "02/03/2025",
+      "created_on_time": "19:36:27",
+      "customer_name": "Aniruddh Sengupta",
+      "items": [
+        {
+          "Category": "HotCoffeeMenu",
+          "Count": 3,
+          "Desc": "Bass Naam Hi Kaapi Hai",
+          "Name": "South Indian Filter Kaapi",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 9,
+          "order_item_id": "020320251936270"
+        },
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 2,
+          "Desc": "Coffee and Caramel unite is a dreamy blend",
+          "Name": "Caramel Frappe",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 56,
+          "order_item_id": "020320251936271"
+        }
+      ],
+      "order_id": "02032025193627",
+      "status": "Pending",
+      "timestamp": 1740924388198,
+      "total": 0,
+      "totalCouponsUsed": 5,
+      "user": "sengupta.a@somaiya.edu",
+      "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+    },
+    "-OKMKoqQtIpGget4BgRY": {
+      "appliedCoupons": {
+        "Original South India Frappe": 2
+      },
+      "cancelled_at": "02/03/2025, 20:22:58",
+      "cancelled_by": "Ke6WhLG7lRgolMaihasYVk02BzH3",
+      "created_on": "02/03/2025, 20:21:34",
+      "created_on_date": "02/03/2025",
+      "created_on_time": "20:21:34",
+      "customer_name": "Aniruddh Sengupta",
+      "items": [
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 2,
+          "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+          "Name": "Original South India Frappe",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 43,
+          "order_item_id": "020320252021340"
+        }
+      ],
+      "order_id": "02032025202134",
+      "status": "Cancelled",
+      "timestamp": 1740927094807,
+      "total": 0,
+      "totalCouponsUsed": 2,
+      "user": "sengupta.a@somaiya.edu",
+      "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+    },
+    "-OKMP6rLDY-LiMOKjQ09": {
+      "appliedCoupons": {
+        "Caramel Frappe": 2,
+        "South Indian Filter Kaapi": 2
+      },
+      "created_on": "02/03/2025, 20:40:20",
+      "created_on_date": "02/03/2025",
+      "created_on_time": "20:40:20",
+      "customer_name": "Aniruddh Sengupta",
+      "items": [
+        {
+          "Category": "HotCoffeeMenu",
+          "Count": 2,
+          "Desc": "Bass Naam Hi Kaapi Hai",
+          "Name": "South Indian Filter Kaapi",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 9,
+          "order_item_id": "020320252040200"
+        },
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 2,
+          "Desc": "Coffee and Caramel unite is a dreamy blend",
+          "Name": "Caramel Frappe",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 56,
+          "order_item_id": "020320252040201"
+        }
+      ],
+      "order_id": "02032025204020",
+      "status": "Preparing",
+      "timestamp": 1740928221325,
+      "total": 0,
+      "totalCouponsUsed": 4,
+      "user": "sengupta.a@somaiya.edu",
+      "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+    },
+    "-OKPBeADraOVbyl7Pq02": {
+      "appliedCoupons": {
+        "Caramel Frappe": 2,
+        "Original South India Frappe": 2
+      },
+      "cancelled_at": "03/03/2025, 09:41:33",
+      "cancelled_by": "Ke6WhLG7lRgolMaihasYVk02BzH3",
+      "created_on": "03/03/2025, 09:40:22",
+      "created_on_date": "03/03/2025",
+      "created_on_time": "09:40:22",
+      "customer_name": "Aniruddh Sengupta",
+      "items": [
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 2,
+          "Desc": "Coffee and Caramel unite is a dreamy blend",
+          "Name": "Caramel Frappe",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 56,
+          "order_item_id": "030320250940220"
+        },
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 2,
+          "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+          "Name": "Original South India Frappe",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 43,
+          "order_item_id": "030320250940221"
+        }
+      ],
+      "order_id": "03032025094022",
+      "status": "Cancelled",
+      "timestamp": 1740975023411,
+      "total": 0,
+      "totalCouponsUsed": 4,
+      "user": "sengupta.a@somaiya.edu",
+      "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+    },
+    "-OKPC4vfL0WkZg1_VGpv": {
+      "appliedCoupons": {
+        "Caramel Frappe": 2,
+        "Vanilla Praline Frappe": 2
+      },
+      "created_on": "03/03/2025, 09:42:16",
+      "created_on_date": "03/03/2025",
+      "created_on_time": "09:42:16",
+      "customer_name": "Aniruddh Sengupta",
+      "items": [
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 2,
+          "Desc": "Coffee and Caramel unite is a dreamy blend",
+          "Name": "Caramel Frappe",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 56,
+          "order_item_id": "030320250942160"
+        },
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 2,
+          "Desc": "Praline-perfect fusion: creamy, nutty and vanilla delight",
+          "Name": "Vanilla Praline Frappe",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 8,
+          "order_item_id": "030320250942161"
+        }
+      ],
+      "order_id": "03032025094216",
+      "status": "Pending",
+      "timestamp": 1740975137152,
+      "total": 0,
+      "totalCouponsUsed": 4,
+      "user": "sengupta.a@somaiya.edu",
+      "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+    },
+    "-OKPDnPgjCUBkyN5Fak-": {
+      "appliedCoupons": {
+        "Original South India Frappe": 3
+      },
+      "created_on": "03/03/2025, 09:49:45",
+      "created_on_date": "03/03/2025",
+      "created_on_time": "09:49:45",
+      "customer_name": "Aniruddh Sengupta",
+      "items": [
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 3,
+          "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+          "Name": "Original South India Frappe",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 43,
+          "order_item_id": "030320250949450"
+        }
+      ],
+      "order_id": "03032025094945",
+      "status": "Pending",
+      "timestamp": 1740975585583,
+      "total": 0,
+      "totalCouponsUsed": 3,
+      "user": "sengupta.a@somaiya.edu",
+      "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+    },
+    "-OKPFWJW4d3S9FQUGPPn": {
+      "appliedCoupons": {
+        "Original South India Frappe": 2
+      },
+      "created_on": "03/03/2025, 09:57:15",
+      "created_on_date": "03/03/2025",
+      "created_on_time": "09:57:15",
+      "customer_name": "Aniruddh Sengupta",
+      "items": [
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 2,
+          "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+          "Name": "Original South India Frappe",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 43,
+          "order_item_id": "030320250957150"
+        }
+      ],
+      "order_id": "03032025095715",
+      "status": "Pending",
+      "timestamp": 1740976035786,
+      "total": 0,
+      "totalCouponsUsed": 2,
+      "user": "sengupta.a@somaiya.edu",
+      "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+    },
+    "-OKPJvV3QtDX_t7JHhkn": {
+      "appliedCoupons": {
+        "Original South India Frappe": 2
+      },
+      "created_on": "03/03/2025, 10:16:31",
+      "created_on_date": "03/03/2025",
+      "created_on_time": "10:16:31",
+      "customer_name": "Aniruddh Sengupta",
+      "items": [
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 2,
+          "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+          "Name": "Original South India Frappe",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 43,
+          "order_item_id": "030320251016310"
+        }
+      ],
+      "order_id": "03032025101631",
+      "status": "Pending",
+      "timestamp": 1740977191570,
+      "total": 0,
+      "totalCouponsUsed": 2,
+      "user": "sengupta.a@somaiya.edu",
+      "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+    },
+    "-OKPKLgLIJlKie_mYST-": {
+      "appliedCoupons": {
+        "Caramel Frappe": 2
+      },
+      "created_on": "03/03/2025, 10:18:22",
+      "created_on_date": "03/03/2025",
+      "created_on_time": "10:18:22",
+      "customer_name": "Aniruddh Sengupta",
+      "items": [
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 2,
+          "Desc": "Coffee and Caramel unite is a dreamy blend",
+          "Name": "Caramel Frappe",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 56,
+          "order_item_id": "030320251018220"
+        }
+      ],
+      "order_id": "03032025101822",
+      "status": "Pending",
+      "timestamp": 1740977302928,
+      "total": 0,
+      "totalCouponsUsed": 2,
+      "user": "sengupta.a@somaiya.edu",
+      "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+    },
+    "-OKPPZi-yhB-_1xX8t1y": {
+      "appliedCoupons": {
+        "Caramel Frappe": 2
+      },
+      "created_on": "03/03/2025, 10:41:10",
+      "created_on_date": "03/03/2025",
+      "created_on_time": "10:41:10",
+      "customer_name": "Aniruddh Sengupta",
+      "items": [
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 2,
+          "Desc": "Coffee and Caramel unite is a dreamy blend",
+          "Name": "Caramel Frappe",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 56,
+          "order_item_id": "030320251041100"
+        }
+      ],
+      "order_id": "03032025104110",
+      "status": "Pending",
+      "timestamp": 1740978671138,
+      "total": 0,
+      "totalCouponsUsed": 2,
+      "user": "sengupta.a@somaiya.edu",
+      "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+    },
+    "-OKPShzxlbQli4AqUSWI": {
+      "appliedCoupons": {
+        "Caramel Frappe": 2
+      },
+      "created_on": "03/03/2025, 10:54:54",
+      "created_on_date": "03/03/2025",
+      "created_on_time": "10:54:54",
+      "customer_name": "Aniruddh Sengupta",
+      "items": [
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 2,
+          "Desc": "Coffee and Caramel unite is a dreamy blend",
+          "Name": "Caramel Frappe",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 56,
+          "order_item_id": "030320251054540"
+        }
+      ],
+      "order_id": "03032025105454",
+      "status": "Pending",
+      "timestamp": 1740979495599,
+      "total": 0,
+      "totalCouponsUsed": 2,
+      "user": "sengupta.a@somaiya.edu",
+      "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+    },
+    "-OKPi_Go1pPmLIorwPA3": {
+      "appliedCoupons": {
+        "Caramel Frappe": 2
+      },
+      "created_on": "03/03/2025, 12:08:35",
+      "created_on_date": "03/03/2025",
+      "created_on_time": "12:08:35",
+      "customer_name": "Aniruddh Sengupta",
+      "items": [
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 2,
+          "Desc": "Coffee and Caramel unite is a dreamy blend",
+          "Name": "Caramel Frappe",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 56,
+          "order_item_id": "030320251208350"
+        }
+      ],
+      "order_id": "03032025120835",
+      "status": "Pending",
+      "timestamp": 1740983916301,
+      "total": 0,
+      "totalCouponsUsed": 2,
+      "user": "sengupta.a@somaiya.edu",
+      "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+    },
+    "-OKSbfiIpUpWpcKvVGCY": {
+      "appliedCoupons": {
+        "Original South India Frappe": 1
+      },
+      "created_on": "04/03/2025, 01:37:18",
+      "created_on_date": "04/03/2025",
+      "created_on_time": "01:37:18",
+      "customer_name": "Aniruddh Sengupta",
+      "items": [
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 1,
+          "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+          "Name": "Original South India Frappe",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 43,
+          "order_item_id": "040320250137180"
+        }
+      ],
+      "order_id": "04032025013718",
+      "status": "Pending",
+      "timestamp": 1741032439390,
+      "total": 0,
+      "totalCouponsUsed": 1,
+      "user": "sengupta.a@somaiya.edu",
+      "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+    },
+    "-OKSfzqficPlJlicR6v6": {
+      "appliedCoupons": {
+        "Caramel Frappe": 2
+      },
+      "created_on": "04/03/2025, 01:56:09",
+      "created_on_date": "04/03/2025",
+      "created_on_time": "01:56:09",
+      "customer_name": "Aniruddh Sengupta",
+      "items": [
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 2,
+          "Desc": "Coffee and Caramel unite is a dreamy blend",
+          "Name": "Caramel Frappe",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 53,
+          "order_item_id": "040320250156090"
+        }
+      ],
+      "order_id": "04032025015609",
+      "status": "Pending",
+      "timestamp": 1741033571912,
+      "total": 0,
+      "totalCouponsUsed": 2,
+      "user": "sengupta.a@somaiya.edu",
+      "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+    },
+    "-OKSgel5YBzp9e_8ARS4": {
+      "appliedCoupons": {
+        "Original South India Frappe": 1
+      },
+      "created_on": "04/03/2025, 01:59:05",
+      "created_on_date": "04/03/2025",
+      "created_on_time": "01:59:05",
+      "customer_name": "Aniruddh Sengupta",
+      "items": [
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 1,
+          "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+          "Name": "Original South India Frappe",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 42,
+          "order_item_id": "040320250159050"
+        }
+      ],
+      "order_id": "04032025015905",
+      "status": "Pending",
+      "timestamp": 1741033746218,
+      "total": 0,
+      "totalCouponsUsed": 1,
+      "user": "sengupta.a@somaiya.edu",
+      "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+    },
+    "-OKU4vrCvUJxz3HU3zpL": {
+      "appliedCoupons": {
+        "Original South India Frappe": 2
+      },
+      "created_on": "04/03/2025, 08:29:05",
+      "created_on_date": "04/03/2025",
+      "created_on_time": "08:29:05",
+      "customer_name": "Aniruddh Sengupta",
+      "items": [
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 2,
+          "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+          "Name": "Original South India Frappe",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 42,
+          "order_item_id": "040320250829050"
+        }
+      ],
+      "order_id": "04032025082905",
+      "status": "Pending",
+      "timestamp": 1741057147037,
+      "total": 0,
+      "totalCouponsUsed": 2,
+      "user": "sengupta.a@somaiya.edu",
+      "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+    },
+    "-OKUPqeRLypw5uC8XTc_": {
+      "appliedCoupons": {
+        "Original South India Frappe": 3
+      },
+      "created_on": "04/03/2025, 10:00:28",
+      "created_on_date": "04/03/2025",
+      "created_on_time": "10:00:28",
+      "customer_name": "Aniruddh Sengupta",
+      "items": [
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 3,
+          "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+          "Name": "Original South India Frappe",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 42,
+          "order_item_id": "040320251000280"
+        }
+      ],
+      "order_id": "04032025100028",
+      "status": "Pending",
+      "timestamp": 1741062630747,
+      "total": 0,
+      "totalCouponsUsed": 3,
+      "user": "sengupta.a@somaiya.edu",
+      "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+    },
+    "-OKUQYohMiaXQfntgbEu": {
+      "appliedCoupons": {
+        "Caramel Frappe": 2
+      },
+      "created_on": "04/03/2025, 10:03:33",
+      "created_on_date": "04/03/2025",
+      "created_on_time": "10:03:33",
+      "customer_name": "Aniruddh Sengupta",
+      "items": [
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 2,
+          "Desc": "Coffee and Caramel unite is a dreamy blend",
+          "Name": "Caramel Frappe",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 53,
+          "order_item_id": "040320251003330"
+        }
+      ],
+      "order_id": "04032025100333",
+      "status": "Pending",
+      "timestamp": 1741062815713,
+      "total": 0,
+      "totalCouponsUsed": 2,
+      "user": "sengupta.a@somaiya.edu",
+      "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+    },
+    "-OKUROMMQa5WQGSRyiXk": {
+      "appliedCoupons": {
+        "Original South India Frappe": 2
+      },
+      "created_on": "04/03/2025, 10:07:13",
+      "created_on_date": "04/03/2025",
+      "created_on_time": "10:07:13",
+      "customer_name": "Aniruddh Sengupta",
+      "items": [
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 2,
+          "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+          "Name": "Original South India Frappe",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 42,
+          "order_item_id": "040320251007130"
+        }
+      ],
+      "order_id": "04032025100713",
+      "status": "Pending",
+      "timestamp": 1741063034999,
+      "total": 0,
+      "totalCouponsUsed": 2,
+      "user": "sengupta.a@somaiya.edu",
+      "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+    },
+    "-OKUSv5ZSwOnW-tj7OUw": {
+      "appliedCoupons": {
+        "Caramel Frappe": 2
+      },
+      "created_on": "04/03/2025, 10:13:53",
+      "created_on_date": "04/03/2025",
+      "created_on_time": "10:13:53",
+      "customer_name": "Aniruddh Sengupta",
+      "items": [
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 2,
+          "Desc": "Coffee and Caramel unite is a dreamy blend",
+          "Name": "Caramel Frappe",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 53,
+          "order_item_id": "040320251013530"
+        }
+      ],
+      "order_id": "04032025101353",
+      "status": "Pending",
+      "timestamp": 1741063435302,
+      "total": 0,
+      "totalCouponsUsed": 2,
+      "user": "sengupta.a@somaiya.edu",
+      "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+    },
+    "-OKXJGzq-qt1IwD2ciJ2": {
+      "appliedCoupons": {
+        "Original South India Frappe": 2
+      },
+      "created_on": "04/03/2025, 23:30:37",
+      "created_on_date": "04/03/2025",
+      "created_on_time": "23:30:37",
+      "customer_name": "Aniruddh Sengupta",
+      "items": [
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 2,
+          "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+          "Name": "Original South India Frappe",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 42,
+          "order_item_id": "040320252330370"
+        }
+      ],
+      "order_id": "04032025233037",
+      "status": "Pending",
+      "timestamp": 1741111239387,
+      "total": 0,
+      "totalCouponsUsed": 2,
+      "user": "sengupta.a@somaiya.edu",
+      "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+    },
+    "-OKXLsbU-PZtfeQ5ethP": {
+      "appliedCoupons": {
+        "Original South India Frappe": 1
+      },
+      "created_on": "04/03/2025, 23:42:00",
+      "created_on_date": "04/03/2025",
+      "created_on_time": "23:42:00",
+      "customer_name": "Aniruddh Sengupta",
+      "items": [
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 1,
+          "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+          "Name": "Original South India Frappe",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 42,
+          "order_item_id": "040320252342000"
+        }
+      ],
+      "order_id": "04032025234200",
+      "status": "Pending",
+      "timestamp": 1741111921868,
+      "total": 0,
+      "totalCouponsUsed": 1,
+      "user": "sengupta.a@somaiya.edu",
+      "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+    },
+    "-OKXOTqZNFmIwo8nSb6s": {
+      "appliedCoupons": {
+        "Original South India Frappe": 2
+      },
+      "created_on": "04/03/2025, 23:53:21",
+      "created_on_date": "04/03/2025",
+      "created_on_time": "23:53:21",
+      "customer_name": "Aniruddh Sengupta",
+      "items": [
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 2,
+          "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+          "Name": "Original South India Frappe",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 42,
+          "order_item_id": "040320252353210"
+        }
+      ],
+      "order_id": "04032025235321",
+      "status": "Pending",
+      "timestamp": 1741112602798,
+      "total": 0,
+      "totalCouponsUsed": 2,
+      "user": "sengupta.a@somaiya.edu",
+      "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+    },
+    "-OKZUZhIa_xdthvm_Jik": {
+      "appliedCoupons": {
+        "Original South India Frappe": 2
+      },
+      "created_on": "05/03/2025, 09:39:12",
+      "created_on_date": "05/03/2025",
+      "created_on_time": "09:39:12",
+      "customer_name": "Aniruddh Sengupta",
+      "items": [
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 2,
+          "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+          "Name": "Original South India Frappe",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 42,
+          "order_item_id": "050320250939120"
+        }
+      ],
+      "order_id": "05032025093912",
+      "status": "Pending",
+      "timestamp": 1741147754007,
+      "total": 0,
+      "totalCouponsUsed": 2,
+      "user": "sengupta.a@somaiya.edu",
+      "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+    },
+    "-OKZwnL8J0MgCvWVbj6P": {
+      "appliedCoupons": {
+        "Original South India Frappe": 4
+      },
+      "created_on": "05/03/2025, 11:46:55",
+      "created_on_date": "05/03/2025",
+      "created_on_time": "11:46:55",
+      "customer_name": "Aniruddh Sengupta",
+      "items": [
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 4,
+          "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+          "Name": "Original South India Frappe",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 42,
+          "order_item_id": "050320251146550"
+        }
+      ],
+      "order_id": "05032025114655",
+      "status": "Pending",
+      "timestamp": 1741155416179,
+      "total": 0,
+      "totalCouponsUsed": 4,
+      "user": "sengupta.a@somaiya.edu",
+      "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+    },
+    "-OK_Qa9_L6C8BgPsEUh2": {
+      "appliedCoupons": {
+        "Original South India Frappe": 2
+      },
+      "created_on": "05/03/2025, 14:01:28",
+      "created_on_date": "05/03/2025",
+      "created_on_time": "14:01:28",
+      "customer_name": "Aniruddh Sengupta",
+      "items": [
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 2,
+          "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+          "Name": "Original South India Frappe",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 42,
+          "order_item_id": "050320251401280"
+        }
+      ],
+      "order_id": "05032025140128",
+      "status": "Pending",
+      "timestamp": 1741163489339,
+      "total": 0,
+      "totalCouponsUsed": 2,
+      "user": "sengupta.a@somaiya.edu",
+      "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+    },
+    "-OK_QfZ4bUzJZuQekB7e": {
+      "appliedCoupons": {
+        "Original South India Frappe": 1
+      },
+      "created_on": "05/03/2025, 14:01:50",
+      "created_on_date": "05/03/2025",
+      "created_on_time": "14:01:50",
+      "customer_name": "Aniruddh Sengupta",
+      "items": [
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 1,
+          "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+          "Name": "Original South India Frappe",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 42,
+          "order_item_id": "050320251401500"
+        }
+      ],
+      "order_id": "05032025140150",
+      "status": "Pending",
+      "timestamp": 1741163511455,
+      "total": 0,
+      "totalCouponsUsed": 1,
+      "user": "sengupta.a@somaiya.edu",
+      "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+    },
+    "-OK_QuptWtnAtXOBymuF": {
+      "appliedCoupons": {
+        "Cold Brew": 2
+      },
+      "created_on": "05/03/2025, 14:02:52",
+      "created_on_date": "05/03/2025",
+      "created_on_time": "14:02:52",
+      "customer_name": "Aniruddh Sengupta",
+      "items": [
+        {
+          "Category": "ColdCoffeeMenu",
+          "Count": 2,
+          "Desc": "",
+          "Name": "Cold Brew",
+          "Price": 0,
+          "Size": "250ml",
+          "Stock": 29,
+          "order_item_id": "050320251402520"
+        }
+      ],
+      "order_id": "05032025140252",
+      "status": "Pending",
+      "timestamp": 1741163574045,
+      "total": 0,
+      "totalCouponsUsed": 2,
+      "user": "sengupta.a@somaiya.edu",
+      "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+    }
+  },
+  "Reports_Access": {
+    "Qon8vrBEcQUTGb1ZUZD5VZDyWq02": true,
+    "UxjKuIhkfnZ7vHHCa1GcgBKD81U2": true,
+    "plXROqmXFGeKdpgjU0qhwbG9BPt2": true
+  },
+  "Stocks_Access": {
+    "0pU28JhYbqaO54kurivO9nuzMQF3": true,
+    "5tw54t8hSsd4N4RZQWFWT5u1aDT2": true,
+    "Qon8vrBEcQUTGb1ZUZD5VZDyWq02": true,
+    "hRCdLKbU97gqLCp9B6TuzBmOUd52": true,
+    "n1hCvQMvuYNhvfHDHdqSCJnDFrm1": true,
+    "plXROqmXFGeKdpgjU0qhwbG9BPt2": true,
+    "ux5PRqaHhMYoeJMvpuO51BGcTiL2": true
+  },
+  "Stocks_Log": {
+    "01032025182444": {
+      "inputData": {
+        "ColdCoffeeMenu": [
+          "43",
+          "56",
+          "85",
+          null,
+          "29"
+        ]
+      },
+      "prevStockData": {
+        "ColdCoffeeMenu": {
+          "Caramel Frappe": 5,
+          "Cold Brew": 9,
+          "Hazelnut Frappe": 6,
+          "Malnad Tonic": 10,
+          "Original South India Frappe": 4,
+          "Vanilla Praline Frappe": 8
+        },
+        "HotCoffeeMenu": {
+          "Kaapiccino": 3,
+          "South Indian Filter Kaapi": 9
+        },
+        "KaapiFestMenu": {
+          "Aḍike Iced Latte": 5,
+          "Aḍike Kaapi Latte": 10,
+          "Nariyal Iced Latte": 5,
+          "Nariyal Kaapi Latte": 5,
+          "Roohafza Iced Latte": 4,
+          "Roohafza Kaapi Latte": 5,
+          "Thandai Iced Latte": 5,
+          "Thandai Kaapi Latte": 5
+        },
+        "SavouryMenu": {
+          "Baked Pav Bhaji": 5,
+          "Baked Vada Pav": 5,
+          "Benne Croissant": 3
+        }
+      },
+      "timestamp": "01/03/2025, 18:24:44"
+    },
+    "05032025181851": {
+      "prevStockData": {
+        "ColdCoffeeMenu": {
+          "Caramel Frappe": 53,
+          "Cold Brew": 29,
+          "Hazelnut Frappe": 85,
+          "Malnad Tonic": 10,
+          "Original South India Frappe": 42,
+          "Vanilla Praline Frappe": 8
+        },
+        "HotCoffeeMenu": {
+          "Kaapiccino": 3,
+          "South Indian Filter Kaapi": 9
+        },
+        "KaapiFestMenu": {
+          "Aḍike Iced Latte": 5,
+          "Aḍike Kaapi Latte": 10,
+          "Nariyal Iced Latte": 5,
+          "Nariyal Kaapi Latte": 5,
+          "Roohafza Iced Latte": 4,
+          "Roohafza Kaapi Latte": 5,
+          "Thandai Iced Latte": 5,
+          "Thandai Kaapi Latte": 5
+        },
+        "SavouryMenu": {
+          "Baked Pav Bhaji": 5,
+          "Baked Vada Pav": 5,
+          "Benne Croissant": 3
+        }
+      },
+      "timestamp": "05/03/2025, 18:18:51"
+    },
+    "09032025141624": {
+      "inputData": {
+        "HotCoffeeMenu": [
+          null,
+          null,
+          "20",
+          "12",
+          "13",
+          "12",
+          "6",
+          "21",
+          "5"
+        ]
+      },
+      "prevStockData": {
+        "ColdCoffeeMenu": {
+          "Caramel Frappe": 53,
+          "Cold Brew": 29,
+          "Hazelnut Frappe": 85,
+          "Malnad Tonic": 10,
+          "Original South India Frappe": 42,
+          "Vanilla Praline Frappe": 8
+        },
+        "HotCoffeeMenu": {
+          "Café Latte": 0,
+          "Café Mocha": 0,
+          "Cappuccino": 0,
+          "Espresso": 0,
+          "Hot Chocolate": 0,
+          "Irish Americano": 0,
+          "Kaapiccino": 3,
+          "Macchiato": 0,
+          "South Indian Filter Kaapi": 9
+        },
+        "KaapiFestMenu": {
+          "Aḍike Iced Latte": 5,
+          "Aḍike Kaapi Latte": 10,
+          "Nariyal Iced Latte": 5,
+          "Nariyal Kaapi Latte": 5,
+          "Roohafza Iced Latte": 4,
+          "Roohafza Kaapi Latte": 5,
+          "Thandai Iced Latte": 5,
+          "Thandai Kaapi Latte": 5
+        },
+        "SavouryMenu": {
+          "Baked Pav Bhaji": 5,
+          "Baked Vada Pav": 5,
+          "Benne Croissant": 3
+        }
+      },
+      "timestamp": "09/03/2025, 14:16:24"
+    }
+  },
+  "UserCoupons": {
+    "-OJOG0aaUkhIIDPQB9Hn": {
+      "active_coupons": 0,
+      "email": "aniruddhs105@gmail.com",
+      "last_allocation_date": 1739912712222,
+      "redemption_history": [
+        {
+          "items": [
+            {
+              "count": 1,
+              "date": 1740819660870,
+              "item_name": "Caramel Frappe"
+            }
+          ],
+          "order_id": "-OKFw-FLPYHEu6rrlHRZ",
+          "timestamp": 1740819660870,
+          "total_coupons": 1
+        },
+        {
+          "items": [
+            {
+              "count": 3,
+              "date": 1740821284752,
+              "item_name": "Original South India Frappe"
+            },
+            {
+              "count": 1,
+              "date": 1740821284752,
+              "item_name": "Hazelnut Frappe"
+            }
+          ],
+          "order_id": "-OKG1Bcdwf2Xqro9vM-J",
+          "timestamp": 1740821284752,
+          "total_coupons": 4
+        },
+        {
+          "items": [
+            {
+              "count": 2,
+              "date": 1740821556728,
+              "item_name": "Original South India Frappe"
+            },
+            {
+              "count": 2,
+              "date": 1740821556728,
+              "item_name": "Caramel Frappe"
+            }
+          ],
+          "order_id": "-OKG2E5UiMspTXFB574V",
+          "timestamp": 1740821556728,
+          "total_coupons": 4
+        },
+        {
+          "items": [
+            {
+              "count": 2,
+              "date": 1740821591115,
+              "item_name": "Original South India Frappe"
+            }
+          ],
+          "order_id": "-OKG2MUp72tc3kTBpAwO",
+          "timestamp": 1740821591115,
+          "total_coupons": 2
+        },
+        {
+          "items": [
+            {
+              "count": 2,
+              "date": 1740821741413,
+              "item_name": "Original South India Frappe"
+            },
+            {
+              "count": 4,
+              "date": 1740821741413,
+              "item_name": "South Indian Filter Kaapi"
+            }
+          ],
+          "order_id": "-OKG2wB5eEGpKB4_pNu3",
+          "timestamp": 1740821741413,
+          "total_coupons": 6
+        },
+        {
+          "items": [
+            {
+              "count": 1,
+              "date": 1740822175080,
+              "item_name": "Original South India Frappe"
+            }
+          ],
+          "order_id": "-OKG4a32R3qbUVR144uL",
+          "timestamp": 1740822175080,
+          "total_coupons": 1
+        },
+        {
+          "items": [
+            {
+              "count": 2,
+              "date": 1740830753118,
+              "item_name": "Original South India Frappe"
+            }
+          ],
+          "order_id": "-OKGaJGWlvhs8CdmX7Tz",
+          "timestamp": 1740830753118,
+          "total_coupons": 2
+        },
+        {
+          "items": [
+            {
+              "count": 1,
+              "date": 1740831629758,
+              "item_name": "Caramel Frappe"
+            }
+          ],
+          "order_id": "-OKGdeI1Sru9EMGXKrtb",
+          "timestamp": 1740831629758,
+          "total_coupons": 1
+        },
+        {
+          "items": [
+            {
+              "count": 1,
+              "date": 1740833918439,
+              "item_name": "Original South India Frappe"
+            }
+          ],
+          "order_id": "-OKGmO0mthGqTxza5xPx",
+          "timestamp": 1740833918439,
+          "total_coupons": 1
+        },
+        {
+          "items": [
+            {
+              "count": 4,
+              "date": 1740833957837,
+              "item_name": "Caramel Frappe"
+            }
+          ],
+          "order_id": "-OKGmXdNrTZ1vktLIFhp",
+          "timestamp": 1740833957837,
+          "total_coupons": 4
+        },
+        {
+          "items": [
+            {
+              "count": 2,
+              "date": 1740911332362,
+              "item_name": "Original South India Frappe"
+            }
+          ],
+          "order_id": "-OKLOgenNHD0NiEJs0tl",
+          "timestamp": 1740911332362,
+          "total_coupons": 2
+        },
+        {
+          "items": [
+            {
+              "count": 2,
+              "date": 1740913421874,
+              "item_name": "Original South India Frappe"
+            }
+          ],
+          "order_id": "-OKLWenzjBnUgLV_demo",
+          "timestamp": 1740913421874,
+          "total_coupons": 2
+        },
+        {
+          "items": [
+            {
+              "count": 1,
+              "date": 1740922183613,
+              "item_name": "Original South India Frappe"
+            }
+          ],
+          "order_id": "-OKM24vkufTK4YlPEyT3",
+          "timestamp": 1740922183613,
+          "total_coupons": 1
+        }
+      ]
+    },
+    "-OJRJH5HHUqqw-seBTC-": {
+      "active_coupons": 0,
+      "allocation_history": {
+        "1739936831359": {
+          "admin_id": "plXROqmXFGeKdpgjU0qhwbG9BPt2",
+          "amount": 20
+        },
+        "1739937936836": {
+          "admin_id": "plXROqmXFGeKdpgjU0qhwbG9BPt2",
+          "amount": 25
+        }
+      },
+      "created_at": 1705644600000,
+      "email": "tomstark159@gmail.com",
+      "last_allocation_date": 1705644600000,
+      "total_redemptions": 0
+    },
+    "-OJRNygSee-MuNXwMNb3": {
+      "active_coupons": 0,
+      "allocation_history": {
+        "1739938062581": {
+          "admin_id": "plXROqmXFGeKdpgjU0qhwbG9BPt2",
+          "amount": 30
+        }
+      },
+      "created_at": 1739938062581,
+      "email": "aniruddh@gmail.com",
+      "last_allocation_date": 1739938062581,
+      "total_redemptions": 0
+    },
+    "-OJgr5sKHEoH2MsPNZ0t": {
+      "active_coupons": 10,
+      "allocation_history": {
+        "1740214781409": {
+          "admin_id": "Qon8vrBEcQUTGb1ZUZD5VZDyWq02",
+          "amount": 10
+        }
+      },
+      "created_at": 1740214781409,
+      "email": "vedit@drilldown.online",
+      "last_allocation_date": 1740214781408,
+      "redemption_history": [
+        {
+          "order_id": "-OJgs1kTSWzFEZj6DOJF",
+          "timestamp": 1740214643713,
+          "total_coupons": 0
+        },
+        {
+          "order_id": "-OJgs60PoNny5M3v9JKi",
+          "timestamp": 1740214661209,
+          "total_coupons": 0
+        },
+        {
+          "order_id": "-OJgu0E964eyn5etPXcn",
+          "timestamp": 1740215161767,
+          "total_coupons": 0
+        }
+      ],
+      "total_redemptions": 0
+    },
+    "-OJgrjG1G61S5dD6GeKI": {
+      "active_coupons": 0,
+      "created_at": "2025-02-22T08:56:03.873Z",
+      "email": "veditbeladia@gmail.com",
+      "total_redemptions": 0
+    },
+    "-OKFabt7fgEQs_NlUUYI": {
+      "active_coupons": 20,
+      "allocation_history": {
+        "1740814056025": {
+          "admin_id": "Qon8vrBEcQUTGb1ZUZD5VZDyWq02",
+          "amount": 40
+        },
+        "1741176495165": {
+          "admin_id": "Qon8vrBEcQUTGb1ZUZD5VZDyWq02",
+          "amount": 20
+        }
+      },
+      "created_at": 1740814056025,
+      "email": "kbhatt0904@drilldown.online",
+      "last_allocation_date": 1741176495165,
+      "redemption_history": [
+        {
+          "order_id": "-OKFb0kPPuz-IPJ4qB8r",
+          "timestamp": 1740814164036,
+          "total_coupons": 0
+        },
+        {
+          "items": [
+            {
+              "count": 2,
+              "date": 1740814275996,
+              "item_name": "Kaapiccino"
+            }
+          ],
+          "order_id": "-OKFbS4TxvB65VAv2FRQ",
+          "timestamp": 1740814275996,
+          "total_coupons": 2
+        },
+        {
+          "items": [
+            {
+              "count": 4,
+              "date": 1740833233372,
+              "item_name": "Original South India Frappe"
+            },
+            {
+              "count": 9,
+              "date": 1740833233372,
+              "item_name": "South Indian Filter Kaapi"
+            },
+            {
+              "count": 5,
+              "date": 1740833233372,
+              "item_name": "Baked Vada Pav"
+            },
+            {
+              "count": 5,
+              "date": 1740833233372,
+              "item_name": "Caramel Frappe"
+            },
+            {
+              "count": 8,
+              "date": 1740833233372,
+              "item_name": "Vanilla Praline Frappe"
+            },
+            {
+              "count": 7,
+              "date": 1740833233372,
+              "item_name": "Cold Brew"
+            }
+          ],
+          "order_id": "-OKGjlG6keHfKl7BNYvy",
+          "timestamp": 1740833233372,
+          "total_coupons": 38
+        },
+        {
+          "items": [
+            {
+              "count": 4,
+              "date": 1740834118961,
+              "item_name": "Original South India Frappe"
+            },
+            {
+              "count": 1,
+              "date": 1740834118961,
+              "item_name": "Kaapiccino"
+            }
+          ],
+          "order_id": "-OKGn8SB-aXozJDaWgEq",
+          "timestamp": 1740834118961,
+          "total_coupons": 5
+        },
+        {
+          "items": [
+            {
+              "count": 5,
+              "date": 1740834532171,
+              "item_name": "South Indian Filter Kaapi"
+            }
+          ],
+          "order_id": "-OKGoiLxsrIKrqTC6R8U",
+          "timestamp": 1740834532171,
+          "total_coupons": 5
+        },
+        {
+          "items": [
+            {
+              "count": 5,
+              "date": 1740834556584,
+              "item_name": "South Indian Filter Kaapi"
+            }
+          ],
+          "order_id": "-OKGooJUlboH8tfPdxBH",
+          "timestamp": 1740834556584,
+          "total_coupons": 5
+        }
+      ],
+      "total_redemptions": 0
+    },
+    "-OKaf-LOHwxEx_LXPgYv": {
+      "active_coupons": 105,
+      "allocation_history": {
+        "1741184303568": {
+          "admin_id": "Qon8vrBEcQUTGb1ZUZD5VZDyWq02",
+          "amount": 120
+        }
+      },
+      "cancellation_history": [
+        {
+          "action": "refund",
+          "coupons_refunded": 3,
+          "date": 1741506632041,
+          "order_id": "09032025131457",
+          "reason": "order_cancelled",
+          "refunded_at": "2025-03-09T07:50:32.041Z"
+        },
+        {
+          "action": "refund",
+          "coupons_refunded": 1,
+          "date": 1741506656144,
+          "order_id": "09032025131515",
+          "reason": "order_cancelled",
+          "refunded_at": "2025-03-09T07:50:56.144Z"
+        }
+      ],
+      "created_at": 1741184303568,
+      "email": "sengupta.a@somaiya.edu",
+      "last_allocation_date": 1741184303568,
+      "last_redemption_date": "2025-03-09T07:45:16.411Z",
+      "redemption_history": [
+        {
+          "category": "ColdCoffeeMenu",
+          "date": 1741503634363,
+          "item_name": "Original South India Frappe",
+          "item_price": 0,
+          "quantity": 2,
+          "redeemed_at": "2025-03-09T07:00:34.363Z"
+        },
+        {
+          "category": "ColdCoffeeMenu",
+          "date": 1741503634363,
+          "item_name": "Vanilla Praline Frappe",
+          "item_price": 0,
+          "quantity": 5,
+          "redeemed_at": "2025-03-09T07:00:34.363Z"
+        },
+        {
+          "category": "ColdCoffeeMenu",
+          "date": 1741504583362,
+          "item_name": "Original South India Frappe",
+          "item_price": 0,
+          "quantity": 5,
+          "redeemed_at": "2025-03-09T07:16:23.362Z"
+        },
+        {
+          "category": "ColdCoffeeMenu",
+          "date": 1741505951733,
+          "item_name": "Caramel Frappe",
+          "item_price": "Rs. 120",
+          "quantity": 2,
+          "redeemed_at": "2025-03-09T07:39:11.733Z"
+        },
+        {
+          "category": "ColdCoffeeMenu",
+          "date": 1741506157299,
+          "item_name": "Original South India Frappe",
+          "item_price": "Rs. 100",
+          "quantity": 1,
+          "redeemed_at": "2025-03-09T07:42:37.299Z"
+        },
+        {
+          "category": "ColdCoffeeMenu",
+          "date": 1741506301807,
+          "item_name": "Original South India Frappe",
+          "item_price": "Rs. 100",
+          "quantity": 3,
+          "redeemed_at": "2025-03-09T07:45:01.807Z"
+        },
+        {
+          "category": "ColdCoffeeMenu",
+          "date": 1741506316411,
+          "item_name": "Original South India Frappe",
+          "item_price": "Rs. 100",
+          "quantity": 1,
+          "redeemed_at": "2025-03-09T07:45:16.411Z"
+        }
+      ],
+      "total_redemptions": 19
+    }
+  },
+  "Users": {
+    "FSXq6EoVWOQwNCmfZpanzQkSpW02": {
+      "displayName": "Aniruddh Sengupta",
+      "email": "aniruddhs105@gmail.com",
+      "lastLogin": 1739797261739,
+      "photoURL": "https://lh3.googleusercontent.com/a/ACg8ocINxmKqGCqRRjOvrNM5jHrzGDNTbk3r8hGrW1LErYPapV1lLqY=s96-c"
+    },
+    "Ke6WhLG7lRgolMaihasYVk02BzH3": {
+      "displayName": "Aniruddh Sengupta",
+      "email": "sengupta.a@somaiya.edu",
+      "lastLogin": 1739797579459,
+      "photoURL": "https://lh3.googleusercontent.com/a/ACg8ocJFx8TuQvaocKalChuV3iegQD-ta6arerH0TlPTYHHxPNG3JQ=s96-c"
+    }
+  },
+  "completed": {
+    "020320251640000": {
+      "Category": "ColdCoffeeMenu",
+      "Count": 3,
+      "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+      "Name": "Original South India Frappe",
+      "Price": "Rs. 100",
+      "Section": "Main",
+      "Size": "250ml",
+      "Stock": 43,
+      "created_on": "02/03/2025, 16:40:00",
+      "created_on_date": "02/03/2025",
+      "created_on_time": "16:40:00",
+      "customer_name": "Aniruddh Sengupta 02032025164000",
+      "order_id": "02032025164000",
+      "order_item_id": "020320251640000",
+      "prep_start_time": "02/03/2025, 18:45:43",
+      "prepared_by_email": "kunj@drilldown.online",
+      "prepared_by_id": "Qon8vrBEcQUTGb1ZUZD5VZDyWq02",
+      "served_by_email": "kunj@drilldown.online",
+      "served_by_id": "Qon8vrBEcQUTGb1ZUZD5VZDyWq02",
+      "served_time": "02/03/2025, 18:45:46",
+      "status": "Served"
+    },
+    "020320251808050": {
+      "Category": "ColdCoffeeMenu",
+      "Count": 4,
+      "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+      "Name": "Original South India Frappe",
+      "Price": "Rs. 100",
+      "Section": "Main",
+      "Size": "250ml",
+      "Stock": 43,
+      "Table": "Table1",
+      "created_on": "02/03/2025, 18:08:05",
+      "created_on_date": "02/03/2025",
+      "created_on_time": "18:08:05",
+      "customer_name": "Aniruddh Sengupta 02032025180805",
+      "order_id": "02032025180805",
+      "order_item_id": "020320251808050",
+      "prep_start_time": "02/03/2025, 18:45:38",
+      "prepared_by_email": "kunj@drilldown.online",
+      "prepared_by_id": "Qon8vrBEcQUTGb1ZUZD5VZDyWq02",
+      "served_by_email": "kunj@drilldown.online",
+      "served_by_id": "Qon8vrBEcQUTGb1ZUZD5VZDyWq02",
+      "served_time": "02/03/2025, 18:46:06",
+      "status": "Served"
+    },
+    "020320251808051": {
+      "Category": "ColdCoffeeMenu",
+      "Count": 2,
+      "Desc": "Coffee and Caramel unite is a dreamy blend",
+      "Name": "Caramel Frappe",
+      "Price": "Rs. 120",
+      "Section": "Main",
+      "Size": "250ml",
+      "Stock": 56,
+      "Table": "Table1",
+      "created_on": "02/03/2025, 18:08:05",
+      "created_on_date": "02/03/2025",
+      "created_on_time": "18:08:05",
+      "customer_name": "Aniruddh Sengupta 02032025180805",
+      "order_id": "02032025180805",
+      "order_item_id": "020320251808051",
+      "prep_start_time": "02/03/2025, 19:19:06",
+      "prepared_by_email": "kunj@drilldown.online",
+      "prepared_by_id": "Qon8vrBEcQUTGb1ZUZD5VZDyWq02",
+      "served_by_email": "kunj@drilldown.online",
+      "served_by_id": "Qon8vrBEcQUTGb1ZUZD5VZDyWq02",
+      "served_time": "02/03/2025, 19:19:07",
+      "status": "Served"
+    },
+    "020320251814300": {
+      "Category": "ColdCoffeeMenu",
+      "Count": 3,
+      "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+      "Name": "Original South India Frappe",
+      "Price": "Rs. 100",
+      "Section": "Main",
+      "Size": "250ml",
+      "Stock": 43,
+      "Table": "Table1",
+      "created_on": "02/03/2025, 18:14:30",
+      "created_on_date": "02/03/2025",
+      "created_on_time": "18:14:30",
+      "customer_name": "Aniruddh Sengupta 02032025181430",
+      "order_id": "02032025181430",
+      "order_item_id": "020320251814300",
+      "served_by_email": "kunj@drilldown.online",
+      "served_by_id": "Qon8vrBEcQUTGb1ZUZD5VZDyWq02",
+      "served_time": "02/03/2025, 19:19:00",
+      "status": "Served"
+    },
+    "020320251859430": {
+      "Category": "ColdCoffeeMenu",
+      "Count": 1,
+      "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+      "Name": "Original South India Frappe",
+      "Price": "Rs. 100",
+      "Section": "Main",
+      "Size": "250ml",
+      "Stock": 43,
+      "created_on": "02/03/2025, 18:59:43",
+      "created_on_date": "02/03/2025",
+      "created_on_time": "18:59:43",
+      "customer_name": "Aniruddh Sengupta 02032025185943",
+      "order_id": "02032025185943",
+      "order_item_id": "020320251859430",
+      "served_by_email": "kunj@drilldown.online",
+      "served_by_id": "Qon8vrBEcQUTGb1ZUZD5VZDyWq02",
+      "served_time": "02/03/2025, 19:00:03",
+      "status": "Served"
+    },
+    "020320251917330": {
+      "Category": "ColdCoffeeMenu",
+      "Count": 3,
+      "Desc": "Coffee and Caramel unite is a dreamy blend",
+      "Name": "Caramel Frappe",
+      "Price": 0,
+      "Section": "Main",
+      "Size": "250ml",
+      "Stock": 56,
+      "created_on": "02/03/2025, 19:17:33",
+      "created_on_date": "02/03/2025",
+      "created_on_time": "19:17:33",
+      "customer_name": "Aniruddh Sengupta 02032025191733",
+      "order_id": "02032025191733",
+      "order_item_id": "020320251917330",
+      "prep_start_time": "02/03/2025, 19:18:05",
+      "prepared_by_email": "kunj@drilldown.online",
+      "prepared_by_id": "Qon8vrBEcQUTGb1ZUZD5VZDyWq02",
+      "served_by_email": "kunj@drilldown.online",
+      "served_by_id": "Qon8vrBEcQUTGb1ZUZD5VZDyWq02",
+      "served_time": "02/03/2025, 19:18:27",
+      "status": "Served"
+    },
+    "020320251917331": {
+      "Category": "HotCoffeeMenu",
+      "Count": 2,
+      "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+      "Name": "Kaapiccino",
+      "Price": "Rs.90",
+      "Section": "Main",
+      "Size": "250ml",
+      "Stock": 3,
+      "created_on": "02/03/2025, 19:17:33",
+      "created_on_date": "02/03/2025",
+      "created_on_time": "19:17:33",
+      "customer_name": "Aniruddh Sengupta 02032025191733",
+      "order_id": "02032025191733",
+      "order_item_id": "020320251917331",
+      "prep_start_time": "02/03/2025, 19:18:20",
+      "prepared_by_email": "kunj@drilldown.online",
+      "prepared_by_id": "Qon8vrBEcQUTGb1ZUZD5VZDyWq02",
+      "served_by_email": "kunj@drilldown.online",
+      "served_by_id": "Qon8vrBEcQUTGb1ZUZD5VZDyWq02",
+      "served_time": "02/03/2025, 19:18:27",
+      "status": "Served"
+    },
+    "020320251934080": {
+      "Category": "HotCoffeeMenu",
+      "Count": 5,
+      "Desc": "Bass Naam Hi Kaapi Hai",
+      "Name": "South Indian Filter Kaapi",
+      "Price": "Rs. 50",
+      "Section": "Main",
+      "Size": "250ml",
+      "Stock": 9,
+      "created_on": "02/03/2025, 19:34:08",
+      "created_on_date": "02/03/2025",
+      "created_on_time": "19:34:08",
+      "customer_name": "Aniruddh Sengupta 02032025193408",
+      "order_id": "02032025193408",
+      "order_item_id": "020320251934080",
+      "prep_start_time": "02/03/2025, 20:22:53",
+      "prepared_by_email": "kunj@drilldown.online",
+      "prepared_by_id": "Qon8vrBEcQUTGb1ZUZD5VZDyWq02",
+      "served_by_email": "kunj@drilldown.online",
+      "served_by_id": "Qon8vrBEcQUTGb1ZUZD5VZDyWq02",
+      "served_time": "05/03/2025, 11:45:48",
+      "status": "Served"
+    },
+    "020320251936270": {
+      "Category": "HotCoffeeMenu",
+      "Count": 3,
+      "Desc": "Bass Naam Hi Kaapi Hai",
+      "Name": "South Indian Filter Kaapi",
+      "Price": 0,
+      "Section": "Main",
+      "Size": "250ml",
+      "Stock": 9,
+      "created_on": "02/03/2025, 19:36:27",
+      "created_on_date": "02/03/2025",
+      "created_on_time": "19:36:27",
+      "customer_name": "Aniruddh Sengupta 02032025193627",
+      "order_id": "02032025193627",
+      "order_item_id": "020320251936270",
+      "prep_start_time": "02/03/2025, 19:36:44",
+      "prepared_by_email": "kunj@drilldown.online",
+      "prepared_by_id": "Qon8vrBEcQUTGb1ZUZD5VZDyWq02",
+      "served_by_email": "kunj@drilldown.online",
+      "served_by_id": "Qon8vrBEcQUTGb1ZUZD5VZDyWq02",
+      "served_time": "02/03/2025, 19:37:13",
+      "status": "Served"
+    },
+    "020320251936271": {
+      "Category": "ColdCoffeeMenu",
+      "Count": 2,
+      "Desc": "Coffee and Caramel unite is a dreamy blend",
+      "Name": "Caramel Frappe",
+      "Price": "Rs. 120",
+      "Section": "Main",
+      "Size": "250ml",
+      "Stock": 56,
+      "created_on": "02/03/2025, 19:36:27",
+      "created_on_date": "02/03/2025",
+      "created_on_time": "19:36:27",
+      "customer_name": "Aniruddh Sengupta 02032025193627",
+      "order_id": "02032025193627",
+      "order_item_id": "020320251936271",
+      "prep_start_time": "02/03/2025, 19:37:11",
+      "prepared_by_email": "kunj@drilldown.online",
+      "prepared_by_id": "Qon8vrBEcQUTGb1ZUZD5VZDyWq02",
+      "served_by_email": "kunj@drilldown.online",
+      "served_by_id": "Qon8vrBEcQUTGb1ZUZD5VZDyWq02",
+      "served_time": "02/03/2025, 19:37:13",
+      "status": "Served"
+    },
+    "020320252040200": {
+      "Category": "HotCoffeeMenu",
+      "Count": 2,
+      "Desc": "Bass Naam Hi Kaapi Hai",
+      "Name": "South Indian Filter Kaapi",
+      "Price": 0,
+      "Section": "Main",
+      "Size": "250ml",
+      "Stock": 9,
+      "created_on": "02/03/2025, 20:40:20",
+      "created_on_date": "02/03/2025",
+      "created_on_time": "20:40:20",
+      "customer_name": "Aniruddh Sengupta 02032025204020",
+      "order_id": "02032025204020",
+      "order_item_id": "020320252040200",
+      "prep_start_time": "02/03/2025, 20:41:34",
+      "prepared_by_email": "kunj@drilldown.online",
+      "prepared_by_id": "Qon8vrBEcQUTGb1ZUZD5VZDyWq02",
+      "served_by_email": "kunj@drilldown.online",
+      "served_by_id": "Qon8vrBEcQUTGb1ZUZD5VZDyWq02",
+      "served_time": "02/03/2025, 20:41:39",
+      "status": "Served"
+    },
+    "020320252040201": {
+      "Category": "ColdCoffeeMenu",
+      "Count": 2,
+      "Desc": "Coffee and Caramel unite is a dreamy blend",
+      "Name": "Caramel Frappe",
+      "Price": "Rs. 120",
+      "Section": "Main",
+      "Size": "250ml",
+      "Stock": 56,
+      "created_on": "02/03/2025, 20:40:20",
+      "created_on_date": "02/03/2025",
+      "created_on_time": "20:40:20",
+      "customer_name": "Aniruddh Sengupta 02032025204020",
+      "order_id": "02032025204020",
+      "order_item_id": "020320252040201",
+      "prep_start_time": "02/03/2025, 20:41:38",
+      "prepared_by_email": "kunj@drilldown.online",
+      "prepared_by_id": "Qon8vrBEcQUTGb1ZUZD5VZDyWq02",
+      "served_by_email": "kunj@drilldown.online",
+      "served_by_id": "Qon8vrBEcQUTGb1ZUZD5VZDyWq02",
+      "served_time": "02/03/2025, 20:41:39",
+      "status": "Served"
+    },
+    "030320250942160": {
+      "Category": "ColdCoffeeMenu",
+      "Count": 2,
+      "Desc": "Coffee and Caramel unite is a dreamy blend",
+      "Name": "Caramel Frappe",
+      "Price": 0,
+      "Section": "Main",
+      "Size": "250ml",
+      "Stock": 56,
+      "created_on": "03/03/2025, 09:42:16",
+      "created_on_date": "03/03/2025",
+      "created_on_time": "09:42:16",
+      "customer_name": "Aniruddh Sengupta 03032025094216",
+      "order_id": "03032025094216",
+      "order_item_id": "030320250942160",
+      "prep_start_time": "03/03/2025, 09:48:40",
+      "prepared_by_email": "kunj@drilldown.online",
+      "prepared_by_id": "Qon8vrBEcQUTGb1ZUZD5VZDyWq02",
+      "served_by_email": "kunj@drilldown.online",
+      "served_by_id": "Qon8vrBEcQUTGb1ZUZD5VZDyWq02",
+      "served_time": "05/03/2025, 11:45:50",
+      "status": "Served"
+    },
+    "030320250942161": {
+      "Category": "ColdCoffeeMenu",
+      "Count": 2,
+      "Desc": "Praline-perfect fusion: creamy, nutty and vanilla delight",
+      "Name": "Vanilla Praline Frappe",
+      "Price": "Rs. 120",
+      "Section": "Main",
+      "Size": "250ml",
+      "Stock": 8,
+      "created_on": "03/03/2025, 09:42:16",
+      "created_on_date": "03/03/2025",
+      "created_on_time": "09:42:16",
+      "customer_name": "Aniruddh Sengupta 03032025094216",
+      "order_id": "03032025094216",
+      "order_item_id": "030320250942161",
+      "prep_start_time": "03/03/2025, 09:51:26",
+      "prepared_by_email": "kunj@drilldown.online",
+      "prepared_by_id": "Qon8vrBEcQUTGb1ZUZD5VZDyWq02",
+      "served_by_email": "kunj@drilldown.online",
+      "served_by_id": "Qon8vrBEcQUTGb1ZUZD5VZDyWq02",
+      "served_time": "05/03/2025, 11:45:50",
+      "status": "Served"
+    },
+    "030320250957150": {
+      "Category": "ColdCoffeeMenu",
+      "Count": 2,
+      "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+      "Name": "Original South India Frappe",
+      "Price": "Rs. 100",
+      "Section": "Main",
+      "Size": "250ml",
+      "Stock": 43,
+      "created_on": "03/03/2025, 09:57:15",
+      "created_on_date": "03/03/2025",
+      "created_on_time": "09:57:15",
+      "customer_name": "Aniruddh Sengupta 03032025095715",
+      "order_id": "03032025095715",
+      "order_item_id": "030320250957150",
+      "prep_start_time": "03/03/2025, 09:57:49",
+      "prepared_by_email": "kunj@drilldown.online",
+      "prepared_by_id": "Qon8vrBEcQUTGb1ZUZD5VZDyWq02",
+      "served_by_email": "kunj@drilldown.online",
+      "served_by_id": "Qon8vrBEcQUTGb1ZUZD5VZDyWq02",
+      "served_time": "03/03/2025, 09:57:58",
+      "status": "Served"
+    },
+    "040320252353210": {
+      "Category": "ColdCoffeeMenu",
+      "Count": 2,
+      "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+      "Name": "Original South India Frappe",
+      "Price": "Rs. 100",
+      "Section": "Main",
+      "Size": "250ml",
+      "Stock": 42,
+      "created_on": "04/03/2025, 23:53:21",
+      "created_on_date": "04/03/2025",
+      "created_on_time": "23:53:21",
+      "customer_name": "Aniruddh Sengupta 04032025235321",
+      "order_id": "04032025235321",
+      "order_item_id": "040320252353210",
+      "prep_start_time": "05/03/2025, 13:34:09",
+      "prepared_by_email": "kunj@drilldown.online",
+      "prepared_by_id": "Qon8vrBEcQUTGb1ZUZD5VZDyWq02",
+      "served_by_email": "kunj@drilldown.online",
+      "served_by_id": "Qon8vrBEcQUTGb1ZUZD5VZDyWq02",
+      "served_time": "05/03/2025, 13:34:14",
+      "status": "Served"
+    },
+    "050320250939120": {
+      "Category": "ColdCoffeeMenu",
+      "Count": 2,
+      "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+      "Name": "Original South India Frappe",
+      "Price": "Rs. 100",
+      "Section": "Main",
+      "Size": "250ml",
+      "Stock": 42,
+      "created_on": "05/03/2025, 09:39:12",
+      "created_on_date": "05/03/2025",
+      "created_on_time": "09:39:12",
+      "customer_name": "Aniruddh Sengupta 05032025093912",
+      "order_id": "05032025093912",
+      "order_item_id": "050320250939120",
+      "prep_start_time": "05/03/2025, 13:33:50",
+      "prepared_by_email": "kunj@drilldown.online",
+      "prepared_by_id": "Qon8vrBEcQUTGb1ZUZD5VZDyWq02",
+      "served_by_email": "kunj@drilldown.online",
+      "served_by_id": "Qon8vrBEcQUTGb1ZUZD5VZDyWq02",
+      "served_time": "05/03/2025, 13:33:52",
+      "status": "Served"
+    },
+    "050320251408590": {
+      "Category": "ColdCoffeeMenu",
+      "Count": 2,
+      "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+      "Name": "Original South India Frappe",
+      "Price": "Rs. 100",
+      "Section": "Main",
+      "Size": "250ml",
+      "Stock": 42,
+      "created_on": "05/03/2025, 14:08:59",
+      "created_on_date": "05/03/2025",
+      "created_on_time": "14:08:59",
+      "customer_name": "dfr 18022025183924 05032025140859",
+      "order_id": "05032025140859",
+      "order_item_id": "050320251408590",
+      "prep_start_time": "05/03/2025, 14:15:29",
+      "prepared_by_email": "kunj@drilldown.online",
+      "prepared_by_id": "Qon8vrBEcQUTGb1ZUZD5VZDyWq02",
+      "served_by_email": "kunj@drilldown.online",
+      "served_by_id": "Qon8vrBEcQUTGb1ZUZD5VZDyWq02",
+      "served_time": "05/03/2025, 14:15:49",
+      "status": "Served"
+    },
+    "050320251426400": {
+      "Category": "ColdCoffeeMenu",
+      "Count": 4,
+      "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+      "Name": "Original South India Frappe",
+      "Price": 0,
+      "Section": "Main",
+      "Size": "250ml",
+      "Stock": 42,
+      "created_on": "05/03/2025, 14:26:40",
+      "created_on_date": "05/03/2025",
+      "created_on_time": "14:26:40",
+      "customer_name": "dfr 18022025183924 05032025142640",
+      "order_id": "05032025142640",
+      "order_item_id": "050320251426400",
+      "prep_start_time": "05/03/2025, 14:27:42",
+      "prepared_by_email": "kunj@drilldown.online",
+      "prepared_by_id": "Qon8vrBEcQUTGb1ZUZD5VZDyWq02",
+      "served_by_email": "kunj@drilldown.online",
+      "served_by_id": "Qon8vrBEcQUTGb1ZUZD5VZDyWq02",
+      "served_time": "05/03/2025, 14:28:00",
+      "status": "Served"
+    },
+    "050320251426401": {
+      "Category": "ColdCoffeeMenu",
+      "Count": 2,
+      "Desc": "Coffee and Caramel unite is a dreamy blend",
+      "Name": "Caramel Frappe",
+      "Price": "Rs. 120",
+      "Section": "Main",
+      "Size": "250ml",
+      "Stock": 53,
+      "created_on": "05/03/2025, 14:26:40",
+      "created_on_date": "05/03/2025",
+      "created_on_time": "14:26:40",
+      "customer_name": "dfr 18022025183924 05032025142640",
+      "order_id": "05032025142640",
+      "order_item_id": "050320251426401",
+      "prep_start_time": "05/03/2025, 14:27:58",
+      "prepared_by_email": "kunj@drilldown.online",
+      "prepared_by_id": "Qon8vrBEcQUTGb1ZUZD5VZDyWq02",
+      "served_by_email": "kunj@drilldown.online",
+      "served_by_id": "Qon8vrBEcQUTGb1ZUZD5VZDyWq02",
+      "served_time": "05/03/2025, 14:28:00",
+      "status": "Served"
+    },
+    "050320251834350": {
+      "Category": "ColdCoffeeMenu",
+      "Count": 4,
+      "Desc": "Praline-perfect fusion: creamy, nutty and vanilla delight",
+      "Name": "Vanilla Praline Frappe",
+      "Price": "Rs. 120",
+      "Section": "Main",
+      "Size": "250ml",
+      "Stock": 8,
+      "created_on": "05/03/2025, 18:34:35",
+      "created_on_date": "05/03/2025",
+      "created_on_time": "18:34:35",
+      "customer_name": "kbhatt0904@drilldown.online 05032025183435",
+      "order_id": "05032025183435",
+      "order_item_id": "050320251834350",
+      "prep_start_time": "05/03/2025, 18:34:45",
+      "prepared_by_email": "kunj@drilldown.online",
+      "prepared_by_id": "Qon8vrBEcQUTGb1ZUZD5VZDyWq02",
+      "served_by_email": "kunj@drilldown.online",
+      "served_by_id": "Qon8vrBEcQUTGb1ZUZD5VZDyWq02",
+      "served_time": "05/03/2025, 18:35:03",
+      "status": "Served"
+    },
+    "050320251859140": {
+      "Category": "ColdCoffeeMenu",
+      "Count": 2,
+      "Desc": "Coffee and Caramel unite is a dreamy blend",
+      "Name": "Caramel Frappe",
+      "Price": "Rs. 120",
+      "Section": "Main",
+      "Size": "250ml",
+      "Stock": 53,
+      "created_on": "05/03/2025, 18:59:14",
+      "created_on_date": "05/03/2025",
+      "created_on_time": "18:59:14",
+      "customer_name": "dfr 18022025183924",
+      "order_id": "05032025185914",
+      "order_item_id": "050320251859140",
+      "prep_start_time": "05/03/2025, 19:19:04",
+      "prepared_by_email": "kunj@drilldown.online",
+      "prepared_by_id": "Qon8vrBEcQUTGb1ZUZD5VZDyWq02",
+      "served_by_email": "kunj@drilldown.online",
+      "served_by_id": "Qon8vrBEcQUTGb1ZUZD5VZDyWq02",
+      "served_time": "05/03/2025, 19:19:05",
+      "status": "Served",
+      "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+    },
+    "050320251907090": {
+      "Category": "ColdCoffeeMenu",
+      "Count": 2,
+      "Desc": "Coffee and Caramel unite is a dreamy blend",
+      "Name": "Caramel Frappe",
+      "Price": "Rs. 120",
+      "Section": "Main",
+      "Size": "250ml",
+      "Stock": 53,
+      "created_on": "05/03/2025, 19:07:09",
+      "created_on_date": "05/03/2025",
+      "created_on_time": "19:07:09",
+      "customer_name": "dfr 18022025183924",
+      "order_id": "05032025190709",
+      "order_item_id": "050320251907090",
+      "prep_start_time": "05/03/2025, 19:18:58",
+      "prepared_by_email": "kunj@drilldown.online",
+      "prepared_by_id": "Qon8vrBEcQUTGb1ZUZD5VZDyWq02",
+      "served_by_email": "kunj@drilldown.online",
+      "served_by_id": "Qon8vrBEcQUTGb1ZUZD5VZDyWq02",
+      "served_time": "05/03/2025, 19:19:00",
+      "status": "Served",
+      "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+    },
+    "050320252045330": {
+      "Category": "ColdCoffeeMenu",
+      "Count": 2,
+      "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+      "Name": "Original South India Frappe",
+      "Price": "Rs. 100",
+      "Section": "Main",
+      "Size": "250ml",
+      "Stock": 42,
+      "created_on": "05/03/2025, 20:45:33",
+      "created_on_date": "05/03/2025",
+      "created_on_time": "20:45:33",
+      "customer_name": "aniruddh@drilldown.online",
+      "order_id": "05032025204533",
+      "order_item_id": "050320252045330",
+      "prep_start_time": "09/03/2025, 13:42:22",
+      "prepared_by_email": "kunj@drilldown.online",
+      "prepared_by_id": "Qon8vrBEcQUTGb1ZUZD5VZDyWq02",
+      "served_by_email": "kunj@drilldown.online",
+      "served_by_id": "Qon8vrBEcQUTGb1ZUZD5VZDyWq02",
+      "served_time": "09/03/2025, 13:42:25",
+      "status": "Served",
+      "userId": "plXROqmXFGeKdpgjU0qhwbG9BPt2"
+    },
+    "090320251246220": {
+      "Category": "ColdCoffeeMenu",
+      "Count": 5,
+      "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+      "Name": "Original South India Frappe",
+      "Price": 0,
+      "Section": "Main",
+      "Size": "250ml",
+      "Stock": 42,
+      "coupon_quantity": 5,
+      "coupon_redeemed": true,
+      "created_on": "09/03/2025, 12:46:22",
+      "created_on_date": "09/03/2025",
+      "created_on_time": "12:46:22",
+      "customer_name": "dfr 18022025183924 09032025124622",
+      "order_id": "09032025124622",
+      "order_item_id": "090320251246220",
+      "prep_start_time": "09/03/2025, 12:47:54",
+      "prepared_by_email": "kunj@drilldown.online",
+      "prepared_by_id": "Qon8vrBEcQUTGb1ZUZD5VZDyWq02",
+      "served_by_email": "kunj@drilldown.online",
+      "served_by_id": "Qon8vrBEcQUTGb1ZUZD5VZDyWq02",
+      "served_time": "09/03/2025, 12:48:16",
+      "status": "Served"
+    },
+    "placeholder123": {
+      "Category": "Example",
+      "Count": 1,
+      "Desc": "Placeholder item",
+      "Name": "Example Item",
+      "Price": 100,
+      "Section": "Main",
+      "Size": "Regular",
+      "Stock": 10,
+      "created_on": "01/03/2023, 12:00:00",
+      "created_on_date": "01/03/2023",
+      "created_on_time": "12:00:00",
+      "customer_name": "placeholder@example.com 0103202312000000",
+      "order_id": "0103202312000000",
+      "order_item_id": "01032023120000000",
+      "status": "Completed"
+    }
+  },
+  "new": {
+    "050320252038340": {
+      "Category": "ColdCoffeeMenu",
+      "Count": 2,
+      "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+      "Name": "Original South India Frappe",
+      "Price": "Rs. 100",
+      "Section": "Main",
+      "Size": "250ml",
+      "Stock": 42,
+      "created_on": "05/03/2025, 20:38:34",
+      "created_on_date": "05/03/2025",
+      "created_on_time": "20:38:34",
+      "customer_name": "dfr 18022025183924",
+      "order_id": "05032025203834",
+      "order_item_id": "050320252038340",
+      "status": "Pending",
+      "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+    },
+    "050320252050480": {
+      "Category": "ColdCoffeeMenu",
+      "Count": 2,
+      "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+      "Name": "Original South India Frappe",
+      "Price": "Rs. 100",
+      "Section": "Main",
+      "Size": "250ml",
+      "Stock": 42,
+      "created_on": "05/03/2025, 20:50:48",
+      "created_on_date": "05/03/2025",
+      "created_on_time": "20:50:48",
+      "customer_name": "dfr 18022025183924",
+      "order_id": "05032025205048",
+      "order_item_id": "050320252050480",
+      "status": "Pending",
+      "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+    },
+    "050320252054240": {
+      "Category": "ColdCoffeeMenu",
+      "Count": 2,
+      "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+      "Name": "Original South India Frappe",
+      "Price": "Rs. 100",
+      "Section": "Main",
+      "Size": "250ml",
+      "Stock": 42,
+      "created_on": "05/03/2025, 20:54:24",
+      "created_on_date": "05/03/2025",
+      "created_on_time": "20:54:24",
+      "customer_name": "dfr 18022025183924",
+      "order_id": "05032025205424",
+      "order_item_id": "050320252054240",
+      "status": "Pending",
+      "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+    },
+    "050320252109240": {
+      "Category": "ColdCoffeeMenu",
+      "Count": 3,
+      "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+      "Name": "Original South India Frappe",
+      "Price": "Rs. 100",
+      "Section": "Main",
+      "Size": "250ml",
+      "Stock": 42,
+      "created_on": "05/03/2025, 21:09:24",
+      "created_on_date": "05/03/2025",
+      "created_on_time": "21:09:24",
+      "customer_name": "dfr 18022025183924",
+      "order_id": "05032025210924",
+      "order_item_id": "050320252109240",
+      "status": "Pending",
+      "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+    },
+    "050320252114470": {
+      "Category": "ColdCoffeeMenu",
+      "Count": 2,
+      "Desc": "Coffee and Caramel unite is a dreamy blend",
+      "Name": "Caramel Frappe",
+      "Price": 0,
+      "Section": "Main",
+      "Size": "250ml",
+      "Stock": 53,
+      "created_on": "05/03/2025, 21:14:47",
+      "created_on_date": "05/03/2025",
+      "created_on_time": "21:14:47",
+      "customer_name": "dfr 18022025183924 05032025211447",
+      "order_id": "05032025211447",
+      "order_item_id": "050320252114470",
+      "status": "Pending"
+    },
+    "070320251532430": {
+      "Category": "ColdCoffeeMenu",
+      "Count": 3,
+      "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+      "Name": "Original South India Frappe",
+      "Price": 0,
+      "Section": "Main",
+      "Size": "250ml",
+      "Stock": 42,
+      "created_on": "07/03/2025, 15:32:43",
+      "created_on_date": "07/03/2025",
+      "created_on_time": "15:32:43",
+      "customer_name": "sengupta.a@somaiya.edu 07032025153243",
+      "order_id": "07032025153243",
+      "order_item_id": "070320251532430",
+      "status": "Pending"
+    },
+    "070320251538320": {
+      "Category": "ColdCoffeeMenu",
+      "Count": 3,
+      "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+      "Name": "Original South India Frappe",
+      "Price": 0,
+      "Section": "Main",
+      "Size": "250ml",
+      "Stock": 42,
+      "created_on": "07/03/2025, 15:38:32",
+      "created_on_date": "07/03/2025",
+      "created_on_time": "15:38:32",
+      "customer_name": "sengupta.a@somaiya.edu 07032025153832",
+      "order_id": "07032025153832",
+      "order_item_id": "070320251538320",
+      "status": "Pending"
+    },
+    "070320251539160": {
+      "Category": "ColdCoffeeMenu",
+      "Count": 1,
+      "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+      "Name": "Original South India Frappe",
+      "Price": "Rs. 100",
+      "Section": "Main",
+      "Size": "250ml",
+      "Stock": 42,
+      "created_on": "07/03/2025, 15:39:16",
+      "created_on_date": "07/03/2025",
+      "created_on_time": "15:39:16",
+      "customer_name": "sengupta.a@somaiya.edu 07032025153916",
+      "order_id": "07032025153916",
+      "order_item_id": "070320251539160",
+      "status": "Pending"
+    },
+    "070320251546550": {
+      "Category": "ColdCoffeeMenu",
+      "Count": 1,
+      "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+      "Name": "Original South India Frappe",
+      "Price": 0,
+      "Section": "Main",
+      "Size": "250ml",
+      "Stock": 42,
+      "created_on": "07/03/2025, 15:46:55",
+      "created_on_date": "07/03/2025",
+      "created_on_time": "15:46:55",
+      "customer_name": "sengupta.a@somaiya.edu 07032025154655",
+      "order_id": "07032025154655",
+      "order_item_id": "070320251546550",
+      "status": "Pending"
+    }
+  },
+  "orders": {
+    "Aniruddh Sengupta 02032025164000": {
+      "020320251640000": {
+        "status": "Served"
+      }
+    },
+    "Aniruddh Sengupta 02032025180805": {
+      "020320251808050": {
+        "status": "Served"
+      },
+      "020320251808051": {
+        "status": "Served"
+      }
+    },
+    "Aniruddh Sengupta 02032025181430": {
+      "020320251814300": {
+        "status": "Served"
+      }
+    },
+    "Aniruddh Sengupta 02032025185943": {
+      "020320251859430": {
+        "status": "Served"
+      }
+    },
+    "Aniruddh Sengupta 02032025191733": {
+      "020320251917330": {
+        "status": "Served"
+      },
+      "020320251917331": {
+        "status": "Served"
+      }
+    },
+    "Aniruddh Sengupta 02032025193408": {
+      "020320251934080": {
+        "status": "Served"
+      }
+    },
+    "Aniruddh Sengupta 02032025193627": {
+      "020320251936270": {
+        "status": "Served"
+      },
+      "020320251936271": {
+        "status": "Served"
+      }
+    },
+    "Aniruddh Sengupta 02032025202134": {
+      "020320252021340": {
+        "status": "Preparing"
+      }
+    },
+    "Aniruddh Sengupta 02032025204020": {
+      "020320252040200": {
+        "status": "Served"
+      },
+      "020320252040201": {
+        "status": "Served"
+      }
+    },
+    "Aniruddh Sengupta 03032025094216": {
+      "030320250942160": {
+        "status": "Served"
+      },
+      "030320250942161": {
+        "status": "Served"
+      }
+    },
+    "Aniruddh Sengupta 03032025095715": {
+      "030320250957150": {
+        "status": "Served"
+      }
+    },
+    "Aniruddh Sengupta 03032025104110": {
+      "030320251041100": {
+        "status": "Preparing"
+      }
+    },
+    "Aniruddh Sengupta 04032025235321": {
+      "040320252353210": {
+        "status": "Served"
+      }
+    },
+    "Aniruddh Sengupta 05032025093912": {
+      "050320250939120": {
+        "status": "Served"
+      }
+    },
+    "Aniruddh Sengupta 05032025114655": {
+      "050320251146550": {
+        "status": "Preparing"
+      }
+    },
+    "aniruddh-at-drilldown-dot-online": {
+      "050320252045330": {
+        "Category": "ColdCoffeeMenu",
+        "Count": 2,
+        "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+        "Name": "Original South India Frappe",
+        "Price": "Rs. 100",
+        "Section": "Main",
+        "Size": "250ml",
+        "Stock": 42,
+        "created_on": "05/03/2025, 20:45:33",
+        "created_on_date": "05/03/2025",
+        "created_on_time": "20:45:33",
+        "customer_name": "aniruddh@drilldown.online",
+        "order_id": "05032025204533",
+        "order_item_id": "050320252045330",
+        "status": "Served",
+        "userId": "plXROqmXFGeKdpgjU0qhwbG9BPt2"
+      }
+    },
+    "dfr 18022025183924": {
+      "040320250142560": {
+        "Category": "ColdCoffeeMenu",
+        "Count": 1,
+        "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+        "Name": "Original South India Frappe",
+        "Price": "Rs. 100",
+        "Size": "250ml",
+        "Stock": 43,
+        "created_on": "04/03/2025, 01:42:56",
+        "created_on_date": "04/03/2025",
+        "created_on_time": "01:42:56",
+        "customer_name": "dfr 18022025183924",
+        "order_id": "04032025014256",
+        "order_item_id": "040320250142560",
+        "status": "Pending"
+      },
+      "040320250149500": {
+        "Category": "ColdCoffeeMenu",
+        "Count": 3,
+        "Desc": "Coffee and Caramel unite is a dreamy blend",
+        "Name": "Caramel Frappe",
+        "Price": "Rs. 120",
+        "Size": "250ml",
+        "Stock": 56,
+        "created_on": "04/03/2025, 01:49:50",
+        "created_on_date": "04/03/2025",
+        "created_on_time": "01:49:50",
+        "customer_name": "dfr 18022025183924",
+        "order_id": "04032025014950",
+        "order_item_id": "040320250149500",
+        "status": "Pending"
+      },
+      "050320251408590": {
+        "Category": "ColdCoffeeMenu",
+        "Count": 2,
+        "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+        "Name": "Original South India Frappe",
+        "Price": "Rs. 100",
+        "Section": "Main",
+        "Size": "250ml",
+        "Stock": 42,
+        "created_on": "05/03/2025, 14:08:59",
+        "created_on_date": "05/03/2025",
+        "created_on_time": "14:08:59",
+        "customer_name": "dfr 18022025183924 05032025140859",
+        "order_id": "05032025140859",
+        "order_item_id": "050320251408590",
+        "status": "Pending"
+      },
+      "050320251421400": {
+        "Category": "ColdCoffeeMenu",
+        "Count": 3,
+        "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+        "Name": "Original South India Frappe",
+        "Price": 0,
+        "Section": "Main",
+        "Size": "250ml",
+        "Stock": 42,
+        "cancelled_by": "dfr 18022025183924",
+        "cancelled_on": "05/03/2025, 14:22:10",
+        "created_on": "05/03/2025, 14:21:40",
+        "created_on_date": "05/03/2025",
+        "created_on_time": "14:21:40",
+        "customer_name": "dfr 18022025183924 05032025142140",
+        "order_id": "05032025142140",
+        "order_item_id": "050320251421400",
+        "status": "Cancelled"
+      },
+      "050320251421401": {
+        "Category": "ColdCoffeeMenu",
+        "Count": 2,
+        "Desc": "Coffee and Caramel unite is a dreamy blend",
+        "Name": "Caramel Frappe",
+        "Price": "Rs. 120",
+        "Section": "Main",
+        "Size": "250ml",
+        "Stock": 53,
+        "cancelled_by": "dfr 18022025183924",
+        "cancelled_on": "05/03/2025, 14:22:10",
+        "created_on": "05/03/2025, 14:21:40",
+        "created_on_date": "05/03/2025",
+        "created_on_time": "14:21:40",
+        "customer_name": "dfr 18022025183924 05032025142140",
+        "order_id": "05032025142140",
+        "order_item_id": "050320251421401",
+        "status": "Cancelled"
+      },
+      "050320251426400": {
+        "Category": "ColdCoffeeMenu",
+        "Count": 4,
+        "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+        "Name": "Original South India Frappe",
+        "Price": 0,
+        "Section": "Main",
+        "Size": "250ml",
+        "Stock": 42,
+        "created_on": "05/03/2025, 14:26:40",
+        "created_on_date": "05/03/2025",
+        "created_on_time": "14:26:40",
+        "customer_name": "dfr 18022025183924 05032025142640",
+        "order_id": "05032025142640",
+        "order_item_id": "050320251426400",
+        "status": "Pending"
+      },
+      "050320251426401": {
+        "Category": "ColdCoffeeMenu",
+        "Count": 2,
+        "Desc": "Coffee and Caramel unite is a dreamy blend",
+        "Name": "Caramel Frappe",
+        "Price": "Rs. 120",
+        "Section": "Main",
+        "Size": "250ml",
+        "Stock": 53,
+        "created_on": "05/03/2025, 14:26:40",
+        "created_on_date": "05/03/2025",
+        "created_on_time": "14:26:40",
+        "customer_name": "dfr 18022025183924 05032025142640",
+        "order_id": "05032025142640",
+        "order_item_id": "050320251426401",
+        "status": "Pending"
+      },
+      "050320251620110": {
+        "Category": "ColdCoffeeMenu",
+        "Count": 3,
+        "Desc": "Coffee and Caramel unite is a dreamy blend",
+        "Name": "Caramel Frappe",
+        "Price": 0,
+        "Section": "Main",
+        "Size": "250ml",
+        "Stock": 53,
+        "created_on": "05/03/2025, 16:20:11",
+        "created_on_date": "05/03/2025",
+        "created_on_time": "16:20:11",
+        "customer_name": "dfr 18022025183924 05032025162011",
+        "order_id": "05032025162011",
+        "order_item_id": "050320251620110",
+        "status": "Pending"
+      },
+      "050320251626060": {
+        "Category": "ColdCoffeeMenu",
+        "Count": 3,
+        "Desc": "Coffee and Caramel unite is a dreamy blend",
+        "Name": "Caramel Frappe",
+        "Price": "Rs. 120",
+        "Section": "Main",
+        "Size": "250ml",
+        "Stock": 53,
+        "created_on": "05/03/2025, 16:26:06",
+        "created_on_date": "05/03/2025",
+        "created_on_time": "16:26:06",
+        "customer_name": "dfr 18022025183924 05032025162606",
+        "order_id": "05032025162606",
+        "order_item_id": "050320251626060",
+        "status": "Pending"
+      },
+      "050320251626250": {
+        "Category": "ColdCoffeeMenu",
+        "Count": 2,
+        "Desc": "Coffee and Caramel unite is a dreamy blend",
+        "Name": "Caramel Frappe",
+        "Price": "Rs. 120",
+        "Section": "Main",
+        "Size": "250ml",
+        "Stock": 53,
+        "created_on": "05/03/2025, 16:26:25",
+        "created_on_date": "05/03/2025",
+        "created_on_time": "16:26:25",
+        "customer_name": "dfr 18022025183924 05032025162625",
+        "order_id": "05032025162625",
+        "order_item_id": "050320251626250",
+        "status": "Pending"
+      },
+      "050320251635280": {
+        "Category": "ColdCoffeeMenu",
+        "Count": 2,
+        "Desc": "Coffee Frappe With Everyone's Favourite Hazelnut Flavour Notes",
+        "Name": "Hazelnut Frappe",
+        "Price": "Rs. 120",
+        "Section": "Main",
+        "Size": "250ml",
+        "Stock": 85,
+        "created_on": "05/03/2025, 16:35:28",
+        "created_on_date": "05/03/2025",
+        "created_on_time": "16:35:28",
+        "customer_name": "dfr 18022025183924 05032025163528",
+        "order_id": "05032025163528",
+        "order_item_id": "050320251635280",
+        "status": "Pending"
+      },
+      "050320251820150": {
+        "Category": "ColdCoffeeMenu",
+        "Count": 3,
+        "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+        "Name": "Original South India Frappe",
+        "Price": 0,
+        "Section": "Main",
+        "Size": "250ml",
+        "Stock": 42,
+        "created_on": "05/03/2025, 18:20:15",
+        "created_on_date": "05/03/2025",
+        "created_on_time": "18:20:15",
+        "customer_name": "dfr 18022025183924",
+        "order_id": "05032025182015",
+        "order_item_id": "050320251820150",
+        "status": "Pending",
+        "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+      },
+      "050320251820151": {
+        "Category": "ColdCoffeeMenu",
+        "Count": 2,
+        "Desc": "Praline-perfect fusion: creamy, nutty and vanilla delight",
+        "Name": "Vanilla Praline Frappe",
+        "Price": 0,
+        "Section": "Main",
+        "Size": "250ml",
+        "Stock": 8,
+        "created_on": "05/03/2025, 18:20:15",
+        "created_on_date": "05/03/2025",
+        "created_on_time": "18:20:15",
+        "customer_name": "dfr 18022025183924",
+        "order_id": "05032025182015",
+        "order_item_id": "050320251820151",
+        "status": "Pending",
+        "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+      },
+      "050320251841280": {
+        "Category": "ColdCoffeeMenu",
+        "Count": 2,
+        "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+        "Name": "Original South India Frappe",
+        "Price": "Rs. 100",
+        "Section": "Main",
+        "Size": "250ml",
+        "Stock": 42,
+        "created_on": "05/03/2025, 18:41:28",
+        "created_on_date": "05/03/2025",
+        "created_on_time": "18:41:28",
+        "customer_name": "dfr 18022025183924",
+        "order_id": "05032025184128",
+        "order_item_id": "050320251841280",
+        "status": "Pending",
+        "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+      },
+      "050320251845340": {
+        "Category": "ColdCoffeeMenu",
+        "Count": 2,
+        "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+        "Name": "Original South India Frappe",
+        "Price": "Rs. 100",
+        "Section": "Main",
+        "Size": "250ml",
+        "Stock": 42,
+        "created_on": "05/03/2025, 18:45:34",
+        "created_on_date": "05/03/2025",
+        "created_on_time": "18:45:34",
+        "customer_name": "dfr 18022025183924",
+        "order_id": "05032025184534",
+        "order_item_id": "050320251845340",
+        "status": "Pending",
+        "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+      },
+      "050320251851210": {
+        "Category": "ColdCoffeeMenu",
+        "Count": 2,
+        "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+        "Name": "Original South India Frappe",
+        "Price": "Rs. 100",
+        "Section": "Main",
+        "Size": "250ml",
+        "Stock": 42,
+        "created_on": "05/03/2025, 18:51:21",
+        "created_on_date": "05/03/2025",
+        "created_on_time": "18:51:21",
+        "customer_name": "dfr 18022025183924",
+        "order_id": "05032025185121",
+        "order_item_id": "050320251851210",
+        "status": "Pending",
+        "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+      },
+      "050320251852130": {
+        "Category": "ColdCoffeeMenu",
+        "Count": 2,
+        "Desc": "",
+        "Name": "Cold Brew",
+        "Price": "Rs. 160",
+        "Section": "Main",
+        "Size": "250ml",
+        "Stock": 29,
+        "created_on": "05/03/2025, 18:52:13",
+        "created_on_date": "05/03/2025",
+        "created_on_time": "18:52:13",
+        "customer_name": "dfr 18022025183924",
+        "order_id": "05032025185213",
+        "order_item_id": "050320251852130",
+        "status": "Pending",
+        "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+      },
+      "050320251855120": {
+        "Category": "ColdCoffeeMenu",
+        "Count": 2,
+        "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+        "Name": "Original South India Frappe",
+        "Price": "Rs. 100",
+        "Section": "Main",
+        "Size": "250ml",
+        "Stock": 42,
+        "created_on": "05/03/2025, 18:55:12",
+        "created_on_date": "05/03/2025",
+        "created_on_time": "18:55:12",
+        "customer_name": "dfr 18022025183924",
+        "order_id": "05032025185512",
+        "order_item_id": "050320251855120",
+        "status": "Pending",
+        "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+      },
+      "050320251859140": {
+        "Category": "ColdCoffeeMenu",
+        "Count": 2,
+        "Desc": "Coffee and Caramel unite is a dreamy blend",
+        "Name": "Caramel Frappe",
+        "Price": "Rs. 120",
+        "Section": "Main",
+        "Size": "250ml",
+        "Stock": 53,
+        "created_on": "05/03/2025, 18:59:14",
+        "created_on_date": "05/03/2025",
+        "created_on_time": "18:59:14",
+        "customer_name": "dfr 18022025183924",
+        "order_id": "05032025185914",
+        "order_item_id": "050320251859140",
+        "status": "Served",
+        "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+      },
+      "050320251907090": {
+        "Category": "ColdCoffeeMenu",
+        "Count": 2,
+        "Desc": "Coffee and Caramel unite is a dreamy blend",
+        "Name": "Caramel Frappe",
+        "Price": "Rs. 120",
+        "Section": "Main",
+        "Size": "250ml",
+        "Stock": 53,
+        "created_on": "05/03/2025, 19:07:09",
+        "created_on_date": "05/03/2025",
+        "created_on_time": "19:07:09",
+        "customer_name": "dfr 18022025183924",
+        "order_id": "05032025190709",
+        "order_item_id": "050320251907090",
+        "status": "Served",
+        "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+      },
+      "050320251907450": {
+        "Category": "ColdCoffeeMenu",
+        "Count": 2,
+        "Desc": "Coffee and Caramel unite is a dreamy blend",
+        "Name": "Caramel Frappe",
+        "Price": "Rs. 120",
+        "Section": "Main",
+        "Size": "250ml",
+        "Stock": 53,
+        "cancelled_by": "dfr 18022025183924",
+        "cancelled_on": "05/03/2025, 19:18:06",
+        "created_on": "05/03/2025, 19:07:45",
+        "created_on_date": "05/03/2025",
+        "created_on_time": "19:07:45",
+        "customer_name": "dfr 18022025183924",
+        "order_id": "05032025190745",
+        "order_item_id": "050320251907450",
+        "status": "Cancelled",
+        "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+      },
+      "050320251911530": {
+        "Category": "ColdCoffeeMenu",
+        "Count": 2,
+        "Desc": "Coffee and Caramel unite is a dreamy blend",
+        "Name": "Caramel Frappe",
+        "Price": "Rs. 120",
+        "Section": "Main",
+        "Size": "250ml",
+        "Stock": 53,
+        "cancelled_by": "dfr 18022025183924",
+        "cancelled_on": "05/03/2025, 19:16:10",
+        "created_on": "05/03/2025, 19:11:53",
+        "created_on_date": "05/03/2025",
+        "created_on_time": "19:11:53",
+        "customer_name": "dfr 18022025183924",
+        "order_id": "05032025191153",
+        "order_item_id": "050320251911530",
+        "status": "Cancelled",
+        "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+      },
+      "050320251915250": {
+        "Category": "ColdCoffeeMenu",
+        "Count": 2,
+        "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+        "Name": "Original South India Frappe",
+        "Price": 0,
+        "Section": "Main",
+        "Size": "250ml",
+        "Stock": 42,
+        "cancelled_by": "dfr 18022025183924",
+        "cancelled_on": "05/03/2025, 19:16:00",
+        "created_on": "05/03/2025, 19:15:25",
+        "created_on_date": "05/03/2025",
+        "created_on_time": "19:15:25",
+        "customer_name": "dfr 18022025183924",
+        "order_id": "05032025191525",
+        "order_item_id": "050320251915250",
+        "status": "Cancelled",
+        "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+      },
+      "050320251921440": {
+        "Category": "ColdCoffeeMenu",
+        "Count": 2,
+        "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+        "Name": "Original South India Frappe",
+        "Price": "Rs. 100",
+        "Section": "Main",
+        "Size": "250ml",
+        "Stock": 42,
+        "created_on": "05/03/2025, 19:21:44",
+        "created_on_date": "05/03/2025",
+        "created_on_time": "19:21:44",
+        "customer_name": "dfr 18022025183924",
+        "order_id": "05032025192144",
+        "order_item_id": "050320251921440",
+        "status": "Pending",
+        "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+      },
+      "050320251922220": {
+        "Category": "ColdCoffeeMenu",
+        "Count": 2,
+        "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+        "Name": "Original South India Frappe",
+        "Price": "Rs. 100",
+        "Section": "Main",
+        "Size": "250ml",
+        "Stock": 42,
+        "created_on": "05/03/2025, 19:22:22",
+        "created_on_date": "05/03/2025",
+        "created_on_time": "19:22:22",
+        "customer_name": "dfr 18022025183924",
+        "order_id": "05032025192222",
+        "order_item_id": "050320251922220",
+        "status": "Pending",
+        "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+      },
+      "050320251942230": {
+        "Category": "ColdCoffeeMenu",
+        "Count": 2,
+        "Desc": "Coffee and Caramel unite is a dreamy blend",
+        "Name": "Caramel Frappe",
+        "Price": "Rs. 120",
+        "Section": "Main",
+        "Size": "250ml",
+        "Stock": 53,
+        "created_on": "05/03/2025, 19:42:23",
+        "created_on_date": "05/03/2025",
+        "created_on_time": "19:42:23",
+        "customer_name": "dfr 18022025183924",
+        "order_id": "05032025194223",
+        "order_item_id": "050320251942230",
+        "status": "Pending",
+        "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+      },
+      "050320251945500": {
+        "Category": "ColdCoffeeMenu",
+        "Count": 2,
+        "Desc": "Coffee Frappe With Everyone's Favourite Hazelnut Flavour Notes",
+        "Name": "Hazelnut Frappe",
+        "Price": "Rs. 120",
+        "Section": "Main",
+        "Size": "250ml",
+        "Stock": 85,
+        "created_on": "05/03/2025, 19:45:50",
+        "created_on_date": "05/03/2025",
+        "created_on_time": "19:45:50",
+        "customer_name": "dfr 18022025183924",
+        "order_id": "05032025194550",
+        "order_item_id": "050320251945500",
+        "status": "Pending",
+        "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+      },
+      "050320251949020": {
+        "Category": "ColdCoffeeMenu",
+        "Count": 2,
+        "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+        "Name": "Original South India Frappe",
+        "Price": "Rs. 100",
+        "Section": "Main",
+        "Size": "250ml",
+        "Stock": 42,
+        "created_on": "05/03/2025, 19:49:02",
+        "created_on_date": "05/03/2025",
+        "created_on_time": "19:49:02",
+        "customer_name": "dfr 18022025183924",
+        "order_id": "05032025194902",
+        "order_item_id": "050320251949020",
+        "status": "Pending",
+        "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+      },
+      "050320251955190": {
+        "Category": "ColdCoffeeMenu",
+        "Count": 2,
+        "Desc": "Coffee and Caramel unite is a dreamy blend",
+        "Name": "Caramel Frappe",
+        "Price": "Rs. 120",
+        "Section": "Main",
+        "Size": "250ml",
+        "Stock": 53,
+        "created_on": "05/03/2025, 19:55:19",
+        "created_on_date": "05/03/2025",
+        "created_on_time": "19:55:19",
+        "customer_name": "dfr 18022025183924",
+        "order_id": "05032025195519",
+        "order_item_id": "050320251955190",
+        "status": "Pending",
+        "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+      },
+      "050320251957390": {
+        "Category": "ColdCoffeeMenu",
+        "Count": 3,
+        "Desc": "Coffee and Caramel unite is a dreamy blend",
+        "Name": "Caramel Frappe",
+        "Price": "Rs. 120",
+        "Section": "Main",
+        "Size": "250ml",
+        "Stock": 53,
+        "created_on": "05/03/2025, 19:57:39",
+        "created_on_date": "05/03/2025",
+        "created_on_time": "19:57:39",
+        "customer_name": "dfr 18022025183924",
+        "order_id": "05032025195739",
+        "order_item_id": "050320251957390",
+        "status": "Pending",
+        "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+      },
+      "050320252000330": {
+        "Category": "ColdCoffeeMenu",
+        "Count": 2,
+        "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+        "Name": "Original South India Frappe",
+        "Price": "Rs. 100",
+        "Section": "Main",
+        "Size": "250ml",
+        "Stock": 42,
+        "created_on": "05/03/2025, 20:00:33",
+        "created_on_date": "05/03/2025",
+        "created_on_time": "20:00:33",
+        "customer_name": "dfr 18022025183924",
+        "order_id": "05032025200033",
+        "order_item_id": "050320252000330",
+        "status": "Pending",
+        "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+      },
+      "050320252032160": {
+        "Category": "ColdCoffeeMenu",
+        "Count": 2,
+        "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+        "Name": "Original South India Frappe",
+        "Price": "Rs. 100",
+        "Section": "Main",
+        "Size": "250ml",
+        "Stock": 42,
+        "created_on": "05/03/2025, 20:32:16",
+        "created_on_date": "05/03/2025",
+        "created_on_time": "20:32:16",
+        "customer_name": "dfr 18022025183924",
+        "order_id": "05032025203216",
+        "order_item_id": "050320252032160",
+        "status": "Pending",
+        "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+      },
+      "050320252032330": {
+        "Category": "ColdCoffeeMenu",
+        "Count": 2,
+        "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+        "Name": "Original South India Frappe",
+        "Price": "Rs. 100",
+        "Section": "Main",
+        "Size": "250ml",
+        "Stock": 42,
+        "created_on": "05/03/2025, 20:32:33",
+        "created_on_date": "05/03/2025",
+        "created_on_time": "20:32:33",
+        "customer_name": "dfr 18022025183924",
+        "order_id": "05032025203233",
+        "order_item_id": "050320252032330",
+        "status": "Pending",
+        "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+      },
+      "050320252037370": {
+        "Category": "ColdCoffeeMenu",
+        "Count": 3,
+        "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+        "Name": "Original South India Frappe",
+        "Price": "Rs. 100",
+        "Section": "Main",
+        "Size": "250ml",
+        "Stock": 42,
+        "created_on": "05/03/2025, 20:37:37",
+        "created_on_date": "05/03/2025",
+        "created_on_time": "20:37:37",
+        "customer_name": "dfr 18022025183924",
+        "order_id": "05032025203737",
+        "order_item_id": "050320252037370",
+        "status": "Pending",
+        "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+      },
+      "050320252038340": {
+        "Category": "ColdCoffeeMenu",
+        "Count": 2,
+        "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+        "Name": "Original South India Frappe",
+        "Price": "Rs. 100",
+        "Section": "Main",
+        "Size": "250ml",
+        "Stock": 42,
+        "created_on": "05/03/2025, 20:38:34",
+        "created_on_date": "05/03/2025",
+        "created_on_time": "20:38:34",
+        "customer_name": "dfr 18022025183924",
+        "order_id": "05032025203834",
+        "order_item_id": "050320252038340",
+        "status": "Pending",
+        "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+      },
+      "050320252050480": {
+        "Category": "ColdCoffeeMenu",
+        "Count": 2,
+        "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+        "Name": "Original South India Frappe",
+        "Price": "Rs. 100",
+        "Section": "Main",
+        "Size": "250ml",
+        "Stock": 42,
+        "created_on": "05/03/2025, 20:50:48",
+        "created_on_date": "05/03/2025",
+        "created_on_time": "20:50:48",
+        "customer_name": "dfr 18022025183924",
+        "order_id": "05032025205048",
+        "order_item_id": "050320252050480",
+        "status": "Pending",
+        "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+      },
+      "050320252054240": {
+        "Category": "ColdCoffeeMenu",
+        "Count": 2,
+        "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+        "Name": "Original South India Frappe",
+        "Price": "Rs. 100",
+        "Section": "Main",
+        "Size": "250ml",
+        "Stock": 42,
+        "created_on": "05/03/2025, 20:54:24",
+        "created_on_date": "05/03/2025",
+        "created_on_time": "20:54:24",
+        "customer_name": "dfr 18022025183924",
+        "order_id": "05032025205424",
+        "order_item_id": "050320252054240",
+        "status": "Pending",
+        "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+      },
+      "050320252109240": {
+        "Category": "ColdCoffeeMenu",
+        "Count": 3,
+        "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+        "Name": "Original South India Frappe",
+        "Price": "Rs. 100",
+        "Section": "Main",
+        "Size": "250ml",
+        "Stock": 42,
+        "created_on": "05/03/2025, 21:09:24",
+        "created_on_date": "05/03/2025",
+        "created_on_time": "21:09:24",
+        "customer_name": "dfr 18022025183924",
+        "order_id": "05032025210924",
+        "order_item_id": "050320252109240",
+        "status": "Pending",
+        "userId": "Ke6WhLG7lRgolMaihasYVk02BzH3"
+      },
+      "050320252114470": {
+        "Category": "ColdCoffeeMenu",
+        "Count": 2,
+        "Desc": "Coffee and Caramel unite is a dreamy blend",
+        "Name": "Caramel Frappe",
+        "Price": 0,
+        "Section": "Main",
+        "Size": "250ml",
+        "Stock": 53,
+        "created_on": "05/03/2025, 21:14:47",
+        "created_on_date": "05/03/2025",
+        "created_on_time": "21:14:47",
+        "customer_name": "dfr 18022025183924 05032025211447",
+        "order_id": "05032025211447",
+        "order_item_id": "050320252114470",
+        "status": "Pending"
+      },
+      "050320252117150": {
+        "Category": "HotCoffeeMenu",
+        "Count": 2,
+        "Desc": "Bass Naam Hi Kaapi Hai",
+        "Name": "South Indian Filter Kaapi",
+        "Price": "Rs. 50",
+        "Section": "Main",
+        "Size": "250ml",
+        "Stock": 9,
+        "cancelled_by": "dfr 18022025183924",
+        "cancelled_on": "09/03/2025, 13:14:29",
+        "created_on": "05/03/2025, 21:17:15",
+        "created_on_date": "05/03/2025",
+        "created_on_time": "21:17:15",
+        "customer_name": "dfr 18022025183924 05032025211715",
+        "order_id": "05032025211715",
+        "order_item_id": "050320252117150",
+        "status": "Cancelled"
+      },
+      "090320251230330": {
+        "Category": "ColdCoffeeMenu",
+        "Count": 2,
+        "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+        "Name": "Original South India Frappe",
+        "Price": 0,
+        "Section": "Main",
+        "Size": "250ml",
+        "Stock": 42,
+        "cancelled_by": "dfr 18022025183924",
+        "cancelled_on": "09/03/2025, 13:12:03",
+        "coupon_quantity": 2,
+        "coupon_redeemed": true,
+        "created_on": "09/03/2025, 12:30:33",
+        "created_on_date": "09/03/2025",
+        "created_on_time": "12:30:33",
+        "customer_name": "dfr 18022025183924 09032025123033",
+        "order_id": "09032025123033",
+        "order_item_id": "090320251230330",
+        "status": "Cancelled"
+      },
+      "090320251230331": {
+        "Category": "ColdCoffeeMenu",
+        "Count": 5,
+        "Desc": "Praline-perfect fusion: creamy, nutty and vanilla delight",
+        "Name": "Vanilla Praline Frappe",
+        "Price": 0,
+        "Section": "Main",
+        "Size": "250ml",
+        "Stock": 8,
+        "cancelled_by": "dfr 18022025183924",
+        "cancelled_on": "09/03/2025, 13:12:03",
+        "coupon_quantity": 5,
+        "coupon_redeemed": true,
+        "created_on": "09/03/2025, 12:30:33",
+        "created_on_date": "09/03/2025",
+        "created_on_time": "12:30:33",
+        "customer_name": "dfr 18022025183924 09032025123033",
+        "order_id": "09032025123033",
+        "order_item_id": "090320251230331",
+        "status": "Cancelled"
+      },
+      "090320251246220": {
+        "Category": "ColdCoffeeMenu",
+        "Count": 5,
+        "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+        "Name": "Original South India Frappe",
+        "Price": 0,
+        "Section": "Main",
+        "Size": "250ml",
+        "Stock": 42,
+        "coupon_quantity": 5,
+        "coupon_redeemed": true,
+        "created_on": "09/03/2025, 12:46:22",
+        "created_on_date": "09/03/2025",
+        "created_on_time": "12:46:22",
+        "customer_name": "dfr 18022025183924 09032025124622",
+        "order_id": "09032025124622",
+        "order_item_id": "090320251246220",
+        "status": "Pending"
+      },
+      "090320251309110": {
+        "Category": "ColdCoffeeMenu",
+        "Count": 2,
+        "Desc": "Coffee and Caramel unite is a dreamy blend",
+        "Name": "Caramel Frappe",
+        "Price": "Rs. 120",
+        "Section": "Main",
+        "Size": "250ml",
+        "Stock": 53,
+        "cancelled_by": "dfr 18022025183924",
+        "cancelled_on": "09/03/2025, 13:09:22",
+        "coupon_quantity": 2,
+        "coupon_redeemed": true,
+        "created_on": "09/03/2025, 13:09:11",
+        "created_on_date": "09/03/2025",
+        "created_on_time": "13:09:11",
+        "customer_name": "dfr 18022025183924 09032025130911",
+        "order_id": "09032025130911",
+        "order_item_id": "090320251309110",
+        "status": "Cancelled"
+      },
+      "090320251312360": {
+        "Category": "ColdCoffeeMenu",
+        "Count": 1,
+        "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+        "Name": "Original South India Frappe",
+        "Price": "Rs. 100",
+        "Section": "Main",
+        "Size": "250ml",
+        "Stock": 42,
+        "cancelled_by": "dfr 18022025183924",
+        "cancelled_on": "09/03/2025, 13:12:46",
+        "coupon_quantity": 1,
+        "coupon_redeemed": true,
+        "created_on": "09/03/2025, 13:12:36",
+        "created_on_date": "09/03/2025",
+        "created_on_time": "13:12:36",
+        "customer_name": "dfr 18022025183924 09032025131236",
+        "order_id": "09032025131236",
+        "order_item_id": "090320251312360",
+        "status": "Cancelled"
+      },
+      "090320251314570": {
+        "Category": "ColdCoffeeMenu",
+        "Count": 3,
+        "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+        "Name": "Original South India Frappe",
+        "Price": "Rs. 100",
+        "Section": "Main",
+        "Size": "250ml",
+        "Stock": 42,
+        "cancelled_by": "dfr 18022025183924",
+        "cancelled_on": "09/03/2025, 13:20:31",
+        "coupon_quantity": 3,
+        "coupon_redeemed": true,
+        "created_on": "09/03/2025, 13:14:57",
+        "created_on_date": "09/03/2025",
+        "created_on_time": "13:14:57",
+        "customer_name": "dfr 18022025183924 09032025131457",
+        "order_id": "09032025131457",
+        "order_item_id": "090320251314570",
+        "status": "Cancelled"
+      },
+      "090320251315150": {
+        "Category": "ColdCoffeeMenu",
+        "Count": 1,
+        "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+        "Name": "Original South India Frappe",
+        "Price": "Rs. 100",
+        "Section": "Main",
+        "Size": "250ml",
+        "Stock": 42,
+        "cancelled_by": "dfr 18022025183924",
+        "cancelled_on": "09/03/2025, 13:20:55",
+        "coupon_quantity": 1,
+        "coupon_redeemed": true,
+        "created_on": "09/03/2025, 13:15:15",
+        "created_on_date": "09/03/2025",
+        "created_on_time": "13:15:15",
+        "customer_name": "dfr 18022025183924 09032025131515",
+        "order_id": "09032025131515",
+        "order_item_id": "090320251315150",
+        "status": "Cancelled"
+      }
+    },
+    "dfr 18022025183924 05032025140859": {
+      "050320251408590": {
+        "status": "Served"
+      }
+    },
+    "dfr 18022025183924 05032025142640": {
+      "050320251426400": {
+        "status": "Served"
+      },
+      "050320251426401": {
+        "status": "Served"
+      }
+    },
+    "dfr 18022025183924 09032025124622": {
+      "090320251246220": {
+        "status": "Served"
+      }
+    },
+    "kbhatt0904-at-drilldown-dot-online": {
+      "050320251828300": {
+        "Category": "HotCoffeeMenu",
+        "Count": 1,
+        "Desc": "Bass Naam Hi Kaapi Hai",
+        "Name": "South Indian Filter Kaapi",
+        "Price": 0,
+        "Section": "Main",
+        "Size": "250ml",
+        "Stock": 9,
+        "cancelled_by": "kbhatt0904@drilldown.online",
+        "cancelled_on": "05/03/2025, 18:33:59",
+        "created_on": "05/03/2025, 18:28:30",
+        "created_on_date": "05/03/2025",
+        "created_on_time": "18:28:30",
+        "customer_name": "kbhatt0904@drilldown.online 05032025182830",
+        "order_id": "05032025182830",
+        "order_item_id": "050320251828300",
+        "status": "Cancelled"
+      },
+      "050320251834350": {
+        "Category": "ColdCoffeeMenu",
+        "Count": 4,
+        "Desc": "Praline-perfect fusion: creamy, nutty and vanilla delight",
+        "Name": "Vanilla Praline Frappe",
+        "Price": "Rs. 120",
+        "Section": "Main",
+        "Size": "250ml",
+        "Stock": 8,
+        "created_on": "05/03/2025, 18:34:35",
+        "created_on_date": "05/03/2025",
+        "created_on_time": "18:34:35",
+        "customer_name": "kbhatt0904@drilldown.online 05032025183435",
+        "order_id": "05032025183435",
+        "order_item_id": "050320251834350",
+        "status": "Pending"
+      }
+    },
+    "sengupta-dot-a-at-somaiya-dot-edu": {
+      "050320251820300": {
+        "Category": "ColdCoffeeMenu",
+        "Count": 2,
+        "Desc": "Coffee Frappe With Everyone's Favourite Hazelnut Flavour Notes",
+        "Name": "Hazelnut Frappe",
+        "Price": 0,
+        "Section": "Main",
+        "Size": "250ml",
+        "Stock": 6,
+        "created_on": "05/03/2025, 18:20:30",
+        "created_on_date": "05/03/2025",
+        "created_on_time": "18:20:30",
+        "customer_name": "sengupta.a@somaiya.edu 05032025182030",
+        "order_id": "05032025182030",
+        "order_item_id": "050320251820300",
+        "status": "Pending"
+      },
+      "050320251820301": {
+        "Category": "ColdCoffeeMenu",
+        "Count": 1,
+        "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+        "Name": "Original South India Frappe",
+        "Price": 0,
+        "Section": "Main",
+        "Size": "250ml",
+        "Stock": 4,
+        "created_on": "05/03/2025, 18:20:30",
+        "created_on_date": "05/03/2025",
+        "created_on_time": "18:20:30",
+        "customer_name": "sengupta.a@somaiya.edu 05032025182030",
+        "order_id": "05032025182030",
+        "order_item_id": "050320251820301",
+        "status": "Pending"
+      },
+      "050320251820302": {
+        "Category": "ColdCoffeeMenu",
+        "Count": 2,
+        "Desc": "Coffee and Caramel unite is a dreamy blend",
+        "Name": "Caramel Frappe",
+        "Price": 0,
+        "Section": "Main",
+        "Size": "250ml",
+        "Stock": 53,
+        "created_on": "05/03/2025, 18:20:30",
+        "created_on_date": "05/03/2025",
+        "created_on_time": "18:20:30",
+        "customer_name": "sengupta.a@somaiya.edu 05032025182030",
+        "order_id": "05032025182030",
+        "order_item_id": "050320251820302",
+        "status": "Pending"
+      },
+      "070320251532430": {
+        "Category": "ColdCoffeeMenu",
+        "Count": 3,
+        "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+        "Name": "Original South India Frappe",
+        "Price": 0,
+        "Section": "Main",
+        "Size": "250ml",
+        "Stock": 42,
+        "created_on": "07/03/2025, 15:32:43",
+        "created_on_date": "07/03/2025",
+        "created_on_time": "15:32:43",
+        "customer_name": "sengupta.a@somaiya.edu 07032025153243",
+        "order_id": "07032025153243",
+        "order_item_id": "070320251532430",
+        "status": "Pending"
+      },
+      "070320251538320": {
+        "Category": "ColdCoffeeMenu",
+        "Count": 3,
+        "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+        "Name": "Original South India Frappe",
+        "Price": 0,
+        "Section": "Main",
+        "Size": "250ml",
+        "Stock": 42,
+        "created_on": "07/03/2025, 15:38:32",
+        "created_on_date": "07/03/2025",
+        "created_on_time": "15:38:32",
+        "customer_name": "sengupta.a@somaiya.edu 07032025153832",
+        "order_id": "07032025153832",
+        "order_item_id": "070320251538320",
+        "status": "Pending"
+      },
+      "070320251539160": {
+        "Category": "ColdCoffeeMenu",
+        "Count": 1,
+        "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+        "Name": "Original South India Frappe",
+        "Price": "Rs. 100",
+        "Section": "Main",
+        "Size": "250ml",
+        "Stock": 42,
+        "created_on": "07/03/2025, 15:39:16",
+        "created_on_date": "07/03/2025",
+        "created_on_time": "15:39:16",
+        "customer_name": "sengupta.a@somaiya.edu 07032025153916",
+        "order_id": "07032025153916",
+        "order_item_id": "070320251539160",
+        "status": "Pending"
+      },
+      "070320251546550": {
+        "Category": "ColdCoffeeMenu",
+        "Count": 1,
+        "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+        "Name": "Original South India Frappe",
+        "Price": 0,
+        "Section": "Main",
+        "Size": "250ml",
+        "Stock": 42,
+        "created_on": "07/03/2025, 15:46:55",
+        "created_on_date": "07/03/2025",
+        "created_on_time": "15:46:55",
+        "customer_name": "sengupta.a@somaiya.edu 07032025154655",
+        "order_id": "07032025154655",
+        "order_item_id": "070320251546550",
+        "status": "Pending"
+      }
+    }
+  },
+  "users": {
+    "8qjyeK8XsRP9ZxcdcqKq9I6SWYl2": {
+      "email": "kbhatt0904@drilldown.online",
+      "name": "Kunj Bhatt",
+      "photoURL": "https://lh3.googleusercontent.com/a-/ALV-UjWlGQ6qS0YXfdSnvQKYPlhpFpN_19z-ovW9qaX3pqpHkk6f14drnynVrLzJhx4gyokYkOXhI8EeluoMzy3I-lla7DhkYa27eEWgXrGBz2S0f5T4GJaACnfsurEs8BJkRz08pPQAVY18xJdWkw7uTQ4t6UfGR9rKtNxRKwhyNtiUkiEo5f3gXK0Te8jFhIVCsqc1yehoL23DKZfMud7Oaf5mKYb38tuUlLkt1Cs7eomHt3DxtazHXOOe9bK0pjLqNnlsqE7nvJbSi3cOyWPb6wMI2KymkwK-Tx1Ql9QJ4GtAGGPydwlrzRRMma42TFMzjCzJYtNZenll8Fd2dsO2-cTy_Cz8ARkcjJl98Qp5Sq7o8HPiDFooBeBdza628lZ4A3_QfMY_fuzBfxEqyTcOiX7_EKtmqqh-M2FLQ1nIayNYdO7zYN3lnm9qvGDZYaS3yKwRpxsZYRYPFsDactlAqROXIP73fpSITq8YwT0BA8n8uDrYfq93Gehi_NDguKcsRroKf1yr76Y2demLRC0i_Lhdhe3tms_MwVLvtPm4xHrR2N4mlSRDnS5wcush-gywhUpzpY-qxbHufUmkY6KorlPPM5ZOPfYqNWUxwePhmiv1RYomPwXYQK3iYhQ64b_lWdt5SM2hjCK_PI-NILozGSeFJIUW6onxpP0w86OG4ow87b0kd9HzJx8aOri3Zu5K_RUsSmKkoqv-lw9Syuj8nwwc2WyBpq3kBswkTZTg_AxAOfNA7ThFR8c_OFmoSGFK-e3et3LGsELnzmXQrnH1IFFqWsnWnHl0Wj8IWWJ35aDo6MFi2b9Ce9KUCBLEL7SeunbnFuqvxY1jLZSJD-2JCxkLSZY3ooi6QCF1qWgNJZ-dB7GeabXKMWUl9DGalRWBc1uqkgdlicZtKu2_M9Gs1J2NAjy9IsRhyczKc8eHLQjTXWliQN2-0tWPi2acQAxiAKnAo4fjvPH4vGUK8sxSvWChoQ=s96-c"
+    },
+    "FSXq6EoVWOQwNCmfZpanzQkSpW02": {
+      "email": "aniruddhs105@gmail.com",
+      "name": "Aniruddh Sengupta",
+      "photoURL": "https://lh3.googleusercontent.com/a/ACg8ocINxmKqGCqRRjOvrNM5jHrzGDNTbk3r8hGrW1LErYPapV1lLqY=s96-c"
+    },
+    "Ke6WhLG7lRgolMaihasYVk02BzH3": {
+      "email": "sengupta.a@somaiya.edu",
+      "name": "Aniruddh Sengupta",
+      "photoURL": "https://lh3.googleusercontent.com/a/ACg8ocJFx8TuQvaocKalChuV3iegQD-ta6arerH0TlPTYHHxPNG3JQ=s96-c"
+    },
+    "lWbbUwbZYpOGkSSD8660j5TLjmD2": {
+      "email": "veditbeladia@gmail.com",
+      "name": "VEDIT BELADIA",
+      "photoURL": "https://lh3.googleusercontent.com/a/ACg8ocK0M8cFLGZy4poaVYWrFVuaw_UHU2TOeKG80vvWD_bWxWAh50054A=s96-c"
+    },
+    "plXROqmXFGeKdpgjU0qhwbG9BPt2": {
+      "email": "aniruddh@drilldown.online",
+      "lastUpdated": 1741187763026,
+      "name": "Aniruddh Sengupta",
+      "photoURL": "https://lh3.googleusercontent.com/a-/ALV-UjXOjIuVrBp0VnKAFvwm1Cm6M-xICFpHLlt4d8rL3wkOGVFUiuCgKkfB3RIc7kVR4Lp2aSlu8fU60R7HkIujkmO7pbmZT9kosXZsRG2QwGPUlfUXABT8StoW7a8YEoNKqm34hOpcH8sJIZCHnUlhV9Eg4nxX8Z6nhWNlhOqTLSsYWLfbPRKlm4z8W1abNGfepdxc8b4RPDnA-_I1EHFr5weU_i7abvXTTiT9QSlvMcvvPB2p3voS-5-8HG5MR-F4df9ad6KVIE61j4LrFxyJU5yFowZf-4pVZHCBjMA7-aRa1RcJRl7hSLbkRWMK2iccS-uH0RaHkiwfSCrxVnjJ4cfn1t0u0rlTPcpuznnDl3fEA_dIuaUuMRM0sRXwD8zh-2RV1BHftLyhknW3R8zRq0qFHsud0FLnv7OZIxJvUr3XcAKwUx6FAez-Qh3prqwZCbFR0l_qDSR4IOj5c6-o_h7I7QnDALxSsGkgPQitS4d0OwHQweE1b_wA78IGtNY6XPzfJZLa7noTPGrMpjDDFGm9VN3mUytCKmtRpI1NeDPbzxN00buOAzpkmMBuBJtvPBm0OnUkFErh9TzmzXmIrSSikN0b3yhSwK_AQ6s1ll1kOPsl7HlulyYzaveq0UYBRqHWjxGetN51jbbZBo46AkuHbvpurzRCjj2rMFgXFyr-7HPpjYame31VPjR4X5r6N6444gGHIWap-ASy9xS9d_b85V37zPUvHtjnSMseBlkRzZQRyNykHOKGFZcKDJoYPs7a-8pRc4kr6LUaGzys5gUWpIU2EeDqxV87-FZ4nUGqqzzQu4UjRFcP4y6l9aYN100nA1uDnyBuozZ3XLyV_HU8RZIlZijhYyyEfRfK26Q0ptXuFT5pPTKsMj9vN8UhQvabrWOoEV6zm1kdenMVTa4VkyYWZkWladzx0PMPQQAoWabEzYF_DqEkV8RNRoob8vI9y0m_BB7qQ1iKZYrPUvyf-E0=s96-c"
+    }
+  }
+}

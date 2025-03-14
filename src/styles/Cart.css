@@ -182,4 +182,33 @@
 .coupon-info {
     color: #2e7d32;
     font-size: 0.9em;
+}
+
+.coupon-status {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.coupon-warning {
+    background-color: #ffebee;
+    color: #d32f2f;
+    border: 1px solid #f44336;
+}
+
+.coupon-ok {
+    background-color: #e8f5e9;
+    color: #388e3c;
+    border: 1px solid #4caf50;
+}
+
+.place-order-btn.disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.place-order-btn.disabled:hover {
+    background-color: #cccccc;
 } 

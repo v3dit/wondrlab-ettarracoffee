@@ -3,6 +3,18 @@ import database from '../config/FirbaseConfig';
 import firebase from 'firebase/compat/app';
 import '../styles/Cart.css';
 
+// Add email encoding function
+const encodeEmail = (email) => {
+    if (!email) return '';
+    return email.toString()
+        .replace(/\./g, '-dot-')
+        .replace(/@/g, '-at-')
+        .replace(/\$/g, '-dollar-')
+        .replace(/\[/g, '-lbracket-')
+        .replace(/\]/g, '-rbracket-')
+        .replace(/#/g, '-hash-');
+};
+
 const Cart = ({ wishlist, setWishlist, loggedInUser, onPlaceOrder }) => {
     const [userCoupons, setUserCoupons] = useState(null);
     const [redeemedItems, setRedeemedItems] = useState({});
@@ -12,6 +24,7 @@ const Cart = ({ wishlist, setWishlist, loggedInUser, onPlaceOrder }) => {
         if (loggedInUser) {
             const user = firebase.auth().currentUser;
             if (user && user.email) {
+                const encodedEmail = encodeEmail(user.email);
                 // Query UserCoupons by email
                 const couponQuery = database.ref('UserCoupons')
                     .orderByChild('email')
@@ -84,6 +97,37 @@ const Cart = ({ wishlist, setWishlist, loggedInUser, onPlaceOrder }) => {
         }, 0);
     };
 
+    // Calculate total item count
+    const getTotalItemCount = () => {
+        return wishlist.reduce((total, item) => {
+            return total + (parseInt(item.Count) || 0);
+        }, 0);
+    };
+
+    // Check if coupon limit is exceeded
+    const isCouponLimitExceeded = () => {
+        if (!userCoupons) return false;
+        const totalItems = getTotalItemCount();
+        const availableCoupons = userCoupons.active_coupons || 0;
+        return totalItems > availableCoupons;
+    };
+
+    // Get coupon status message
+    const getCouponStatusMessage = () => {
+        if (!userCoupons) return "";
+        
+        const totalItems = getTotalItemCount();
+        const availableCoupons = userCoupons.active_coupons || 0;
+        
+        if (totalItems > availableCoupons) {
+            return `Warning: You have ${totalItems} items but only ${availableCoupons} coupons available.`;
+        } else if (totalItems === availableCoupons) {
+            return `Perfect! You have exactly ${availableCoupons} coupons for your ${totalItems} items.`;
+        } else {
+            return `You have ${availableCoupons} coupons available for ${totalItems} items.`;
+        }
+    };
+
     if (loading) {
         return <div className="cart-container">Loading...</div>;
     }
@@ -92,9 +136,9 @@ const Cart = ({ wishlist, setWishlist, loggedInUser, onPlaceOrder }) => {
         <div className="cart-container">
             <h2>Your Cart</h2>
             
-            {userCoupons && userCoupons.active_coupons > 0 && (
-                <div className="available-coupons">
-                    You have {userCoupons.active_coupons} coupons available to redeem!
+            {userCoupons && (
+                <div className={`coupon-status ${isCouponLimitExceeded() ? 'coupon-warning' : 'coupon-ok'}`}>
+                    {getCouponStatusMessage()}
                 </div>
             )}
             
@@ -128,10 +172,13 @@ const Cart = ({ wishlist, setWishlist, loggedInUser, onPlaceOrder }) => {
             <div className="cart-summary">
                 <div className="total">Total: ₹{calculateTotal()}</div>
                 <button 
-                    className="place-order-btn"
+                    className={`place-order-btn ${isCouponLimitExceeded() ? 'disabled' : ''}`}
                     onClick={() => onPlaceOrder(wishlist, redeemedItems)}
+                    disabled={isCouponLimitExceeded()}
                 >
-                    Place Order
+                    {isCouponLimitExceeded() 
+                        ? 'Adjust Cart (Coupon Limit Exceeded)' 
+                        : 'Place Order'}
                 </button>
             </div>
         </div>

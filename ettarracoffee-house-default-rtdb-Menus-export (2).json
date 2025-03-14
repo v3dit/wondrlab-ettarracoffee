@@ -1,0 +1,1013 @@
+{
+  "ColdMenu": [
+    {
+      "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+      "Img": "https://firebasestorage.googleapis.com/v0/b/ettarracoffee-house.appspot.com/o/south%20india%20Large.jpeg?alt=media&token=a17b3787-9f6c-41b5-ae3a-458d44549ebe",
+      "Name": "Original South India Frappe",
+      "Price": {
+        "350ml": "Rs. 320",
+        "450ml": "Rs. 365"
+      }
+    },
+    {
+      "Desc": "Classic House Special Frappe Served With Twist Of Jaggery",
+      "Img": "https://firebasestorage.googleapis.com/v0/b/ettarracoffee-house.appspot.com/o/classic.jpeg?alt=media&token=0101e545-8c68-492c-85f0-1e978b2f97e8",
+      "Name": "Classic Frappe",
+      "Price": {
+        "350ml": "Rs. 285",
+        "450ml": "Rs. 335"
+      }
+    },
+    {
+      "Desc": "Creamy, nutty blend of almond milk, ice, and espresso, a coffeehouse favourite",
+      "Img": "https://firebasestorage.googleapis.com/v0/b/ettarracoffee-house.appspot.com/o/almond%20Large.jpeg?alt=media&token=9b11af93-285f-4a40-bf0d-fd582be1f874",
+      "Name": "Almond Frappe",
+      "Price": {
+        "350ml": "Rs. 320",
+        "450ml": "Rs. 365"
+      }
+    },
+    {
+      "Desc": "Tender Coconut And Coffee Frappe Blended With Precision",
+      "Img": "https://firebasestorage.googleapis.com/v0/b/ettarracoffee-house.appspot.com/o/nariyal%20Large.jpeg?alt=media&token=689d5a09-d9a8-4101-9408-1f7bd5b23d62",
+      "Name": "Nariyal Irish Cream Frappe",
+      "Price": {
+        "350ml": "Rs. 320",
+        "450ml": "Rs. 365"
+      }
+    },
+    {
+      "Desc": "Coffee Frappe With Everyone's Favourite Hazelnut Flavour Notes",
+      "Img": "https://firebasestorage.googleapis.com/v0/b/ettarracoffee-house.appspot.com/o/southindia%20Large.jpeg?alt=media&token=a4b0b898-6274-4873-9418-ec4d3174e51a",
+      "Name": "Hazelnut Frappe",
+      "Price": {
+        "350ml": "Rs. 320",
+        "450ml": "Rs. 365"
+      }
+    },
+    {
+      "Desc": "Traditional Filter Kaapi On A Bed Of Condensed Milk",
+      "Img": "https://firebasestorage.googleapis.com/v0/b/ettarracoffee-house.appspot.com/o/vietmanis%20Large.jpeg?alt=media&token=328a9d50-8108-4584-bb4c-bee38392845d",
+      "Name": "Vietnamese Frappe",
+      "Price": {
+        "350ml": "Rs. 320",
+        "450ml": "Rs. 365"
+      }
+    },
+    {
+      "Desc": "Introducing our new drink: Espresso base, creamy milk infused with rich dark chocolate, and a touch of sea salt",
+      "Img": "https://firebasestorage.googleapis.com/v0/b/ettarracoffee-house.appspot.com/o/sea%20salt%20Large.jpeg?alt=media&token=1889f5e4-9540-4a41-b292-844cf809aa41",
+      "Name": "Sea Salt Dark Mocha Frappe",
+      "Price": {
+        "350ml": "Rs. 350",
+        "450ml": "Rs. 395"
+      }
+    },
+    {
+      "Desc": "With manual pour over, the coffee drains directly onto the cold water and ice",
+      "Img": "https://firebasestorage.googleapis.com/v0/b/ettarracoffee-house.appspot.com/o/iced%20americano.jpg?alt=media&token=64203e21-1cfb-4f98-8412-86d26fecbed8",
+      "Name": "Iced Americano",
+      "Price": {
+        "350ml": "Rs. 190",
+        "450ml": "Rs. 220"
+      }
+    },
+    {
+      "Desc": "Coffee and Caramel unite is a dreamy blend",
+      "Img": "https://firebasestorage.googleapis.com/v0/b/ettarracoffee-house.appspot.com/o/caremel%20Large.jpeg?alt=media&token=7f3d522e-c1b8-48b9-950f-f0932d33cc74",
+      "Name": "Caramel Frappe",
+      "Price": {
+        "350ml": "Rs. 320",
+        "450ml": "Rs. 365"
+      }
+    },
+    {
+      "Desc": "Praline-perfect fusion: creamy, nutty and vanilla delight",
+      "Img": "https://firebasestorage.googleapis.com/v0/b/ettarracoffee-house.appspot.com/o/caremel%20Large.jpeg?alt=media&token=7f3d522e-c1b8-48b9-950f-f0932d33cc74",
+      "Name": "Vanilla Praline Frappe",
+      "Price": {
+        "350ml": "Rs. 320",
+        "450ml": "Rs. 365"
+      }
+    },
+    {
+      "Desc": "Tonic Water/ Ginger Ale - Espresso Sitting On A Bed Of Tonic Water, Tastes Like A Sparkling And Full Body Cousin To The Beverage On Your Mind",
+      "Img": "https://firebasestorage.googleapis.com/v0/b/ettarracoffee-house.appspot.com/o/espressotonic%20Large.jpeg?alt=media&token=2ee12a38-5d58-4d30-8f72-44d9f8db1098",
+      "Name": "Espresso Tonic",
+      "Price": {
+        "250ml": "Rs. 315",
+        "450ml": "Rs. 315"
+      }
+    },
+    {
+      "Desc": "Tonic Water/ Ginger Ale - Cold Brewed South Indian Coffee With Tonic, Tastes Mild And Sparkling With A Finish Of Subtle Ginger Notes",
+      "Img": "https://firebasestorage.googleapis.com/v0/b/ettarracoffee-house.appspot.com/o/malnad%20Large.jpeg?alt=media&token=f404d5ba-a57f-4a97-8348-db60005abb70",
+      "Name": "Malnad Tonic",
+      "Price": {
+        "350ml": "Rs. 350",
+        "450ml": "Rs. 395"
+      }
+    },
+    {
+      "Desc": "Coffee For The Little 'Sweet Tooth', Served With Condensed Milk",
+      "Img": "",
+      "Name": "Bon Bon Frappe",
+      "Price": {
+        "350ml": "Rs. 320",
+        "450ml": "Rs. 365"
+      }
+    },
+    {
+      "Desc": "Elegant harmony of coffee and indulgent Madagascar chocolate",
+      "Img": "",
+      "Name": "Iced mocha",
+      "Price": {
+        "350ml": "Rs. 285",
+        "450ml": "Rs. 315"
+      }
+    },
+    {
+      "Desc": "A No Brainer To I'm Thirsty And It's Hot",
+      "Img": "",
+      "Name": "Iced Latte",
+      "Price": {
+        "350ml": "Rs. 235",
+        "450ml": "Rs. 260"
+      }
+    },
+    {
+      "Desc": "Premium Madagascar Chocolate Frappe With Chocolate Chips To Balance Textures",
+      "Img": "",
+      "Name": "Madagascar Choco Chip Frappe",
+      "Price": {
+        "350ml": "Rs. 350",
+        "450ml": "Rs. 395"
+      }
+    }
+  ],
+  "ContinentalMenu": [
+    {
+      "Desc": "Paneer Ravioli in Red Ghee Roast: Paneer red ghee roast stuffed in thin round pasta sheets. Tossed in red ghee roast masala and coconut cream.",
+      "Img": "https://firebasestorage.googleapis.com/v0/b/ettarracoffee-house.appspot.com/o/continental%2Fgheeroast.jpeg?alt=media&token=252bfe2b-1bf2-4ba2-b907-b92698145b48",
+      "Name": "Paneer Ravioli in Red Ghee Roast",
+      "Price": {
+        "1 Serving": "Rs. 255"
+      }
+    },
+    {
+      "Desc": "Mushroom Tortellini in creamy Coconut Stew:Mushroom edemunchi filling stuffed in pasta bows. Tossed in coconut stew sauce and sprinkled with parsley.",
+      "Img": "https://firebasestorage.googleapis.com/v0/b/ettarracoffee-house.appspot.com/o/continental%2Fcoconut.jpeg?alt=media&token=90f77d80-5289-4c7e-885e-5d68b97051ba",
+      "Name": "Mushroom Tortellini in Creamy Coconut Stew",
+      "Price": {
+        "1 Serving": "Rs. 255"
+      }
+    },
+    {
+      "Desc": "Spaghetti in Creamy Edemunchi Sauce: Spaghetti in exotic vegetables tossed in coconut cream and pepper sauce (edemunchi).",
+      "Img": "https://firebasestorage.googleapis.com/v0/b/ettarracoffee-house.appspot.com/o/continental%2Fmashroom.jpeg?alt=media&token=6408e4c1-f691-4388-9191-1daf6b05da4d",
+      "Name": "Spaghetti in Creamy Edemunchi Sauce. ",
+      "Price": {
+        "1 Serving": "Rs. 255"
+      }
+    },
+    {
+      "Desc": "Paneer Chettinad Cutlet sandwiched between toasted burger buns. Sauced with curry mayo, thin slices of tomatoes and rocket leaved. Served with a south Indian Coleslaw.",
+      "Img": "https://firebasestorage.googleapis.com/v0/b/ettarracoffee-house.appspot.com/o/continental%2FDSC04325%20Large.jpeg?alt=media&token=278e8fb5-48ff-46e1-be6d-a8714c259314",
+      "Name": "Paneer Chettinad Burger in Curry Mayo",
+      "Price": {
+        "2pcs": "Rs. 160",
+        "4pcs": "Rs. 280",
+        "6pcs": "Rs. 360"
+      }
+    },
+    {
+      "Desc": "Boilled potatoes mixed with tomatoes, capsicum, beetroot and red chilli paste; all mashed and cooked into cutlets with a centre filled cheese filling. Sandwiched between toasted burger buns, capsicum coleslaw, iceberg lettuce and curry mayo. Served with a south Indian Coleslaw.",
+      "Img": "https://firebasestorage.googleapis.com/v0/b/ettarracoffee-house.appspot.com/o/continental%2FDSC04324%20Large.jpeg?alt=media&token=72c5dcb9-132c-4403-a593-c60025689643",
+      "Name": "Mysore Masala Cheese Burger",
+      "Price": {
+        "2pcs": "Rs. 160",
+        "4pcs": "Rs. 280",
+        "6pcs": "Rs. 360"
+      }
+    },
+    {
+      "Desc": "Ghee Roast Margherita pizza: Red ghee roast masala mixed with tomato pizza sauce. Layered on thin pizza bases, topped with mozzarella.",
+      "Img": "https://firebasestorage.googleapis.com/v0/b/ettarracoffee-house.appspot.com/o/continental%2FDSC04338%20Large.jpeg?alt=media&token=b9e5e5ad-0769-496c-8abd-7ed6cfbbba96",
+      "Name": "Ghee Roast Margherita Pizza",
+      "Price": {
+        "3pcs": "Rs. 150",
+        "6pcs": "Rs. 200",
+        "9pcs": "Rs. 285"
+      }
+    },
+    {
+      "Desc": "Malnad Pepper Pizza: Corriander, Coconut and Cinnamon curry tossed with exotic vegetables. Layered on thin pizza bases, topped with mozzarella.",
+      "Img": "https://firebasestorage.googleapis.com/v0/b/ettarracoffee-house.appspot.com/o/continental%2FDSC04334%20Large.jpeg?alt=media&token=9f5ba25c-7538-4ff0-b5ba-b34cc0818d39",
+      "Name": "Malnad Pepper Pizza",
+      "Price": {
+        "3pcs": "Rs. 150",
+        "6pcs": "Rs. 200",
+        "9pcs": "Rs. 285"
+      }
+    },
+    {
+      "Desc": "Ceylon Cinnamon Pizza: Sri-Lankan spiced yellow curry topped with exotic vegetables. Layered on thin pizza bases, topped with mozzarella.",
+      "Img": "https://firebasestorage.googleapis.com/v0/b/ettarracoffee-house.appspot.com/o/continental%2FDSC04343%20Large.jpeg?alt=media&token=2ebbc156-2a40-4c4a-9c24-8c5038a5a778",
+      "Name": "Ceylon Cinnamon Pizza",
+      "Price": {
+        "3pcs": "Rs. 150",
+        "6pcs": "Rs. 200",
+        "9pcs": "Rs. 285"
+      }
+    }
+  ],
+  "HotMenu": [
+    {
+      "Desc": "Bass Naam Hi Kaapi Hai",
+      "Img": "https://firebasestorage.googleapis.com/v0/b/ettarracoffee-house.appspot.com/o/filterkaapi%20Large.jpeg?alt=media&token=18b6da99-d2e4-4394-9f87-1fa5e61cdb1c",
+      "Name": "South Indian Filter Kaapi",
+      "Price": {
+        "150ml": "Rs. 145",
+        "250ml": "Rs. 190"
+      }
+    },
+    {
+      "Desc": "Traditional Filter Coffee Decoction Served In A Classic Cappuccino Fashion",
+      "Img": "https://firebasestorage.googleapis.com/v0/b/ettarracoffee-house.appspot.com/o/coffee%20Large.jpeg?alt=media&token=c660952e-05ea-4e51-8c41-fae823ee5adc",
+      "Name": "Kaapiccino",
+      "Price": {
+        "250ml": "Rs. 225",
+        "350ml": "Rs. 250"
+      }
+    },
+    {
+      "Desc": "Authentic Double Ristreto Served With Warm Water (A.K.A. Up All Night Recovery)",
+      "Img": "https://firebasestorage.googleapis.com/v0/b/ettarracoffee-house.appspot.com/o/Copy%20of%20LAH08948%20Large.jpeg?alt=media&token=63bf4661-37dd-4dce-a211-5f0907552cff",
+      "Name": "Americano",
+      "Price": {
+        "250ml": "Rs. 190",
+        "350ml": "Rs. 220"
+      }
+    },
+    {
+      "Desc": "'Safest Bet' Coffee With A Balanced Proportion Of Coffee, Milk And Silky Milk Foam",
+      "Img": "https://firebasestorage.googleapis.com/v0/b/ettarracoffee-house.appspot.com/o/cappa%20Large.jpeg?alt=media&token=c565e6f8-dc0e-46f1-86bd-4522ffbe9d7c",
+      "Name": "Cappuccino",
+      "Price": {
+        "250ml": "Rs. 235",
+        "350ml": "Rs. 260"
+      }
+    },
+    {
+      "Desc": "'Looks Cute' Coffee With A Biased Milk To Milk Foam Ratio And Solid Coffee Composition",
+      "Img": "https://firebasestorage.googleapis.com/v0/b/ettarracoffee-house.appspot.com/o/Latte%20Large.jpeg?alt=media&token=65824ce5-a8ed-49db-b55e-30d801627926",
+      "Name": "Café Latte",
+      "Price": {
+        "250ml": "Rs. 235",
+        "350ml": "Rs. 260"
+      }
+    },
+    {
+      "Desc": "The 30ml 'Wake Me Up' Coffee Shot",
+      "Img": "https://firebasestorage.googleapis.com/v0/b/ettarracoffee-house.appspot.com/o/espresso%20Large.jpeg?alt=media&token=77aec37a-d896-45e6-aaa0-869318ed8014",
+      "Name": "Espresso",
+      "Price": {
+        "30ml": "Rs. 145"
+      }
+    },
+    {
+      "Desc": "Authentic Double Ristreto Served With Warm Water And Some Sweet Irish Syrup (A.K.A. Up All Night Recovery But Sweet)",
+      "Img": "https://firebasestorage.googleapis.com/v0/b/ettarracoffee-house.appspot.com/o/irishAmericano%20Large.jpeg?alt=media&token=e311ccbb-070c-4c3b-9aef-1a6716b8b56e",
+      "Name": "Irish Americano",
+      "Price": {
+        "250ml": "Rs. 235",
+        "350ml": "Rs. 260"
+      }
+    },
+    {
+      "Desc": "Milk Coffee With Special Dark Cocoa From Madagascar",
+      "Img": "https://firebasestorage.googleapis.com/v0/b/ettarracoffee-house.appspot.com/o/mocha%20Large.jpeg?alt=media&token=4f5f01e5-0919-46c9-b720-5e495fe5389a",
+      "Name": "Café Mocha",
+      "Price": {
+        "250ml": "Rs. 245",
+        "350ml": "Rs. 270"
+      }
+    },
+    {
+      "Desc": "A sweet symphony of Almond and Honey in every Latte sip",
+      "Img": "",
+      "Name": "Almond Honey Latte",
+      "Price": {
+        "250ml": "Rs. 285",
+        "350ml": "Rs. 310"
+      }
+    },
+    {
+      "Desc": "Piccolo is a small coffee with a single espresso shot, topped with steamed milk for a strong coffee flavor",
+      "Img": "",
+      "Name": "Piccolo",
+      "Price": {
+        "100ml": "Rs. 150"
+      }
+    },
+    {
+      "Desc": "Just The Way Our Australian Friends Like It 'More Milk, Less Drama'",
+      "Img": "",
+      "Name": "Flat White",
+      "Price": {
+        "250ml": "Rs. 240"
+      }
+    },
+    {
+      "Desc": "Intense Espresso shot with Milk foam",
+      "Img": "",
+      "Name": "Macchiato",
+      "Price": {
+        "250ml": "Rs. 145"
+      }
+    },
+    {
+      "Desc": "The 44ml 'Wake Me Up' Coffee Shot",
+      "Img": "",
+      "Name": "Double Ristretto",
+      "Price": {
+        "44ml": "Rs. 165"
+      }
+    },
+    {
+      "Desc": "Milk Coffee With Special Cocoa From Madgascar Savoured With Konkan Coastal Sea Salt",
+      "Img": "",
+      "Name": "Sea Salt Dark Mocha",
+      "Price": {
+        "250ml": "Rs. 285",
+        "350ml": "Rs. 315"
+      }
+    },
+    {
+      "Desc": " Caramel/ Vanilla/ Irish/ Hazelnut Syrup",
+      "Img": "",
+      "Name": "Add On",
+      "Price": {
+        "-": "Rs. 50"
+      }
+    },
+    {
+      "Desc": "Dark Chocolate Sauce",
+      "Img": "",
+      "Name": "Add On",
+      "Price": {
+        "-": "Rs. 75"
+      }
+    }
+  ],
+  "KonkanRouteMenu": [
+    {
+      "Desc": "Ingredients: Banana, coconut oil, turmeric and salt.",
+      "Img": "",
+      "Name": "Salted Banana Chips",
+      "Price": {
+        "60 gms": "Rs. 80"
+      }
+    },
+    {
+      "Desc": "Ingredients: Banana, coconut oil, salt and chili powder.",
+      "Img": "",
+      "Name": "Spicy Banana Chips",
+      "Price": {
+        "60 gms": "Rs. 80"
+      }
+    },
+    {
+      "Desc": "Ingredients: Coriander Seeds, Bengal Gram, Fenugreek, Mustard, Turmeric, Byadgi Chilli, Cumin, Pepper & Compounded Asafoetida.",
+      "Img": "",
+      "Name": "Murruku",
+      "Price": {
+        "100 gms": "Rs. 80"
+      }
+    },
+    {
+      "Desc": "Ingredients: Rice, Pulses, Gram flour, Veg Oil, Chilly, Cummin seeds, Seasame & Salt.",
+      "Img": "",
+      "Name": "Round Murruku",
+      "Price": {
+        "100 gms": "Rs. 80"
+      }
+    },
+    {
+      "Desc": "Ingredients: Butter, Icing Sugar, Egg, Flour, Baking Powder, Baking Soda, Coconut Powder.",
+      "Img": "",
+      "Name": "Coconut Nankhatai",
+      "Price": {
+        "100 gms": "Rs. 300"
+      }
+    },
+    {
+      "Desc": "Ingredients: Ghee, Icing Sugar, Flour, Green Elaichi Powder, Pistachio.",
+      "Img": "",
+      "Name": "Plain Nankhatai",
+      "Price": {
+        "100 gms": "Rs. 300"
+      }
+    },
+    {
+      "Desc": "Ingredients: Butter, Ghee, Castor Sugar, Icing Sugar, Elaichi Powder, Flour, Milk Powder, Baking Powder, Dahi, Cashew.",
+      "Img": "",
+      "Name": "Cashewnut Nankhatai",
+      "Price": {
+        "100 gms": "Rs. 300"
+      }
+    },
+    {
+      "Desc": "Ingredients: Butter, Icing Sugar, Maida, Curry leaves, Haldi powder.",
+      "Img": "",
+      "Name": "Curry Cookies",
+      "Price": {
+        "100 gms": "Rs. 300"
+      }
+    }
+  ],
+  "ManualBrewMenu": [
+    {
+      "Desc": "",
+      "Img": "https://firebasestorage.googleapis.com/v0/b/ettarracoffee-house.appspot.com/o/coldbrew%20Large.jpeg?alt=media&token=4fcf0c0f-ec2d-4277-9d6f-6d61e068a673",
+      "Name": "Cold Brew",
+      "Price": {
+        "250ml": "Rs. 315"
+      }
+    },
+    {
+      "Desc": "",
+      "Img": "https://firebasestorage.googleapis.com/v0/b/ettarracoffee-house.appspot.com/o/LAH-00220%20Large.jpeg?alt=media&token=9b9ecdcd-b3d4-4888-8f9d-8754084e3ace",
+      "Name": "Frenchpress",
+      "Price": {
+        "250ml": "Rs. 260"
+      }
+    },
+    {
+      "Desc": "",
+      "Img": "https://firebasestorage.googleapis.com/v0/b/ettarracoffee-house.appspot.com/o/DSC08242%20Large.jpeg?alt=media&token=5848481a-9cb8-48fa-accf-f8e9684b2fdf",
+      "Name": "Pour Over",
+      "Price": {
+        "250ml": "Rs. 260"
+      }
+    },
+    {
+      "Desc": "",
+      "Img": "",
+      "Name": "Aeropress",
+      "Price": {
+        "250ml": "Rs. 260"
+      }
+    }
+  ],
+  "NotCoffeeMenu": [
+    {
+      "Desc": "'Not In The Mood For Coffee But I Want My Daily Caffeine Intake' Beverage",
+      "Img": "https://firebasestorage.googleapis.com/v0/b/ettarracoffee-house.appspot.com/o/hotchocolet%20Large.jpeg?alt=media&token=c0a95d3f-a11a-405b-a655-77293d3fb492",
+      "Name": "Hot Chocolate",
+      "Price": {
+        "250ml": "Rs. 280",
+        "350ml": "Rs. 335"
+      }
+    },
+    {
+      "Desc": "'Sinfully Dark Chocolate' Beverage",
+      "Img": "https://firebasestorage.googleapis.com/v0/b/ettarracoffee-house.appspot.com/o/madagaskerhotchoco%20Large.jpeg?alt=media&token=953cb9ed-a602-42e4-967a-0b714615c7c0",
+      "Name": "Madagascar Hot Chocolate",
+      "Price": {
+        "250ml": "Rs. 280",
+        "350ml": "Rs. 335"
+      }
+    },
+    {
+      "Desc": "Flower power - A refreshing blend of tart hibiscus and cascara, offering a unique twist on traditional tea",
+      "Img": "",
+      "Name": "Hibiscus Cascara",
+      "Price": {
+        "250ml": "Rs. 190",
+        "350ml": "Rs. 235"
+      }
+    },
+    {
+      "Desc": "Tea-riffic and Kala-strophic - A tangy explosion of kala khatta and cascara, delivering a playful and invigorating experience",
+      "Img": "",
+      "Name": "Kala Khatta Cascara",
+      "Price": {
+        "250ml": "Rs. 190",
+        "350ml": "Rs. 235"
+      }
+    },
+    {
+      "Desc": "Citrus Burst - A vibrant mix of orange and cascara, creating a bright and citrusy sensation",
+      "Img": "",
+      "Name": "Santra Cascara",
+      "Price": {
+        "250ml": "Rs. 190",
+        "350ml": "Rs. 235"
+      }
+    },
+    {
+      "Desc": "Tropical Coconut Dreams - A tropical paradise in a glass, combining the sweet notes of coconut with the tangy hibiscus and cascara",
+      "Img": "",
+      "Name": "Hibiscus Nariyal Cascara",
+      "Price": {
+        "250ml": "Rs. 190",
+        "350ml": "Rs. 235"
+      }
+    }
+  ],
+  "SavouryMenu": [
+    {
+      "Desc": "Modern and healthy take on our classic Maharashtrian Street food. With comparatively less calories.",
+      "Img": "https://firebasestorage.googleapis.com/v0/b/ettarracoffee-house.appspot.com/o/vadapav%20Large.jpeg?alt=media&token=c0a9d31a-c3ba-4b4f-b74d-deee7f2883c7",
+      "Labels": [
+        "Gluten",
+        "Milk",
+        "Peanut",
+        "Seed",
+        "Veg"
+      ],
+      "Name": "Baked Vada Pav",
+      "Price": {
+        "1pc": "Rs. 80"
+      }
+    },
+    {
+      "Desc": "A healthier take on the classic Indian street food, featuring a flavorful vegetable mixture baked instead of stir-fried, served in soft, pav buns and a special butter.",
+      "Img": "https://firebasestorage.googleapis.com/v0/b/ettarracoffee-house.appspot.com/o/DSC07747%20Large.jpeg?alt=media&token=ecde6f97-d9bb-4e44-968f-b754984ec04d",
+      "Labels": [
+        "Gluten",
+        "Milk",
+        "Peanut",
+        "Seed",
+        "Veg"
+      ],
+      "Name": "Baked Pav Bhaji",
+      "Price": {
+        "1pc": "Rs. 80"
+      }
+    },
+    {
+      "Desc": "Paneer Red Ghee Roast: A classic, popular Mangalorean dish with a bright reddish color and tangy, spicy and flavour gravy base tossed with cottage cheese pieces.",
+      "Img": "https://firebasestorage.googleapis.com/v0/b/ettarracoffee-house.appspot.com/o/calzone%20Large.jpeg?alt=media&token=1039509d-26db-466c-915e-a0257c677ad3",
+      "Labels": [
+        "Gluten",
+        "Milk",
+        "Peanut",
+        "Seed",
+        "Veg"
+      ],
+      "Name": "Calzone",
+      "Price": {
+        "1pc": "Rs. 70"
+      }
+    },
+    {
+      "Desc": "Simply Buttery! - Croissant with white butter.",
+      "Img": "https://firebasestorage.googleapis.com/v0/b/ettarracoffee-house.appspot.com/o/BenneCris.jpeg?alt=media&token=9a0232b9-85d0-4261-ad40-12a3cbd467e3",
+      "Labels": [
+        "Gluten",
+        "Milk",
+        "Jain"
+      ],
+      "Name": "Benne Croissant",
+      "Price": {
+        "1pc": "Rs. 100",
+        "2pcs": "Rs. 190",
+        "3pcs": "Rs. 270"
+      }
+    },
+    {
+      "Desc": "Cheese 'n' chill! - Toasty croissant with melty mozzarella, bell pepper and chillies.",
+      "Img": "https://firebasestorage.googleapis.com/v0/b/ettarracoffee-house.appspot.com/o/FireCrakerCris.jpeg?alt=media&token=301fe6ff-cce0-40bb-b6c0-39ca7479b042",
+      "Labels": [
+        "Gluten",
+        "Milk",
+        "Veg"
+      ],
+      "Name": "Firecracker Croissant",
+      "Price": {
+        "1pc": "Rs. 115",
+        "2pcs": "Rs. 220",
+        "3pcs": "Rs. 330"
+      }
+    },
+    {
+      "Desc": "Mushroom magic! - Golden croissant with pepper tossed mushrooms and masala cream cheese.",
+      "Img": "",
+      "Labels": [
+        "Gluten",
+        "Milk",
+        "Soy",
+        "Veg"
+      ],
+      "Name": "Mushroom Edemunchi Croissant",
+      "Price": {
+        "1pc": "Rs. 130",
+        "2pcs": "Rs. 250",
+        "3pcs": "Rs. 360"
+      }
+    },
+    {
+      "Desc": "Yellow banana chips are crispy and flavourful snack items made from thinly sliced ripe bananas, fried to perfection, resulting in a delightful and naturally sweet treat.",
+      "Img": "https://firebasestorage.googleapis.com/v0/b/ettarracoffee-house.appspot.com/o/salted%20Large.jpeg?alt=media&token=27000e89-bc05-47c9-b1be-1d17eec534a3",
+      "Name": "Salted Banana Chips",
+      "Price": {
+        "1 Packet": "Rs. 80"
+      }
+    },
+    {
+      "Desc": "Spicy banana chips are crispy and savory snack items made from thinly sliced bananas seasoned with a fiery blend of spices, adding a zesty kick to the classic snack.",
+      "Img": "https://firebasestorage.googleapis.com/v0/b/ettarracoffee-house.appspot.com/o/spicy%20Large.jpeg?alt=media&token=9334d469-f63b-4d66-90ca-aafaaa71ce5b",
+      "Name": "Red Banana Chips",
+      "Price": {
+        "1 Packet": "Rs. 80"
+      }
+    }
+  ],
+  "SihiMenu": [
+    {
+      "Desc": "Several layers of chocolate sponge cake sandwiched with whipped cream, chocolate chantilly and cherries.",
+      "Img": "",
+      "Labels": [
+        "Gluten",
+        "Milk",
+        "Lemon",
+        "Jain"
+      ],
+      "Name": "Black Forest",
+      "Price": {
+        "1pc": 85,
+        "2pcs": 160,
+        "3pcs": 225
+      }
+    },
+    {
+      "Desc": "Made with a moist sponge and a rich chocolate truffle ganache.",
+      "Img": "",
+      "Labels": [
+        "Gluten",
+        "Milk",
+        "Jain"
+      ],
+      "Name": "Dutch Tuffle",
+      "Price": {
+        "1pc": 85,
+        "2pcs": 160,
+        "3pcs": 225
+      }
+    },
+    {
+      "Desc": "A creamy cheesecake with an airy, mousse-like texture that screams Lotus in every bite! Crushed Lotus biscuits in the crust & creamy Lotus in the filling.",
+      "Img": "",
+      "Labels": [
+        "Gluten",
+        "Milk",
+        "Peanut",
+        "Jain"
+      ],
+      "Name": "Biscoff Cheesecake",
+      "Price": {
+        "1pc": "85",
+        "2pcs": 160,
+        "3pcs": 225
+      }
+    },
+    {
+      "Desc": "This Dark Chocolate Namelaka Cream is incredibly silky and intense in chocolate flavours, with a delicious melt-in-your-mouth texture.",
+      "Img": "",
+      "Labels": [
+        "Milk",
+        "Jain"
+      ],
+      "Name": "Chocolate Namelaka",
+      "Price": {
+        "1pc": 85,
+        "2pcs": 160,
+        "3pcs": 225
+      }
+    },
+    {
+      "Desc": "Chef's take on traditional tiramisu by incorporating filter Kapi decoction in the frosting layered with choc chip sponge.",
+      "Img": "",
+      "Labels": [
+        "Gluten",
+        "Milk",
+        "Jain"
+      ],
+      "Name": "Filter-Kapi Misu",
+      "Price": {
+        "1pc": 85,
+        "2pcs": 160,
+        "3pcs": 225
+      }
+    },
+    {
+      "Desc": "A moist, rich, and dramatic layered cake that's known for its striking red color and cream cheese frosting.",
+      "Img": "",
+      "Labels": [
+        "Gluten",
+        "Milk",
+        "Jain"
+      ],
+      "Name": "Red Velvet",
+      "Price": {
+        "1pc": 85,
+        "2pcs": 160,
+        "3pcs": 225
+      }
+    }
+  ],
+  "SweetMenu": [
+    {
+      "Desc": "Papparoti is a popular Malaysian treat, known for its signature coffee caramel, cinnamon coated top and soft, buttery, fluffy interior, creating a delightful pastry experience.",
+      "Img": "https://firebasestorage.googleapis.com/v0/b/ettarracoffee-house.appspot.com/o/papa%20Large.jpeg?alt=media&token=0deb9b93-be7c-4a09-9731-8c9f369089ec",
+      "Labels": [
+        "Gluten",
+        "Milk",
+        "Peanut",
+        "Jain"
+      ],
+      "Name": "Papparoti",
+      "Price": {
+        "Plain": "Rs. 175 ",
+        "With Drizzle": "Rs. 245"
+      }
+    },
+    {
+      "Desc": "A decadent pastry delight, consisting of a fluffy and fried dough filled with a luscious and indulgent dark chocolate mousse.",
+      "Img": "https://firebasestorage.googleapis.com/v0/b/ettarracoffee-house.appspot.com/o/darkchoco%20Large.jpeg?alt=media&token=ece96f71-a7c1-497c-bb3f-8712ff22642e",
+      "Labels": [
+        "Gluten",
+        "Milk",
+        "Peanut",
+        "Jain"
+      ],
+      "Name": "Dark Chocolate Mousse Berliner",
+      "Price": {
+        "1pcs": "Rs. 80",
+        "2pcs": "Rs. 130",
+        "3pcs": "Rs. 180"
+      }
+    },
+    {
+      "Desc": "A heavenly pastry creation featuring a fluffy and fried dough filled with the irresistibly creamy and caramelized flavours of Lotus Biscoff spread.",
+      "Img": "https://firebasestorage.googleapis.com/v0/b/ettarracoffee-house.appspot.com/o/lotus%20Large.jpeg?alt=media&token=11482ffb-63ad-4064-8163-748c269bdf11",
+      "Labels": [
+        "Gluten",
+        "Milk",
+        "Peanut",
+        "Jain"
+      ],
+      "Name": "Lotus Biscoff Berliner",
+      "Price": {
+        "1pcs": "Rs. 80",
+        "2pcs": "Rs. 130",
+        "3pcs": "Rs. 180"
+      }
+    },
+    {
+      "Desc": "A delightful pastry treat that combines the fluffy and fried dough of a Berliner with the creamy and tangy flavours of blueberry cheesecake, creating a perfect fusion of textures and tastes.",
+      "Img": "https://firebasestorage.googleapis.com/v0/b/ettarracoffee-house.appspot.com/o/blueberry%20Large.jpeg?alt=media&token=39efd702-9729-4af0-ad09-a818951a6554",
+      "Labels": [
+        "Gluten",
+        "Milk",
+        "Peanut",
+        "Lemon",
+        "Jain"
+      ],
+      "Name": "Blue Berry Cheesecake Berliner",
+      "Price": {
+        "1pcs": "Rs. 80",
+        "2pcs": "Rs. 130",
+        "3pcs": "Rs. 180"
+      }
+    },
+    {
+      "Desc": "A delectable pastry treat featuring a fluffy and fried dough filled with a generous amount of creamy and irresistible Nutella spread.",
+      "Img": "",
+      "Labels": [
+        "Gluten",
+        "Milk",
+        "Peanut",
+        "Jain"
+      ],
+      "Name": "Nutella Berliner",
+      "Price": {
+        "1pcs": "Rs. 80",
+        "2pcs": "Rs. 130",
+        "3pcs": "Rs. 180"
+      }
+    },
+    {
+      "Desc": "Deliciously soft and chewy chocolate cookies with a signature cracked appearance, making them a delightful treat for chocolate lovers.",
+      "Img": "https://firebasestorage.googleapis.com/v0/b/ettarracoffee-house.appspot.com/o/ChocolateCrinkleCookie.png?alt=media&token=ec4d5235-0330-47f9-aafb-ec29899ce1d6",
+      "Labels": [
+        "Gluten",
+        "Milk"
+      ],
+      "Name": "Chocolate Crinkle Cookie",
+      "Price": {
+        "3pcs": "Rs. 70",
+        "6pcs": "Rs. 130",
+        "9pcs": "Rs. 180"
+      }
+    },
+    {
+      "Desc": "",
+      "Img": "",
+      "Labels": [
+        "Gluten",
+        "Milk",
+        "Lemon"
+      ],
+      "Name": "Macaroon",
+      "Price": {
+        "1pcs": "Rs. 85",
+        "2pcs": "Rs. 160",
+        "3pcs": "Rs. 210"
+      }
+    },
+    {
+      "Desc": "Small and decadent pastry shells filled with rich and luscious chocolate ganache, offering a delightful bite-sized indulgence",
+      "Img": "https://firebasestorage.googleapis.com/v0/b/ettarracoffee-house.appspot.com/o/tart%20Large.jpeg?alt=media&token=ff088f14-f617-452f-b39d-252e8756b8c5",
+      "Labels": [
+        "Gluten",
+        "Milk",
+        "Peanut",
+        "Jain"
+      ],
+      "Name": "Chocolate Tartlets",
+      "Price": {
+        "3pcs": "Rs. 135",
+        "6pcs": "Rs. 240",
+        "9pcs": "Rs. 270"
+      }
+    },
+    {
+      "Desc": "Delectable bite-sized pastry shells filled with a heavenly combination of sweet caramel and a hint of salt, creating a perfect balance of flavors.",
+      "Img": "",
+      "Labels": [
+        "Gluten",
+        "Milk",
+        "Peanut",
+        "Jain"
+      ],
+      "Name": "Salted Caramel Tartlets",
+      "Price": {
+        "3pcs": "Rs. 135",
+        "6pcs": "Rs. 240",
+        "9pcs": "Rs. 270"
+      }
+    },
+    {
+      "Desc": "",
+      "Img": "",
+      "Labels": [
+        "Gluten",
+        "Milk",
+        "Peanut",
+        "Jain"
+      ],
+      "Name": "Filter-Kaapi Tartlets",
+      "Price": {
+        "3pcs": "Rs. 135",
+        "6pcs": "Rs. 240",
+        "9pcs": "Rs. 270"
+      }
+    },
+    {
+      "Desc": "Small and decadent pastry shells filled with rich and luscious chocolate ganache, offering a delightful bite-sized indulgence",
+      "Img": "",
+      "Labels": [
+        "Gluten",
+        "Milk",
+        "Peanut",
+        "Jain"
+      ],
+      "Name": "Kodai Cheese Tartlets",
+      "Price": {
+        "3pcs": "Rs. 135",
+        "6pcs": "Rs. 240",
+        "9pcs": "Rs. 270"
+      }
+    },
+    {
+      "Desc": "Tangy and refreshing bite-sized pastry shells filled with a zesty and citrusy Kacha Limbo (unripe lime) filling, creating a burst of flavour in every bite.",
+      "Img": "",
+      "Labels": [
+        "Gluten",
+        "Milk",
+        "Lemon",
+        "Peanut",
+        "Jain"
+      ],
+      "Name": "Kacha Nimbu Tartlets",
+      "Price": {
+        "3pcs": "Rs. 135",
+        "6pcs": "Rs. 240",
+        "9pcs": "Rs. 270"
+      }
+    },
+    {
+      "Desc": "Fudge Monday blues away! Warm chewy brownie with vanilla ice cream sprinkled with cinnamon cookies.",
+      "Img": "",
+      "Labels": [
+        "Gluten",
+        "Milk",
+        "Peanut",
+        "Jain"
+      ],
+      "Name": "Chewy Brownie",
+      "Price": {
+        "1pc": "Rs. 145",
+        "2pcs": "Rs. 280",
+        "3pcs": "Rs. 405"
+      }
+    },
+    {
+      "Desc": "Not your average sundae. This one's a flavor fiesta! - Butter Scotch , Strawberry and  Vanilla Ice Cream, Tutti-Fruity, Pistachios, Cashewnuts, Vermicelli, Apple, Pineapple and Strawberry Jelly",
+      "Img": "",
+      "Labels": [
+        "Gluten",
+        "Milk",
+        "Peanut",
+        "Veg"
+      ],
+      "Name": "Gadbad",
+      "Price": {
+        "1 serving": "Rs. 225"
+      }
+    },
+    {
+      "Desc": " Vanilla Ice Cream, Homemade Crunch Powder and Chocolate Sauce",
+      "Img": "",
+      "Labels": [
+        "Gluten",
+        "Milk",
+        "Peanut",
+        "Veg"
+      ],
+      "Name": "Vanilla Da",
+      "Price": {
+        "1 cup": "Rs. 165"
+      }
+    },
+    {
+      "Desc": "Chocolate and Vanilla Ice Cream, Homemade Crunch Powder and Chocolate Sauce",
+      "Img": "",
+      "Labels": [
+        "Gluten",
+        "Milk",
+        "Peanut",
+        "Veg"
+      ],
+      "Name": "Chocolate Da",
+      "Price": {
+        "1 cup": "Rs. 165"
+      }
+    },
+    {
+      "Desc": "Vanilla Ice Cream with FIlter Kaapi Shot",
+      "Img": "",
+      "Labels": [
+        "Gluten",
+        "Milk",
+        "Peanut",
+        "Veg"
+      ],
+      "Name": "Filter Coffee Affogato",
+      "Price": {
+        "1 cup": "Rs. 125"
+      }
+    },
+    {
+      "Desc": "Flavour twist on the traditional Indian shortbread cookie, featuring the rich and nutty taste of pistachios, adding a delightful crunch to every bite. ",
+      "Img": "https://firebasestorage.googleapis.com/v0/b/ettarracoffee-house.appspot.com/o/plain%20Large.jpeg?alt=media&token=63c2b10d-b5a3-45ce-8f9c-d50aa89cf274",
+      "Labels": [
+        "Gluten",
+        "Milk",
+        "Peanut",
+        "Jain"
+      ],
+      "Name": "Plain Nankhatai",
+      "Price": {
+        "1 Jar": "Rs. 300"
+      }
+    },
+    {
+      "Desc": "A scrumptious variation of the classic Indian shortbread cookie, made with a buttery dough and loaded with the delightful crunch and  flavour of cashew nuts.",
+      "Img": "https://firebasestorage.googleapis.com/v0/b/ettarracoffee-house.appspot.com/o/cashewnut%20Large.jpeg?alt=media&token=6c976980-3f94-44b9-9e6f-1975e95b8b80",
+      "Labels": [
+        "Gluten",
+        "Milk",
+        "Peanut",
+        "Jain"
+      ],
+      "Name": "Cashewnut Nankhatai",
+      "Price": {
+        "1 Jar": "Rs. 300"
+      }
+    }
+  ]
+}

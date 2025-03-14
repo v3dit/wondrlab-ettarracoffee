@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
 import database from '../config/FirbaseConfig';
 import '../styles/UserProfile.css';
 
@@ -9,6 +10,7 @@ const UserProfile = ({ loggedInUser }) => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [userCoupons, setUserCoupons] = useState(null);
+    const [recentActivity, setRecentActivity] = useState([]);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -16,7 +18,10 @@ const UserProfile = ({ loggedInUser }) => {
             try {
                 setLoading(true);
                 const user = firebase.auth().currentUser;
-                if (!user) throw new Error("User not found");
+                if (!user) {
+                    navigate('/');
+                    return;
+                }
 
                 // Get user data from Firebase
                 const userRef = database.ref(`users/${user.uid}`);
@@ -35,35 +40,33 @@ const UserProfile = ({ loggedInUser }) => {
                 await userRef.update(userProfile);
                 setProfile(userProfile);
 
-                // Get coupon data using email
-                const sanitizedEmail = user.email.replace(/[.#$[\]]/g, '_');
-                const couponRef = database.ref('UserCoupons').orderByChild('email').equalTo(user.email);
-                const couponSnapshot = await couponRef.once('value');
-                const couponData = couponSnapshot.val();
+                // Listen to UserCoupons collection for this user's email
+                const couponQuery = database.ref('UserCoupons')
+                    .orderByChild('email')
+                    .equalTo(user.email);
+                
+                couponQuery.on('value', (snapshot) => {
+                    const data = snapshot.val();
+                    if (data) {
+                        const userCouponData = Object.values(data)[0];
+                        setUserCoupons(userCouponData);
+                        
+                        // Get redemption history and sort by date
+                        const history = userCouponData.redemption_history || [];
+                        // Convert object to array if necessary
+                        const historyArray = Array.isArray(history) ? history : Object.values(history);
+                        const sortedHistory = historyArray
+                            .filter(item => item && item.date) // Filter out any invalid entries
+                            .sort((a, b) => b.date - a.date); // Sort by date instead of timestamp
+                        setRecentActivity(sortedHistory);
+                    }
+                    setLoading(false);
+                });
 
-                if (couponData) {
-                    const couponEntry = Object.values(couponData)[0];
-                    // Get redemption history array safely
-                    const redemptionHistory = Array.isArray(couponEntry.redemption_history) 
-                        ? couponEntry.redemption_history 
-                        : Object.values(couponEntry.redemption_history || {});
-                    
-                    setUserCoupons({
-                        active_coupons: couponEntry.active_coupons || 0,
-                        redemption_history: redemptionHistory,
-                        total_redemptions: redemptionHistory.length || 0
-                    });
-                } else {
-                    setUserCoupons({
-                        active_coupons: 0,
-                        redemption_history: [],
-                        total_redemptions: 0
-                    });
-                }
+                return () => couponQuery.off();
             } catch (error) {
-                console.error("Error:", error);
+                console.error('Error fetching user data:', error);
                 setError(error.message);
-            } finally {
                 setLoading(false);
             }
         };
@@ -71,7 +74,7 @@ const UserProfile = ({ loggedInUser }) => {
         if (loggedInUser) {
             fetchUserData();
         }
-    }, [loggedInUser]);
+    }, [loggedInUser, navigate]);
 
     const handleLogout = async () => {
         try {
@@ -82,15 +85,27 @@ const UserProfile = ({ loggedInUser }) => {
         }
     };
 
+    const formatDate = (timestamp) => {
+        if (!timestamp) return 'Invalid Date';
+        try {
+            const date = new Date(timestamp);
+            return date.toLocaleDateString('en-GB', {
+                day: '2-digit',
+                month: '2-digit',
+                year: 'numeric'
+            });
+        } catch (error) {
+            return 'Invalid Date';
+        }
+    };
+
     if (loading) return <div className="loading-spinner">Loading...</div>;
     if (error) return <div className="error-message">{error}</div>;
 
     return (
         <div className="profile-container">
             <div className="profile-header">
-                <button className="back-button" onClick={() => navigate(-1)}>
-                    ←
-                </button>
+                <button className="profile-back-button" onClick={() => navigate(-1)}>←</button>
                 <button className="logout-btn" onClick={handleLogout}>
                     Logout
                 </button>
@@ -124,30 +139,44 @@ const UserProfile = ({ loggedInUser }) => {
                         <div className="coupon-card">
                             <div className="coupon-icon">✨</div>
                             <div className="coupon-info">
-                                <span className="coupon-count">{userCoupons?.total_redemptions || 0}</span>
+                                <span className="coupon-count">{userCoupons?.total_redeemed || 0}</span>
                                 <span className="coupon-label">Total Redeemed</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                {userCoupons?.redemption_history?.length > 0 && (
-                    <div className="profile-section">
-                        <h3>Recent Activity</h3>
-                        <div className="redemption-history">
-                            {userCoupons.redemption_history.slice(-5).reverse().map((redemption, index) => (
-                                <div key={index} className="history-item">
-                                    <span className="history-date">
-                                        {new Date(redemption.date).toLocaleDateString()}
-                                    </span>
-                                    <span className="history-action">
-                                        Redeemed coupon
-                                    </span>
+                <div className="profile-section">
+                    <h3>Recent Activity</h3>
+                    <div className="activity-list">
+                        {recentActivity.length > 0 ? (
+                            recentActivity.map((activity, index) => (
+                                <div key={index} className="activity-item">
+                                    <div className="activity-date">
+                                        {formatDate(activity.date)}
+                                    </div>
+                                    <div className="activity-details">
+                                        <div className="activity-type">Redeemed coupon</div>
+                                        <div className="activity-items">
+                                            <div className="redeemed-item">
+                                                <div className="redeemed-item-name">
+                                                    {activity.item_name}
+                                                    <span className="item-price">{activity.item_price}</span>
+                                                </div>
+                                                <div className="item-category">{activity.category}</div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            ))}
-                        </div>
+                            ))
+                        ) : (
+                            <div className="no-activity">
+                                <div className="no-activity-icon">📋</div>
+                                <p>No recent activity</p>
+                            </div>
+                        )}
                     </div>
-                )}
+                </div>
             </div>
         </div>
     );
